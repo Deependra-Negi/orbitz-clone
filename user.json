@@ -1,24 +1,19 @@
 {
   "users": [
     {
-      "googleId": "113786029095096597691",
-      "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14Gh-6pKyPJkgGvKrtXEDljgvYn1qR7_aZrv6AZ9N=s96-c",
-      "email": "pawanpatidar08031994@gmail.com",
-      "name": "Pawan Patidar",
-      "givenName": "Pawan",
-      "familyName": "Patidar",
-      "events": {},
+      "firstname": "pawan",
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
       "id": 1
     }
   ],
   "login": [
     {
-      "googleId": "113786029095096597691",
-      "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14Gh-6pKyPJkgGvKrtXEDljgvYn1qR7_aZrv6AZ9N=s96-c",
-      "email": "pawanpatidar08031994@gmail.com",
-      "name": "Pawan Patidar",
-      "givenName": "Pawan",
-      "familyName": "Patidar",
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "checkedA": true,
       "id": 1
     }
   ]

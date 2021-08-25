@@ -1,4 +1,4 @@
-import { Box, Grid, TextField, Button, Typography, Container } from '@material-ui/core'
+import {  Box, Grid,  TextField, Button, Typography, Container } from '@material-ui/core'
 import React, { useState } from 'react';
 import GoogleLogin from "react-google-login";
 import Visibility from '@material-ui/icons/Visibility';
@@ -12,23 +12,23 @@ import { useStyles } from './SignupMake';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import CloseIcon from '@material-ui/icons/Close';
-import { useHistory } from 'react-router';
+
 import axios from 'axios'
 import { useEffect } from 'react';
-
-const SignInForm = () => {
+import { useHistory } from 'react-router';
+const SignUpForm = () => {
     const init = {
-       
+        firstname: "",
         email: "",
         password: "",
         showPassword: false,
     }
     const [formdata, setformdata] = useState(init);
-    const history = useHistory()
     const [status, setstatus] = useState(false);
-
+    const history = useHistory()
+  
     const [disable, setdisable] = useState(true);
-
+ 
 
     const handleonChangeinput = (e) => {
         let email = e.target.value;
@@ -58,60 +58,63 @@ const SignInForm = () => {
             let status = false;
             console.log(allusers);
             allusers.forEach((el) => {
-                if (el.email === formdata.email && el.password === formdata.password) {
-                    status = true;
-                }
-            });
-            if (status) {
-                axios
-                    .post('http://localhost:3010/login', formdata)
-                    .then(function (response) { });
-                history.push('/');
-            } else {
-                history.push('/signup');
-            }
-        });
-
-
-
-    }
-    const responseGoogle = (res) => {
-        console.log(res);
-        let data = { ...res.profileObj, events: {} };
-       console.log(data)
-        axios.get('http://localhost:3010/users').then(function (response) {
-            let allusers = response.data;
-            console.log(allusers)
-            let status = false;
-            console.log(allusers);
-            allusers.forEach((el) => {
-                console.log(el)
-                if (el.email === res.profileObj.email) {
+                if (el.email === formdata.email) {
                     status = true;
                 }
             });
             if (!status) {
                 axios
-                    .post('http://localhost:3010/users', data)
-                    .then(function (response) { });
+                    .post('http://localhost:3010/users', {...formdata})
+                    .then(function (response) { console.log(response) });
+            
+             
             }
-        });
 
-        axios.get('http://localhost:3010/login').then(function (resp) {
-            if (resp.data.length === 0) {
-                axios
-                    .post('http://localhost:3010/login', res.profileObj)
-                    .then(function (resp) { });
-                history.push('/');
-            } else {
-                history.push('/');
-            }
-        });
-    };
+        })
+        history.push("/signin")
+     
+        
+      
+      
+    }
+    
+
+    // const responseGoogle = (res) => {
+    //     console.log(res.profileObj.email);
+    //     let data = { ...res.profileObj, events: {} };
+     
+
+    //     axios.get('http://localhost:3010/users').then(function (response) {
+    //         let allusers = response.data;
+    //         let status = false;
+    //         console.log(allusers);
+    //         allusers.forEach((el) => {
+    //             if (el.email === res.profileObj.email) {
+    //                 status = true;
+    //             }
+    //         });
+    //         if (!status) {
+    //             axios
+    //                 .post('http://localhost:3010/users',data)
+    //                 .then(function (response) { });
+    //         }
+    //     });
+
+    //     axios.get('http://localhost:3010/login').then(function (resp) {
+    //         if (resp.data.length === 0) {
+    //             axios
+    //                 .post('http://localhost:3010/login', res.profileObj)
+    //                 .then(function (resp) { });
+    //             history.push('/');
+    //         } else {
+    //             history.push('/');
+    //         }
+    //     });
+    // };
 
 
     const handleClickShowPassword = () => {
-
+    
         setformdata({ ...formdata, showPassword: !formdata.showPassword });
     };
 
@@ -134,20 +137,21 @@ const SignInForm = () => {
 
             <form onSubmit={handleonSubmit} className={classes.root}>
 
-                <Grid className={classes.Biggrid} container spacing={3}>
+                <Grid  className={classes.Biggrid} container spacing={3}>
 
                     <Grid className={classes.gridItem} xl={6} xs={12} >
                         <Container className={classes.Container}>
-                            <h2>Welcome back! Sign in with</h2>
+                            <h2>Create an account with</h2>
                             <Link className={classes.LinkDeco} to="/google">
                                 <Box className={classes.Box1}>
                                     <Box className={classes.Box2}>
                                         <GoogleLogin
                                             className="google"
+                                            
                                             clientId="1041538525274-ir3pldh2s7m3rhr86gut482ra9h15dcs.apps.googleusercontent.com"
                                             render={(renderProps) => (
                                                 <button
-                                                    
+                                                  
                                                     onClick={renderProps.onClick}
                                                     disabled={renderProps.disabled}
                                                 >
@@ -155,8 +159,8 @@ const SignInForm = () => {
                                                 </button>
                                             )}
                                             buttonText="Login"
-                                            onSuccess={responseGoogle}
-                                            onFailure={responseGoogle}
+                                            // onSuccess={responseGoogle}
+                                            // onFailure={responseGoogle}
                                             isSignedIn={true}
                                             cookiePolicy={"single_host_origin"}
                                         />
@@ -188,9 +192,15 @@ const SignInForm = () => {
                         </Container>
 
                     </Grid>
-                    <Grid className={classes.gridItem} xl={6} xs={12}>
-                        <h2>Or sign in with email</h2>
-                      
+                    <Grid
+                        className={classes.gridItem} xl={6} xs={12}
+                    >
+                        <h2>Or create an account with email</h2>
+                        <Box className={classes.Box}>
+
+                            <TextField onChange={handleonChangeinput} value={formdata.firstname} name="firstname" className={classes.TextField} type="text" id="outlined-basic" label="First and last name" variant="outlined" />
+
+                        </Box>
                         <Box className={classes.Box}>
 
                             <TextField onChange={handleonChangeinput} value={formdata.email} name="email" className={classes.TextField} type="email" id="outlined-basic" label="email address" variant="outlined" />
@@ -235,7 +245,7 @@ const SignInForm = () => {
                         </Box>
                         <Box>
                             <Typography className={classes.textsize} variant="subtitle1" component="h2">
-                                Already have an account?<Link className={classes.LinkDeco1}>Sign in</Link>
+                                Already have an account?<Link to="/signin" className={classes.LinkDeco1}>Sign in</Link>
                             </Typography>
                         </Box>
 
@@ -247,4 +257,4 @@ const SignInForm = () => {
     )
 }
 
-export default SignInForm
+export default SignUpForm

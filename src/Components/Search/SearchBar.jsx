@@ -7,6 +7,7 @@ import DriveEtaIcon from '@material-ui/icons/DriveEta';
 import WorkIcon from '@material-ui/icons/Work';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
+import styles from "./Home.module.css";
 
 export const SearchBar = () => {
     const [valueTab, setValueTab] = useState(0);
@@ -36,8 +37,9 @@ export const SearchBar = () => {
             width: "89%",
             height: "350px",
             border: "1px solid black",
-            margin: "10px auto",
-            padding: "3px 10px"
+            margin: "0px auto",
+            padding: "3px 10px",
+            backgroundColor: "white"
         },
         tb: {
             width: "100%",
@@ -50,6 +52,7 @@ export const SearchBar = () => {
         setValueTab(newValue);
     };
     return (
+        <Box className={styles.home}>
         <Box className={classes.containerSearchBox}>
             <Box className={classes.tabs}>
                     <Tabs
@@ -69,6 +72,7 @@ export const SearchBar = () => {
             </Box>
             <Divider className={classes.div}/>
             <SearchCompact />
-        </Box>
+            </Box>
+            </Box>
     )
 }

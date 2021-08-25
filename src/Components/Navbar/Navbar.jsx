@@ -13,6 +13,7 @@ import Menu from "@material-ui/core/Menu";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -90,6 +91,10 @@ const Navbar = () => {
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  const history = useHistory();
+  const handleHome = () => {
+    history.push("/");
+  }
 
   return (
     <div className={classes.root}>
@@ -97,7 +102,7 @@ const Navbar = () => {
               <Toolbar className={classes.navSpacing}>
                   <div style={{display:'flex'}}>
                     <div className={classes.logo}>
-                        <img src={logo} alt="Orbitz"  />
+              <img style={{ cursor: "pointer" }} onClick={handleHome} src={logo} alt="Orbitz"  />
                     </div>
                     {isMobile ?
                     <div></div> : (<div className={classes.hoverEffect} >

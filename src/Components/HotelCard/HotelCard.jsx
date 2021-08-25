@@ -5,13 +5,12 @@ import { useSelector } from 'react-redux'
 
 
 export default function HotelCard() {
-    const[hotels, setHotels] = useState([])
+    // const[hotels, setHotels] = useState([])
     // useEffect(() => {
     //     axios.get("http://localhost:3001/hotels")
     //     .then((res)=>setHotels(res.data))
     // }, [])
     const results = useSelector(state => state.result)
-    console.log('yooooooooo', results)
     
     return (
     <>

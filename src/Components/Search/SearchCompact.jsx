@@ -65,7 +65,8 @@ export function SearchCompact() {
             backgroundColor: "rgb(200,50,89)",
             borderRadius: "1px",
             textTransform: "none",
-            fontSize: "18px"
+            fontSize: "18px",
+            margin: "5px 40%",
         },
         inpBox: {
             display: "flex",
@@ -91,7 +92,7 @@ export function SearchCompact() {
         setQueryDetails({ ...queryDetails, [name]: value } );
     }
     const handleSearch = () => {
-        console.log(queryDetails);
+        //console.log(queryDetails);
         dispatch(search(queryDetails));
         history.push("/results");
     }

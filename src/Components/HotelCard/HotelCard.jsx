@@ -10,12 +10,12 @@ export default function HotelCard() {
     //     axios.get("http://localhost:3001/hotels")
     //     .then((res)=>setHotels(res.data))
     // }, [])
-    const results = useSelector(state => state.results)
+    const results = useSelector(state => state.result)
     console.log('yooooooooo', results)
     
     return (
     <>
-       {hotels.map((hotel)=>(
+       {results.map((hotel)=>(
         <CardCont>
             <ImgCont><img src={hotel.images[0].url} alt="hotel" /></ImgCont>
             <TextCont>

@@ -36,7 +36,8 @@ export const SearchBar = () => {
         containerSearchBox: {
             width: "89%",
             height: "350px",
-            border: "1px solid black",
+            border: "10px",
+            borderRadius: "1px",
             margin: "0px auto",
             padding: "3px 10px",
             backgroundColor: "white"

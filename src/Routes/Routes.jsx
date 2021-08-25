@@ -1,9 +1,12 @@
 import { Route, Switch } from "react-router-dom"
-import Navbar from "../Components/Navbar"
 import { SearchBar } from "../Components/Search/SearchBar"
 import { SearchResults } from "../Components/Search/SearchResults"
+import Home from '../Components/SignUpAndSignIn/Home'
+import SignInForm from '../Components/SignUpAndSignIn/SignInForm'
+import SignUpForm from '../Components/SignUpAndSignIn/SignUpForm'
 
-export function Routes() {
+
+export const Routes = () => {
     return (
         <div>
             <Switch>
@@ -12,6 +15,12 @@ export function Routes() {
                 </Route>
                 <Route exact path="/results">
                     <SearchResults/>
+                </Route>
+                <Route exact path="/signin">
+                  <SignInForm/>
+                </Route>
+                <Route exact path="/signup">
+                  <SignUpForm/>
                 </Route>
             </Switch>
         </div>

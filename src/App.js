@@ -1,14 +1,20 @@
 import './App.css';
-import Routes from './Routes/Routes';
-
+import Navbar from './Components/Navbar';
+import { HotelListFilters } from './Components/Filters/HotelListFilters';
+import Sort from './Components/Sort/Sort';
+import { Routes } from './Routes/Routes';
 
 function App() {
   return (
-    <div className="App">
-    
-  <Routes/>
-    </div>
-  );
+    <>
+
+      <Navbar />
+      <Routes />
+
+      <Sort />
+      <HotelListFilters />
+    </>
+  )
 }
 
 export default App;

@@ -1,15 +1,20 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from "react-router-dom"
+import { SearchBar } from "../Components/Search/SearchBar"
+import { SearchResults } from "../Components/Search/SearchResults"
 import Home from '../Components/SignUpAndSignIn/Home'
 import SignInForm from '../Components/SignUpAndSignIn/SignIn/SignInForm'
 import SignUpForm from '../Components/SignUpAndSignIn/SignUp/SignUpForm'
 
-const Routes = () => {
+
+export const Routes = () => {
     return (
         <div>
             <Switch>
                 <Route exact path="/">
-                   <Home/>
+                    <SearchBar/>
+                </Route>
+                <Route exact path="/results">
+                    <SearchResults/>
                 </Route>
                 <Route exact path="/signin">
                   <SignInForm/>
@@ -17,9 +22,7 @@ const Routes = () => {
                 <Route exact path="/signup">
                   <SignUpForm/>
                 </Route>
-           </Switch> 
+            </Switch>
         </div>
     )
 }
-
-export default Routes

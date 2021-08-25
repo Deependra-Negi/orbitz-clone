@@ -6,13 +6,15 @@ import { Routes } from './Routes/Routes';
 
 function App() {
   return (
-    <><Navbar/>
-      <Routes/>
-      {/* 
+    <>
+
+      <Navbar />
+      <Routes />
+
       <Sort />
-      <HotelListFilters/> */}
+      <HotelListFilters />
     </>
-  );
+  )
 }
 
 export default App;

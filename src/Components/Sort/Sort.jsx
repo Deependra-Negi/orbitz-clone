@@ -10,7 +10,8 @@ const Sort = () => {
         <FormControl >
           <InputLabel htmlFor="uncontrolled-native">Sort by</InputLabel>
           <NativeSelect
-            defaultValue={30}
+                    defaultValue={30}
+                    
             inputProps={{ 
               name: "name",
               id: "uncontrolled-native",

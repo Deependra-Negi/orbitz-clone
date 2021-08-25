@@ -5,7 +5,7 @@ import FilterCard from "../FilterCard";
 const GuestRating = () => {
     const guestRate=['Any','Wonderful 4.5+','Very Good 4+','Good 3.5+']
     return (
-      <Box>
+      <Box display="flex" flexDirection="column">
         {guestRate.map((item) => {
           return <FilterCard key={uuid()} label={item} />;
         })}

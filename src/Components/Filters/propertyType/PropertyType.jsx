@@ -6,7 +6,7 @@ const PropertyType = () => {
     const propertyTypes = ['Hotel', 'Hotel resort',
     'Bed and Breakfast','villa','Palace']
     return (
-      <Box>
+      <Box display="flex" flexDirection="column">
         {propertyTypes.map((item) => {
           return <FilterCard key={uuid()} label={item} />;
         })}

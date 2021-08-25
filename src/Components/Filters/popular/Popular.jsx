@@ -5,13 +5,12 @@ import FilterCard from '../FilterCard';
 const Popular = () => {
     const populars = ['pool','ocean view','breakfast included','hotel']
     return (
-        <Box>
-            {populars.map((item) => {
-                return <FilterCard key={uuid()
-            } label={ item}/>;
-            })}
-        </Box>
-    )
+      <Box display="flex" flexDirection="column">
+        {populars.map((item) => {
+          return <FilterCard key={uuid()} label={item} />;
+        })}
+      </Box>
+    );
 }
 
 export default Popular

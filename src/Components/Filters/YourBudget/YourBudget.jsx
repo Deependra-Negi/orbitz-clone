@@ -5,7 +5,7 @@ import FilterCard from "../FilterCard";
 const YourBudget = () => {
     const budgets =['Less then $75','$75 to $125','$125 to $250','above $250']
     return (
-      <Box>
+      <Box display='flex'flexDirection='column' >
         {budgets.map((item) => {
           return <FilterCard key={uuid()} label={item} />;
         })}

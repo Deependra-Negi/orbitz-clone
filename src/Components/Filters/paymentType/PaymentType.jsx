@@ -5,12 +5,12 @@ import FilterCard from "../FilterCard";
 const PaymentType = () => {
     const paymentTypes =['Fully refundable','Reserve now , Pay later']
     return (
-        <Box>
-            {paymentTypes.map((item) => {
-                return <FilterCard key={uuid()} label={item} />
-            })}
-        </Box>
-    )
+      <Box display="flex" flexDirection="column">
+        {paymentTypes.map((item) => {
+          return <FilterCard key={uuid()} label={item} />;
+        })}
+      </Box>
+    );
 }
 
 export default PaymentType

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import LoadingComp from "./Loading";
 import { SearchCompact } from "./SearchCompact";
 
-import Sort from '../Sort/Sort'
+
 import {HotelListFilters} from '../Filters/HotelListFilters'
 import HotelsList from "../HotelsList/HotelsList";
 
@@ -16,7 +16,7 @@ export const SearchResults = () => {
         ) : (
           <div style={{ backgroundColor: "#f5f5f5" }}>
             <SearchCompact />
-            <Sort />
+           
             <div style={{ display: "flex" }}>
               <div>
                 <HotelListFilters />

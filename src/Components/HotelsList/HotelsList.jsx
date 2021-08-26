@@ -16,6 +16,17 @@ const HotelsList = () => {
     price1000to2000: false,
     price2000to4000: false,
     priceAbove400: false,
+    Hotel: false,
+    HotelResort: false,
+    BedBreakfast: false,
+    villa: false,
+    Palace: false,
+    Any: false,
+    Wonderful45: false,
+    VeryGood4: false,
+    Good35: false,
+    FullyRefundable: false,
+    PayLater: false,
   };
   const [filter, setFilter] = useState(initFilter)
   const handleSort = (value) => {

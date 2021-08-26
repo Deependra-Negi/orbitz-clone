@@ -13,7 +13,7 @@ export default function HotelCard({ hotel }) {
             <Name>
               <h3>{hotel.name}</h3>
             </Name>
-            <Location>{hotel.area}</Location>
+            <Location>{hotel.area}, {hotel.city}</Location>
           </UpperSec>
           <LowerSec>
             <Left>
@@ -24,9 +24,9 @@ export default function HotelCard({ hotel }) {
             </Left>
             <Right>
               <Deals>{hotel.delas}% off</Deals>
-              <Price>Rs. {hotel.price}</Price>
+              <Price>{hotel.price} ₹</Price>
               <PerNight>per night</PerNight>
-              <Total>total {hotel.price}+20</Total>
+              <Total>total {hotel.price} ₹</Total>
               <Taxes> includes taxes & fees</Taxes>
             </Right>
           </LowerSec>

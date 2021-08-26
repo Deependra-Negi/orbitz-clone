@@ -13,6 +13,7 @@ import SpaIcon from '@material-ui/icons/Spa';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 import LocalParkingIcon from '@material-ui/icons/LocalParking';
 import DeckIcon from '@material-ui/icons/Deck';
+import RoomCard from "../RoomCard/RoomCard";
 
 
 
@@ -139,7 +140,7 @@ export function HotelPageData() {
                             </div>
                         </div>
                         <div className={styles.roomDiv}>
-                            <h1>Choose your Room</h1>
+                        <h1>Choose your Room</h1>
 
 
                         </div>

@@ -101,6 +101,17 @@ const HotelsList = () => {
             else {
               return a;
             }
+          }).filter(a=>{
+            return filter.Any?a.rating>0:a
+          })
+          .filter((a)=>{
+            return filter.Good35?a.rating>3.5:a
+          })
+          .filter((a)=>{
+            return filter.VeryGood4?a.rating>4:a
+          })
+          .filter((a)=>{
+            return filter.Wonderful45 ? a.rating > 4.5 : a;
           })
             .sort((a, b) => {
               return priceSorting

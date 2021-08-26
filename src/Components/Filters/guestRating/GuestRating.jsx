@@ -1,10 +1,16 @@
-import React from 'react'
+import React from "react";
 import Box from "@material-ui/core/Box";
 import { v4 as uuid } from "uuid";
 import FilterCard from "../FilterCard";
 const GuestRating = (props) => {
   const { filter, handleFilter } = props;
-  const guestRate = ["Any", "Wonderful 4.5+", "Very Good 4+", "Good 3.5+"];
+  const guestRate = [
+    { label: "Any", name: "Any" },
+    { label: "Wonderful 4.5+", name: "Wonderful45" },
+    { label: "Very Good 4+", name: "VeryGood4" },
+    { label: "Good 3.5+", name: "Good35" },
+  ];
+
   return (
     <Box display="flex" flexDirection="column">
       {guestRate.map((item) => {
@@ -13,8 +19,8 @@ const GuestRating = (props) => {
             key={uuid()}
             filter={filter}
             handleFilter={handleFilter}
-            name={item}
-            label={item}
+            name={item.name}
+            label={item.label}
           />
         );
       })}
@@ -22,4 +28,4 @@ const GuestRating = (props) => {
   );
 };
 
-export default GuestRating
+export default GuestRating;

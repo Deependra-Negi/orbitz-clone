@@ -11,6 +11,13 @@ const HotelsList = () => {
   const [pricePicksorting, setPricePickSorting] = useState(false);
   const [priceSorting, setPriceSorting] = useState(false);
   const [starSorting, setStarSorting] = useState(true);
+  const initFilter = {
+    priceBelow1000: false,
+    price1000to2000: false,
+    price2000to4000: false,
+    priceAbove400: false,
+  };
+  const [filter, setFilter] = useState(initFilter)
   const handleSort = (value) => {
     if (value === "price") {
       setPriceSorting(true);
@@ -50,15 +57,40 @@ const HotelsList = () => {
       setGuestRateSorting(false);
     }
   };
+  const handleFilter = (e) => {
+    const {name,checked}=e.target
+    setFilter({...filter,[name]:checked})
+  }
   return (
     <>
       <div style={{ display: "flex" }}>
         <div>
-          <HotelListFilters />
+          <HotelListFilters handleFilter={handleFilter } filter={filter}/>
         </div>
         <div>
           <Sort handleSort={handleSort} />
-          {results
+          {results.filter((a) => {
+            if (filter.priceAbove400) {
+              return a.price > 4000;
+            }
+             if (filter.price2000to4000) {
+               return a.price > 2000 && a.price <= 4000;
+            }
+             if (filter.price1000to2000) {
+               return a.price > 1000 && a.price <= 2000;
+             }
+            if (filter.priceBelow1000) {
+              
+              return (a.price<=1000)
+            }
+           
+           
+            
+            
+            else {
+              return a;
+            }
+          })
             .sort((a, b) => {
               return priceSorting
                 ? a.price - b.price

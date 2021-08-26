@@ -1,21 +1,24 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
+import { getHotel } from '../../Redux/Queries/actions'
 
 
 export default function HotelCard() {
-    // const[hotels, setHotels] = useState([])
-    // useEffect(() => {
-    //     axios.get("http://localhost:3001/hotels")
-    //     .then((res)=>setHotels(res.data))
-    // }, [])
+    const history = useHistory();
+    const dispatch = useDispatch();
     const results = useSelector(state => state.result)
+    const handleClick = (id) => {
+        dispatch(getHotel(id));
+        history.push(`/hotels/${id}`);
+    }
     
     return (
     <>
        {results.map((hotel)=>(
-        <CardCont>
+        <CardCont onClick={() => handleClick(hotel.id)}>
             <ImgCont><img src={hotel.images[0].url} alt="hotel" /></ImgCont>
             <TextCont>
                 <UpperSec>
@@ -53,6 +56,7 @@ display: flex;
 flex-wrap: wrap;
 color: #616161;
 background-color: #ffffff;
+cursor: pointer;
 `
 
 const ImgCont = styled.div`

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { SEARCH_FAILURE, SEARCH_REQUEST, SEARCH_SUCCESS } from "./actionTypes";
+import { GET_HOTEL_FAILURE, GET_HOTEL_REQUEST, GET_HOTEL_SUCCESS, SEARCH_FAILURE, SEARCH_REQUEST, SEARCH_SUCCESS } from "./actionTypes";
 
 export const searchRequest = (payload) => {
     return {
@@ -17,6 +17,35 @@ export const searchFailure = () => {
     return {
         type: SEARCH_FAILURE
     }
+}
+
+export const getHotelRequest = () => {
+    return {
+        type: GET_HOTEL_REQUEST
+    }
+}
+export const getHotelSuccess = (payload) => {
+    return {
+        type: GET_HOTEL_SUCCESS,
+        payload
+    }
+}
+export const getHotelFailure = () => {
+    return {
+        type: GET_HOTEL_FAILURE
+    }
+}
+
+
+export const getHotel = (payload) => (dispatch) => {
+    dispatch(getHotelRequest());
+    axios.get(`http://localhost:3001/hotels/${payload}`)
+        .then((res) => {
+            dispatch(getHotelSuccess(res.data));
+        })
+        .catch((err) => {
+            dispatch(getHotelFailure());
+        })
 }
 
 export const search = (payload) => (dispatch) => {

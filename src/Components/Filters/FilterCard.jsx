@@ -7,7 +7,7 @@ const FilterCard = (props) => {
       <FormControlLabel
         control={
           <Checkbox
-            checked={false}
+           /*  checked={false} */
             onChange={onChange}
             name="checkedB"
             color="primary"

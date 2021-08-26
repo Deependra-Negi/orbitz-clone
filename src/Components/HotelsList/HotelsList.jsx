@@ -52,7 +52,9 @@ const HotelsList = () => {
   return (
     <div>
       <Sort handleSort={handleSort} />
-      {results.map((hotel) => {
+      {results.sort((a,b)=>{
+          return priceSorting ? a.price - b.price : starSorting ? b.rating - a.rating : pricePicksorting ? b.price - a.price : guestRatesorting ? b.reviews - a.reviews : dealsorting ? b.delas-a.delas:b
+      }).map((hotel) => {
         return <HotelCard key={hotel.id} hotel={hotel} />;
       })}
     </div>

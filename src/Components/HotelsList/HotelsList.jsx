@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import HotelCard from "../HotelCard/HotelCard";
+import { HotelListFilters } from "../Filters/HotelListFilters";
 import Sort from "../Sort/Sort";
 
 const HotelsList = () => {
@@ -41,7 +42,7 @@ const HotelsList = () => {
       setStarSorting(false);
       setDealSorting(false);
       setGuestRateSorting(true);
-    } else if(value==='recommended') {     
+    } else if (value === "recommended") {
       setPriceSorting(false);
       setPricePickSorting(false);
       setStarSorting(false);
@@ -50,14 +51,33 @@ const HotelsList = () => {
     }
   };
   return (
-    <div>
-      <Sort handleSort={handleSort} />
-      {results.sort((a,b)=>{
-          return priceSorting ? a.price - b.price : starSorting ? b.rating - a.rating : pricePicksorting ? b.price - a.price : guestRatesorting ? b.reviews - a.reviews : dealsorting ? b.delas-a.delas:b
-      }).map((hotel) => {
-        return <HotelCard key={hotel.id} hotel={hotel} />;
-      })}
-    </div>
+    <>
+      <div style={{ display: "flex" }}>
+        <div>
+          <HotelListFilters />
+        </div>
+        <div>
+          <Sort handleSort={handleSort} />
+          {results
+            .sort((a, b) => {
+              return priceSorting
+                ? a.price - b.price
+                : starSorting
+                ? b.rating - a.rating
+                : pricePicksorting
+                ? b.price - a.price
+                : guestRatesorting
+                ? b.reviews - a.reviews
+                : dealsorting
+                ? b.delas - a.delas
+                : b;
+            })
+            .map((hotel) => {
+              return <HotelCard key={hotel.id} hotel={hotel} />;
+            })}
+        </div>
+      </div>
+    </>
   );
 };
 

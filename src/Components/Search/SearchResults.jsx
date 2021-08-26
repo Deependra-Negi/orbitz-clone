@@ -3,7 +3,7 @@ import LoadingComp from "./Loading";
 import { SearchCompact } from "./SearchCompact";
 
 
-import {HotelListFilters} from '../Filters/HotelListFilters'
+
 import HotelsList from "../HotelsList/HotelsList";
 
 
@@ -17,13 +17,11 @@ export const SearchResults = () => {
           <div style={{ backgroundColor: "#f5f5f5" }}>
             <SearchCompact />
            
-            <div style={{ display: "flex" }}>
-              <div>
-                <HotelListFilters />
-              </div>
-              <div>
+            <div >
+              
+              
                 <HotelsList />
-              </div>
+             
             </div>
           </div>
         )}

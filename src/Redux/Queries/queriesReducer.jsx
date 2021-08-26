@@ -1,4 +1,4 @@
-import { SEARCH_FAILURE, SEARCH_REQUEST, SEARCH_SUCCESS } from "./actionTypes";
+import { GET_HOTEL_FAILURE, GET_HOTEL_REQUEST, GET_HOTEL_SUCCESS, SEARCH_FAILURE, SEARCH_REQUEST, SEARCH_SUCCESS } from "./actionTypes";
 
 export const queriesReducer = (state = initState, { type, payload }) => {
     switch (type) {
@@ -26,6 +26,28 @@ export const queriesReducer = (state = initState, { type, payload }) => {
                 isError: true
             }   
         }
+        case GET_HOTEL_REQUEST: return {
+            ...state,
+            status: {
+                isLoading: true,
+                isError: false
+            }
+        }
+        case GET_HOTEL_SUCCESS: return {
+            ...state,
+            currentHotel: payload,
+            status: {
+                isLoading: false,
+                isError: false
+            }
+        }
+        case GET_HOTEL_FAILURE: return {
+            ...state,
+            status: {
+                isLoading: false,
+                isError: true
+            }
+        }
     }
 }
 
@@ -40,5 +62,6 @@ const initState = {
     status: {
         isLoading: false,
         isError: false,
-    }
+    },
+    currentHotel: {}
 }

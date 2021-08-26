@@ -1,51 +1,63 @@
-import React from "react";
-import styled from "styled-components";
+import React, {useState, useEffect} from 'react'
+import styled from 'styled-components'
+import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
+import { getHotel } from '../../Redux/Queries/actions'
 
-export default function HotelCard({ hotel }) {
-  return (
+
+export default function HotelCard() {
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const results = useSelector(state => state.result)
+    const handleClick = (id) => {
+        dispatch(getHotel(id));
+        history.push(`/hotels/${id}`);
+    }
+    
+    return (
     <>
-      <CardCont>
-        <ImgCont>
-          <img src={hotel.images[0].url} alt="hotel" />
-        </ImgCont>
-        <TextCont>
-          <UpperSec>
-            <Name>
-              <h3>{hotel.name}</h3>
-            </Name>
-            <Location>{hotel.area}</Location>
-          </UpperSec>
-          <LowerSec>
-            <Left>
-              <Refund>Fully refundable</Refund>
-              <Refund>Reserve now, pay later</Refund>
-              <Ratings>{hotel.rating}/5 Excelent</Ratings>
-              <Reviews>{hotel.reviews} reviews</Reviews>
-            </Left>
-            <Right>
-              <Deals>{hotel.delas}% off</Deals>
-              <Price>Rs. {hotel.price}</Price>
-              <PerNight>per night</PerNight>
-              <Total>total {hotel.price}+20</Total>
-              <Taxes> includes taxes & fees</Taxes>
-            </Right>
-          </LowerSec>
-        </TextCont>
-      </CardCont>
-    </>
-  );
+       {results.map((hotel)=>(
+        <CardCont onClick={() => handleClick(hotel.id)}>
+            <ImgCont><img src={hotel.images[0].url} alt="hotel" /></ImgCont>
+            <TextCont>
+                <UpperSec>
+                       <Name><h3>{hotel.name}</h3></Name>
+                    <Location>{hotel.area}</Location>
+                </UpperSec>
+                <LowerSec>
+                    <Left>
+                        <Refund>Fully refundable</Refund>
+                        <Refund>Reserve now, pay later</Refund>
+                        <Ratings>{hotel.rating}/5 Excelent</Ratings>
+                        <Reviews>{hotel.reviews} reviews</Reviews>
+                    </Left>
+                    <Right>
+                        <Deals>{hotel.delas}% off</Deals>
+                        <Price>Rs. {hotel.price}</Price>
+                        <PerNight>per night</PerNight>
+                        <Total>total {hotel.price}+20</Total>
+                        <Taxes> includes taxes & fees</Taxes>
+                    </Right>
+                </LowerSec>
+            </TextCont>
+           </CardCont>
+           ))}
+        </>
+    )
 }
 
 const CardCont = styled.div`
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-  margin-top: 0.75rem;
-  display: flex;
-  flex-wrap: wrap;
-  color: #616161;
-  background-color: #ffffff;
-`;
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+margin-top: 0.75rem;
+display: flex;
+flex-wrap: wrap;
+color: #616161;
+background-color: #ffffff;
+cursor: pointer;
+`
 
 const ImgCont = styled.div`
   display: flex;

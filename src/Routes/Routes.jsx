@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom"
 import { HotelPage } from "../Components/HotelPage/HotelPage"
 import { SearchBar } from "../Components/Search/SearchBar"
 import { SearchResults } from "../Components/Search/SearchResults"
-import Home from '../Components/SignUpAndSignIn/Home'
+
 import SignInForm from '../Components/SignUpAndSignIn/SignInForm'
 import SignUpForm from '../Components/SignUpAndSignIn/SignUpForm'
 

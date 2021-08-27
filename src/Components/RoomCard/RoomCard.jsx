@@ -19,6 +19,7 @@ import { FormControlLabel } from '@material-ui/core';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button'
+import { PaymentModal } from '../PaymentModal/PaymentModal';
 
 const useStyles = makeStyles((theme) => ({
     icon:{
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function RoomCard() {
+export default function RoomCard({img, name}) {
 
     const [choice, setChoice] = useState("No")
 
@@ -53,10 +54,10 @@ export default function RoomCard() {
     return (
         <CardCont>
             <ImgCont>
-                <img src="https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" alt="" />
+                <img src={img} alt="" />
             </ImgCont>
             <TextCont>
-                <Name><h3>Deluxe Room</h3></Name>
+                <Name><h3>{name}</h3></Name>
                 <Details>
                     <li><Span><Icon><RoundedCornerSharpIcon className={classes.icon} /></Icon>377 sq ft</Span></li>
                     <li><Span><Icon><PeopleIcon className={classes.icon} /></Icon>Sleeps 2</Span></li>
@@ -87,7 +88,8 @@ export default function RoomCard() {
                         <Span className={classes.blue}>More details<Icon2><ExpandMoreIcon className={classes.icon} /></Icon2></Span>
                     </Right>
                     <Left>
-                        <BtnCont><Button className={classes.btn} variant="contained" color="secondary">Reserve</Button></BtnCont>
+                        {/* <BtnCont><Button className={classes.btn} variant="contained" color="secondary">Reserve</Button></BtnCont> */}
+                        <BtnCont><PaymentModal className={classes.btn}/></BtnCont>
                     </Left>
                 </TotalReserve>
             </TextCont>
@@ -102,7 +104,10 @@ const CardCont = styled.div`
     }
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 350px;
+    margin: 15px;
+    border: 1px solid lightgrey;
+    background-color:white;
 `
 const ImgCont = styled.div`
     height: 220px;

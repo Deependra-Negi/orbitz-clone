@@ -15,7 +15,6 @@ const FilterCard = (props) => {
       <FormControlLabel
         control={
           <Checkbox
-            value={filter.name}
             checked={filter.name}
             onChange={handleChange}
             name={name}

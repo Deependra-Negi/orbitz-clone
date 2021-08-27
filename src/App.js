@@ -8,6 +8,7 @@ import { Routes } from './Routes/Routes';
 function App() {
   return (
     <>
+      <Navbar/>
  <Routes/>
     
     

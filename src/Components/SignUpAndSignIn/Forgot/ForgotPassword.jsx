@@ -22,7 +22,7 @@ const ForgotPassword = () => {
     }, [])
     
     const getData = async () => {
-        let { data } = await axios.get("http://localhost:3010/users")
+        let { data } = await axios.get("http://localhost:3001/users")
         setAllData(data)
 
     }

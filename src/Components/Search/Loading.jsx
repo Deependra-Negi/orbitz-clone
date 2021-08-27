@@ -2,7 +2,6 @@ import React from 'react';
 import ReactLoading from 'react-loading';
 import { makeStyles } from '@material-ui/core';
 
-
 const LoadingComp = () => {
     const useStyles = makeStyles({
         loadingLogo: {

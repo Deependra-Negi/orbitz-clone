@@ -141,7 +141,7 @@ export function HotelPageData() {
                         </div>
                         <div className={styles.roomDiv}>
                         <h1>Choose your Room</h1>
-
+                            <RoomCard/>
 
                         </div>
                     <div className={styles.areaDiv}>

@@ -60,13 +60,15 @@ export function SearchCompact() {
             fontSize: "18px"
         },
         btn2: {
-            width: "210px",
+            width: "180px",
             height: "49px",
             backgroundColor: "rgb(200,50,89)",
-            borderRadius: "1px",
+            borderRadius: "3px",
             textTransform: "none",
             fontSize: "18px",
-            margin: "5px 40%",
+            position: "absolute",
+            bottom: 20,
+            left: 510,
         },
         inpBox: {
             display: "flex",

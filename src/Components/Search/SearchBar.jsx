@@ -9,6 +9,8 @@ import ListAltIcon from '@material-ui/icons/ListAlt';
 import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
 import styles from "./Home.module.css";
 import { PaymentModal } from "../PaymentModal/PaymentModal";
+import HomepageStatic from "../HomepageStatic/HomepageStatic";
+import styled from "styled-components";
 
 export const SearchBar = () => {
     const [valueTab, setValueTab] = useState(0);
@@ -26,7 +28,7 @@ export const SearchBar = () => {
         eachTab: {
             height: "90px",
             textTransform: "none",
-            width: "16.5%"
+            width: "16.5%",
         },
         tabs: {
             width: "100%",
@@ -35,18 +37,24 @@ export const SearchBar = () => {
             height: "80px",
         },
         containerSearchBox: {
-            width: "89%",
-            height: "350px",
+            position: "absolute",
+            top: 50,
+            left:160,
+            width: "77%",
+            height: "290px",
             border: "10px",
             borderRadius: "1px",
-            margin: "0px auto",
-            padding: "3px 10px",
-            backgroundColor: "white"
+            padding: "0px 15px",
+            backgroundColor: "white",
+            boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
         },
         tb: {
             width: "100%",
             display: "flex",
             justifyContent:"space-evenly !important"
+        },
+        lite:{
+            color: "#616161",
         }
     })
     const classes = useStyles();
@@ -54,27 +62,42 @@ export const SearchBar = () => {
         setValueTab(newValue);
     };
     return (
-        <Box className={styles.home}>
-        <Box className={classes.containerSearchBox}>
-            <Box className={classes.tabs}>
-                    <Tabs
-                        value={valueTab}
-                        onChange={handleTabChange}
-                    indicatorColor="primary"
-                    className={classes.tb}
-                        textColor="primary"
-                    >
-                        <Tab icon={<DomainIcon/>} className={classes.eachTab} label="Stays"/>
-                        <Tab icon={<FlightIcon/>} className={classes.eachTab} label="Flights" />
-                        <Tab icon={<DriveEtaIcon/>} className={classes.eachTab} label="Cars" />
-                        <Tab icon={<WorkIcon/>} className={classes.eachTab} label="Packages" />
-                        <Tab icon={<ListAltIcon/>} className={classes.eachTab} label="Things to do" />
-                        <Tab icon={<DirectionsBoatIcon/>} className={classes.eachTab} label="Cruises" />
-                    </Tabs>
-            </Box>
-            <Divider className={classes.div}/>
-            <SearchCompact />
-            </Box>
-            </Box>
+        <MainCont>
+            <Box className={styles.home}>
+            <Box className={classes.containerSearchBox}>
+                <Box className={classes.tabs}>
+                        <Tabs
+                            value={valueTab}
+                            onChange={handleTabChange}
+                        indicatorColor="primary"
+                        className={classes.tb}
+                            textColor="primary"
+                        >
+                            <Tab icon={<DomainIcon className={classes.lite}/>} className={classes.eachTab} label="Stays"/>
+                            <Tab icon={<FlightIcon className={classes.lite}/>} className={classes.eachTab} label="Flights" />
+                            <Tab icon={<DriveEtaIcon className={classes.lite}/>} className={classes.eachTab} label="Cars" />
+                            <Tab icon={<WorkIcon className={classes.lite}/>} className={classes.eachTab} label="Packages" />
+                            <Tab icon={<ListAltIcon className={classes.lite}/>} className={classes.eachTab} label="Things to do" />
+                            <Tab icon={<DirectionsBoatIcon className={classes.lite}/>} className={classes.eachTab} label="Cruises" />
+                        </Tabs>
+                </Box>
+                <Divider className={classes.div}/>
+                <SearchCompact />
+                </Box>
+                </Box>
+                <StaticDivs>
+                    <HomepageStatic />
+                </StaticDivs>
+            </MainCont>
     )
 }
+
+//-------------------styled components--------------------
+
+const MainCont = styled.div`
+    background-color: #f5f5f5;
+`
+const StaticDivs = styled.div`
+    max-width:80rem;
+    margin: auto;
+`

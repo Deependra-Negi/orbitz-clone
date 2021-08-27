@@ -16,8 +16,6 @@ const GuestRating = (props) => {
       {guestRate.map((item) => {
         return (
           <FilterCard
-            key={uuid()}
-            filter={filter}
             handleFilter={handleFilter}
             name={item.name}
             label={item.label}

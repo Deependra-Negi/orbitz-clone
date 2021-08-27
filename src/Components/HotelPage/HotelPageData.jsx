@@ -27,7 +27,7 @@ export function HotelPageData() {
             clearInterval(timer);
         }
     }, [])
-    const hotel = useSelector(state => state.currentHotel);
+    const hotel = useSelector(state => state.Query.currentHotel);
     const starArr = new Array(Math.round(hotel.rating)).fill(1);
     const [value, setValue] = useState(0);
     const ref = useRef();

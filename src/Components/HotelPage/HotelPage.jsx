@@ -5,7 +5,7 @@ import LoadingComp from "../Search/Loading";
 import { HotelPageData } from "./HotelPageData";
 
 export function HotelPage() {
-    const isLoading = useSelector(state => state.status.isLoading);
+    const isLoading = useSelector(state => state.Query.status.isLoading);
     return (
         <div>
             {isLoading ? <LoadingComp /> : <HotelPageData/>}

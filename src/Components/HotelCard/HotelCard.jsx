@@ -9,7 +9,8 @@ import { getHotel } from '../../Redux/Queries/actions'
 export default function HotelCard() {
     const history = useHistory();
     const dispatch = useDispatch();
-    const results = useSelector(state => state.result)
+  const results = useSelector(state => state.Query.result)
+  console.log(results)
     const handleClick = (id) => {
         dispatch(getHotel(id));
         history.push(`/hotels/${id}`);
@@ -17,7 +18,8 @@ export default function HotelCard() {
     
     return (
     <>
-       {results.map((hotel)=>(
+        {results.map((hotel) => (
+      
         <CardCont onClick={() => handleClick(hotel.id)}>
             <ImgCont><img src={hotel.images[0].url} alt="hotel" /></ImgCont>
             <TextCont>

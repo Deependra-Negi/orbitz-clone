@@ -5,7 +5,8 @@ import { HotelListFilters } from "../Filters/HotelListFilters";
 import Sort from "../Sort/Sort";
 
 const HotelsList = () => {
-  const results = useSelector((state) => state.result);
+  const results = useSelector((state) => state.Query.result);
+// console.log("allhotelssort",results)
   const [dealsorting, setDealSorting] = useState(false);
   const [guestRatesorting, setGuestRateSorting] = useState(false);
   const [pricePicksorting, setPricePickSorting] = useState(false);
@@ -30,6 +31,7 @@ const HotelsList = () => {
   };
   const [filter, setFilter] = useState(initFilter);
   const handleSort = (value) => {
+    console.log(value)
     if (value === "price") {
       setPriceSorting(true);
       setPricePickSorting(false);

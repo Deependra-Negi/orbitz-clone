@@ -3,7 +3,7 @@ import LoadingComp from "./Loading";
 import { SearchCompact } from "./SearchCompact";
 import HotelsList from "../HotelsList/HotelsList";
 export const SearchResults = () => {
-    const isLoading = useSelector(state => state.status.isLoading);
+  const isLoading = useSelector(state => state.Query.status.isLoading);
     return (
       <div>
         {isLoading ? (

@@ -15,8 +15,8 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { logoutdonefunc } from "../Redux/Auth/action";
-import { saveData } from "../Utils/LocalStore/LocalData";
+import { logoutdonefunc } from "../../Redux/Auth/action";
+import { saveData } from "../../Utils/LocalStore/LocalData";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({

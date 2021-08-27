@@ -10,11 +10,11 @@ import ForgotPassword from './Components/SignUpAndSignIn/Forgot/ForgotPassword';
 function App() {
   return (
     <>
+       <Navbar />
       <Routes />
       
       
     
-       <Navbar />
 {/* 
       <Sort />
       <HotelListFilters />  */}

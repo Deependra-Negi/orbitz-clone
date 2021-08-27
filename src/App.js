@@ -1,27 +1,14 @@
-import './App.css';
-import Navbar from './Components/Navbar/Navbar';
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
 
-import { Routes } from './Routes/Routes';
-//import RoomCard from './Components/RoomCard/RoomCard'
-
-import RewardCard from './Components/RewardCard/RewardCard';
-import ForgotPassword from './Components/SignUpAndSignIn/Forgot/ForgotPassword';
-
+import { Routes } from "./Routes/Routes";
 function App() {
   return (
     <>
-       <Navbar />
+      <Navbar />
       <Routes />
-      
-      
-    
-{/* 
-      <Sort />
-      <HotelListFilters />  */}
-    
-    
     </>
-  )
+  );
 }
 
 export default App;

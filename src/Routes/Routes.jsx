@@ -2,9 +2,9 @@ import { Route, Switch } from "react-router-dom"
 import { HotelPage } from "../Components/HotelPage/HotelPage"
 import { SearchBar } from "../Components/Search/SearchBar"
 import { SearchResults } from "../Components/Search/SearchResults"
-
-import SignInForm from '../Components/SignUpAndSignIn/SignIn/SignInForm'
-import SignUpForm from '../Components/SignUpAndSignIn/SignUp/SignUpForm'
+import Home from '../Components/SignUpAndSignIn/Home'
+import SignInForm from '../Components/SignUpAndSignIn/SignInForm'
+import SignUpForm from '../Components/SignUpAndSignIn/SignUpForm'
 
 
 export const Routes = () => {
@@ -17,9 +17,6 @@ export const Routes = () => {
                 <Route exact path="/results">
                     <SearchResults/>
                 </Route>
-                {/* <Route exact path="/">
-               <Home/>
-                </Route> */}
                 <Route exact path="/signin">
                   <SignInForm/>
                 </Route>

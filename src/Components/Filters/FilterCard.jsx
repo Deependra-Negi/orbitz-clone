@@ -4,11 +4,6 @@ import Checkbox from "@material-ui/core/Checkbox";
 const FilterCard = (props) => {
   const { filter, label, handleFilter, name } = props;
  
-  
-
-
- 
-  
   const handleChange = (e) => {
   
 
@@ -20,6 +15,7 @@ const FilterCard = (props) => {
       <FormControlLabel
         control={
           <Checkbox
+            value={filter.name}
             checked={filter.name}
             onChange={handleChange}
             name={name}

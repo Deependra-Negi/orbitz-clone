@@ -26,7 +26,7 @@ const YourBudget = (props) => {
       <Box display='flex'flexDirection='column' >
         {budgets.map((item) => {
        
-          return <FilterCard key={uuid()} filter={filter}  handleFilter={handleFilter} name={item.name } label={item.label} />;
+          return <FilterCard handleFilter={handleFilter} name={item.name } label={item.label} />;
         })}
       </Box>
     );

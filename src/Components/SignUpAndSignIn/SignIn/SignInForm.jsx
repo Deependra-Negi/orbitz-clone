@@ -30,9 +30,9 @@ const SignInForm = () => {
     }
     const [formdata, setformdata] = useState(init);
     const history = useHistory()
-    const [status, setstatus] = useState(false);
+    // const [status, setstatus] = useState(false);
 
-    const [disable, setdisable] = useState(true);
+    // const [disable, setdisable] = useState(true);
     const { isLoading, isAuth, isError } = useSelector((state) => state.auth)
 
     console.log(isLoading, isAuth)
@@ -47,7 +47,7 @@ const SignInForm = () => {
     const handleonSubmit = (event) => {
         event.preventDefault()
         console.log(formdata)
-        axios.get('http://localhost:3010/users').then(function (response) {
+        axios.get('http://localhost:3001/users').then(function (response) {
             let allusers = response.data;
             let status = false
             console.log(allusers);
@@ -61,7 +61,7 @@ const SignInForm = () => {
 
               
                 axios
-                    .post('http://localhost:3010/login', { ...formdata })
+                    .post('http://localhost:3001/login', { ...formdata })
                     .then(function (response) { });
                 alert("Login Successful Welcome to Dashboard")
                 let token = formdata.id

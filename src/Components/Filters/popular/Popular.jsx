@@ -16,8 +16,6 @@ const Popular = (props) => {
       {populars.map((item) => {
         return (
           <FilterCard
-            key={uuid()}
-            filter={filter}
             handleFilter={handleFilter}
             name={item}
             label={item}

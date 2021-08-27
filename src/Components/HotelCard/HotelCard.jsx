@@ -41,7 +41,6 @@ export default function HotelCard({hotel}) {
                 </LowerSec>
             </TextCont>
            </CardCont>
-           ))
         </>
     )
 }

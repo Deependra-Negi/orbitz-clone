@@ -10,8 +10,6 @@ const PaymentType = (props) => {
       {paymentTypes.map((item) => {
         return (
           <FilterCard
-            key={uuid()}
-            filter={filter}
             handleFilter={handleFilter}
             name={item}
             label={item}

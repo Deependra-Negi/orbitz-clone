@@ -26,10 +26,11 @@ const SignUpForm = () => {
         showPassword: false,
     }
     const [formdata, setformdata] = useState(init);
-    const [status, setstatus] = useState(false);
+  
+    
     const history = useHistory()
 
-    const [disable, setdisable] = useState(true);
+   
     const { isLoading, isAuth, isError } = useSelector((state) => state.auth)
  
     console.log(isLoading, isAuth)
@@ -63,7 +64,7 @@ const SignUpForm = () => {
         console.log(formdata)
         let username = formdata.firstname
         dispatch(setuserName({ username }))
-        axios.get('http://localhost:3010/users').then(function (response) {
+        axios.get('http://localhost:3001/users').then(function (response) {
             let allusers = response.data;
             let status = false;
         
@@ -75,7 +76,7 @@ const SignUpForm = () => {
             });
             if (!status) {
                 axios
-                    .post('http://localhost:3010/users', { ...formdata })
+                    .post('http://localhost:3001/users', { ...formdata })
                     .then(function (response) {
                         console.log(response)
                       

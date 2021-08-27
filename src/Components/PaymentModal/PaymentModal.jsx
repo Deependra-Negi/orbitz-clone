@@ -27,8 +27,8 @@ export function PaymentModal() {
         btn: {
             color: "white",
             backgroundColor: "rgb(200,50,89)",
-            width: "180px",
-            height: "49px",
+            width: "150px",
+            height: "43px",
             border: "0px",
             borderRadius: "3px",
             cursor: "pointer",
@@ -81,9 +81,9 @@ export function PaymentModal() {
                                 <h5 className={classes.h5}>We will process your payment in your local currency</h5>
                             </div>
                             <div >
-                                <h3 style={{ fontSize: "25px" }} className={classes.alignRight}>Rs. 620</h3>
+                                <h3 style={{ fontSize: "25px" }} className={classes.alignRight}>₹ 5000</h3>
                                 <p className={classes.alignRight}>per night</p>
-                                <p style={{ fontWeight: "700" }} className={classes.alignRight}>Rs. 731 total</p>
+                                <p style={{ fontWeight: "700" }} className={classes.alignRight}>₹ 7310 total</p>
                                 <p className={classes.alignRight}>includes taxes and fees</p>
                                 <button style={{ color: "white" }} variant="contained" color="secondary" className={classes.btn}>Pay now</button>
                             </div>
@@ -95,17 +95,17 @@ export function PaymentModal() {
                                 <h5 className={classes.h5}>Pay the property directly in their local currency</h5>
                             </div>
                             <div >
-                                <h3 style={{ fontSize: "25px" }} className={classes.alignRight}>Rs. 620</h3>
+                                <h3 style={{ fontSize: "25px" }} className={classes.alignRight}>₹ 5000</h3>
                                 <p className={classes.alignRight}>per night</p>
-                                <p style={{ fontWeight: "700" }} className={classes.alignRight}>Rs. 731 total</p>
+                                <p style={{ fontWeight: "700" }} className={classes.alignRight}>₹ 7310 total</p>
                                 <p className={classes.alignRight}>includes taxes and fees</p>
-                                <button variant="contained" color="secondary" className={classes.btn}>Pay at property</button>
+                                <button className={classes.btn}>Pay at property</button>
                             </div>
                         </div>
                     </div>
                 </Box>
             </Modal>
-            <Button onClick={() => setPay(true)}>Pay</Button>
+            <button className={classes.btn} onClick={() => setPay(true)}>Reserve</button>
         </div>
     )
 }

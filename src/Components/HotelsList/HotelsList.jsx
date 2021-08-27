@@ -29,7 +29,7 @@ const HotelsList = () => {
     FullyRefundable: false,
     PayLater: false,
   };
-  const [filter, setFilter] = useState(initFilter)
+  const [filter, setFilter] = useState(initFilter);
   const handleSort = (value) => {
     console.log(value)
     if (value === "price") {
@@ -71,50 +71,46 @@ const HotelsList = () => {
     }
   };
   const handleFilter = (e) => {
-    const {name,checked}=e.target
-    setFilter({...filter,[name]:checked})
-  }
+    const { name, checked } = e.target;
+    setFilter({ ...filter, [name]: checked });
+  };
   return (
     <>
       <div style={{ display: "flex" }}>
         <div>
-          <HotelListFilters handleFilter={handleFilter } filter={filter}/>
+          <HotelListFilters handleFilter={handleFilter} filter={filter} />
         </div>
         <div>
           <Sort handleSort={handleSort} />
-          {results.filter((a) => {
-            if (filter.priceAbove400) {
-              return a.price > 4000;
-            }
-             if (filter.price2000to4000) {
-               return a.price > 2000 && a.price <= 4000;
-            }
-             if (filter.price1000to2000) {
-               return a.price > 1000 && a.price <= 2000;
-             }
-            if (filter.priceBelow1000) {
-              
-              return (a.price<=1000)
-            }
-           
-           
-            
-            
-            else {
-              return a;
-            }
-          }).filter(a=>{
-            return filter.Any?a.rating>0:a
-          })
-          .filter((a)=>{
-            return filter.Good35?a.rating>3.5:a
-          })
-          .filter((a)=>{
-            return filter.VeryGood4?a.rating>4:a
-          })
-          .filter((a)=>{
-            return filter.Wonderful45 ? a.rating > 4.5 : a;
-          })
+          {results
+            .filter((a) => {
+              if (filter.priceAbove400) {
+                return a.price > 4000;
+              }
+              if (filter.price2000to4000) {
+                return a.price > 2000 && a.price <= 4000;
+              }
+              if (filter.price1000to2000) {
+                return a.price > 1000 && a.price <= 2000;
+              }
+              if (filter.priceBelow1000) {
+                return a.price <= 1000;
+              } else {
+                return a;
+              }
+            })
+            .filter((a) => {
+              return filter.Any ? a.rating > 0 : a;
+            })
+            .filter((a) => {
+              return filter.Good35 ? a.rating > 3.5 : a;
+            })
+            .filter((a) => {
+              return filter.VeryGood4 ? a.rating > 4 : a;
+            })
+            .filter((a) => {
+              return filter.Wonderful45 ? a.rating > 4.5 : a;
+            })
             .sort((a, b) => {
               return priceSorting
                 ? a.price - b.price

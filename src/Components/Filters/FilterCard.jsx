@@ -4,23 +4,18 @@ import Checkbox from "@material-ui/core/Checkbox";
 const FilterCard = (props) => {
   const { filter, label, handleFilter, name } = props;
  
+  const handleChange = (e) => {
   
 
-
- 
-  // console.log('filter card: ',typeof(status))
-  const handleChange = (e) => {
-    // console.log('in card: ',e.target.checked)
-
     handleFilter(e);
-    // console.log(e.target.name);
-    // console.log(e.target.checked);
+  
   };
  
     return (
       <FormControlLabel
         control={
           <Checkbox
+            value={filter.name}
             checked={filter.name}
             onChange={handleChange}
             name={name}

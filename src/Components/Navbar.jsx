@@ -12,6 +12,10 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutdonefunc } from "../Redux/Auth/action";
+import { saveData } from "../Utils/LocalStore/LocalData";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,6 +53,17 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
   const classes = useStyles();
+  const { isAuth } = useSelector((state) => state.auth)
+  
+  const dispatch = useDispatch()
+  const handleLogout = () => {
+    if (isAuth) {
+
+      dispatch(logoutdonefunc())
+      saveData("token", "")
+    }
+  }
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const theme = useTheme();
@@ -134,10 +149,13 @@ const Navbar = () => {
               </Button>
               <Button className={classes.btn}>
                 Trips
-              </Button>
-              <Button className={classes.btn}>
-                Sign in
-              </Button>
+                </Button>
+                <Link style={{textDecoration:"none"}} to="/signin">
+                <Button onClick={handleLogout} className={classes.btn}>
+               
+                  {isAuth?"SIGNOUT":"SIGNIN"}
+                  </Button>
+                </Link>
             </div>
           )}
         </Toolbar>

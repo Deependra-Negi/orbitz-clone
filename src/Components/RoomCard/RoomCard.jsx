@@ -46,13 +46,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-<<<<<<< HEAD
-export default function RoomCard({ img, name }) {
-    const hotel = useSelector(state => state.Query.currentHotel);
-    const temp = Number(hotel.price) * (3 / 100);
-=======
 export default function RoomCard({img, name, price, deals, id}) {
->>>>>>> 462fadc6fe8dd3da8490e067d6e0633e9137575f
 
     const [choice, setChoice] = useState("No")
 
@@ -86,19 +80,11 @@ export default function RoomCard({img, name, price, deals, id}) {
                 </RadioGroup>
                 <TotalReserve>
                     <Right>
-<<<<<<< HEAD
-                        <Orbucks><Icon3><MonetizationOnIcon /></Icon3><Orbucks2>Earn 300 ₹ Orbucks</Orbucks2></Orbucks>
-                        <Deals>30% off</Deals>
-                        <Price>{hotel.price}₹</Price>
-                        <PerNight>per night</PerNight>
-                        <Total>{Number(hotel.price) + temp}₹ total</Total>
-=======
                         <Orbucks><Icon3><MonetizationOnIcon /></Icon3><Orbucks2>Earn ₹ {price*0.03} Orbucks</Orbucks2></Orbucks>
                         <Deals>{deals}% off</Deals>
                         <Price>{price}</Price>
                         <PerNight>per night</PerNight>
                         <Total>total {price+price*0.1}</Total>
->>>>>>> 462fadc6fe8dd3da8490e067d6e0633e9137575f
                         <Taxes> includes taxes & fees</Taxes>
                         <Span className={classes.blue}>More details<Icon2><ExpandMoreIcon className={classes.icon} /></Icon2></Span>
                     </Right>

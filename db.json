@@ -1,5 +1,41 @@
 {
-  "payment": [],
+  "payment": [
+    {
+      "token": {
+        "id": "tok_1JTWPySJE6bJwq3gqG8IiMU1",
+        "object": "token",
+        "card": {
+          "id": "card_1JTWPySJE6bJwq3gzoQ7SjGk",
+          "object": "card",
+          "address_city": "Bengaluru",
+          "address_country": "India",
+          "address_line1": "Jayanagar",
+          "address_line1_check": "unchecked",
+          "address_line2": null,
+          "address_state": "19",
+          "address_zip": "560001",
+          "address_zip_check": "unchecked",
+          "brand": "Visa",
+          "country": "US",
+          "cvc_check": "unchecked",
+          "dynamic_last4": null,
+          "exp_month": 11,
+          "exp_year": 2037,
+          "funding": "credit",
+          "last4": "4242",
+          "name": "few",
+          "tokenization_method": null
+        },
+        "client_ip": "157.45.218.246",
+        "created": 1630175894,
+        "email": "doodoo@gmail.com",
+        "livemode": false,
+        "type": "card",
+        "used": false
+      },
+      "id": 1
+    }
+  ],
   "users": [
     {
       "id": 1,

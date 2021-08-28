@@ -50,7 +50,19 @@ export const useStyles = makeStyles((theme) => ({
     },
     textmargin: {
         marginTop:15
+    },
+
+    paper: {
+        width: "30%",
+        margin:"40px auto"
+    },
+    subModel: {
+        display:"flex",
+       padding:"10px",
+        justifyContent: "center",
+        color:"white"
     }
+
 
 
 

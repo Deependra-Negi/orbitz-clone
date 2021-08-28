@@ -1,26 +1,29 @@
-import { Box, Grid, TextField, Button, Typography, Container, Checkbox } from '@material-ui/core'
+import { Box, Grid, TextField, Button, Typography, Container, Checkbox, Modal, Fade, Paper } from '@material-ui/core'
 import React, { useState } from 'react';
 import GoogleLogin from "react-google-login";
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
+
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useStyles } from '../SignUp/SignupMake';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import CloseIcon from '@material-ui/icons/Close';
 import { useHistory } from 'react-router';
 import axios from 'axios'
-import { useEffect } from 'react';
+
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginSuccess, setuserName } from '../../../Redux/Auth/action';
 import {v4 as uuid} from "uuid"
 
 const SignInForm = () => {
+    const [open, setOpen] = React.useState(false);
+   
+
     const init = {
        
         email: "",
@@ -33,10 +36,20 @@ const SignInForm = () => {
     // const [status, setstatus] = useState(false);
 
     // const [disable, setdisable] = useState(true);
-    const { isLoading, isAuth, isError } = useSelector((state) => state.auth)
+    const { isLoading, isAuth
+    } = useSelector((state) => state.auth)
 
     console.log(isLoading, isAuth)
     const dispatch = useDispatch()
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+ 
 
 
     const handleonChangeinput = (e) => {
@@ -63,15 +76,15 @@ const SignInForm = () => {
                 axios
                     .post('http://localhost:3001/login', { ...formdata })
                     .then(function (response) { });
-                alert("Login Successful Welcome to Dashboard")
+                // alert("Login Successful Welcome to Dashboard")
                 let token = formdata.id
              
                 dispatch(loginSuccess({token}))
                 history.push("/")
             } else {
                 
-                  alert("Please Fill Valid Credentials")
-                // history.push('/signup');
+                handleOpen()
+             
             }
            
         });
@@ -94,39 +107,15 @@ const SignInForm = () => {
         dispatch(loginSuccess({ token }))
         dispatch(setuserName({ username }))
      
-        alert("google login succesful")
+    
         history.push('/');
-        // axios.get('http://localhost:3010/users').then(function (response) {
-        //     let allusers = response.data;
-        //     console.log(allusers)
-        //     let status = false;
-        //     console.log(allusers);
-        //     allusers.forEach((el) => {
-        //         console.log(el.email, res.profileObj.email)
-        //         if (el.email === res.profileObj.email) {
-        //             status = true;
-        //         }
-        //     });
-        //     if (!status) {
-        //         axios
-        //             .post('http://localhost:3010/users', data)
-        //             .then(function (response) { });
-        //     }
-        // });
-
-        // axios.get('http://localhost:3010/login').then(function (resp) {
-        //     if (resp.data.length === 0) {
-        //         axios
-        //             .post('http://localhost:3010/login', res.profileObj)
-        //             .then(function (resp) { });
-        //         history.push('/');
-        //     } else {
-        //         history.push('/');
-        //     }
-        // });
+  
     };
 
-    
+   
+
+
+
    
 
 
@@ -140,6 +129,7 @@ const SignInForm = () => {
         };
         const classes = useStyles()
     
+ 
     // if (isAuth) {
     //     return <Redirect to="/"/>
     // } 
@@ -169,20 +159,17 @@ const SignInForm = () => {
                                 <Box className={classes.Box1}>
                                    
                                     <Box className={classes.Box2}>
-                                        <button>
-                                        <GoogleLogin 
-                                            className="google"
+                                      
+                                        <GoogleLogin className={classes.google}
+                                        
                                             clientId="1041538525274-ir3pldh2s7m3rhr86gut482ra9h15dcs.apps.googleusercontent.com"
                                             onSuccess={responseGoogle}
-                                            onFailure={responseGoogle}
+                                            // onFailure={responseGoogle1}
                                             // isSignedIn={true}
                                             cookiePolicy={"single_host_origin"}
                                          
                                         />
                                       
-                                            <img width="20px" src="https://www.wemu.org/sites/wemu/files/201701/Google_-G-_Logo.svg_.png" alt="googlelogo" />
-                                        </button>
-                                        <h4 className={classes.IconColor}>Google</h4>
 
 
                                     </Box>
@@ -280,6 +267,40 @@ const SignInForm = () => {
 
                 </Grid>
             </form>
+
+            <Modal 
+                aria-labelledby="spring-modal-title"
+                aria-describedby="spring-modal-description"
+                className={classes.Modal}
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                // BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={open}>
+                    <Paper className={classes.paper}>
+                        <div className={classes.subModal} style={{display:"flex",justifyContent:"space-around",alignItems:"center"}}>
+                            <h2 style={{color:"white"}} >!opps:warning</h2>
+                            <Button variant="contained" color="inherit" style={{ height: "30px" }} onClick={handleClose}>X</Button>
+                        </div>
+                        <div className={classes.subModal1}>
+
+                        <p  >Please Fill Valid Credentials</p>
+                        </div>
+                        <Button variant="contained"
+                            color="primary"  onClick={handleClose}>OK</Button>
+                    </Paper>
+                </Fade>
+            </Modal>
+
+
+       
+
+
+
         </>
     )
 

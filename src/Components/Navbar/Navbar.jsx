@@ -18,59 +18,62 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutdonefunc } from "../../Redux/Auth/action";
 import { saveData } from "../../Utils/LocalStore/LocalData";
 import { Link } from "react-router-dom";
+import {  Fade, Modal, Paper } from "@material-ui/core";
+import { useState } from "react";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    //width: "100vw",
+
     margin: 0,
     padding: 0
   },
-  
+
   navSpacing: {
     maxWidth: "78rem",
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
-    alignSelf:"center"
+    alignSelf: "center"
   },
-  
+
   headerBg: {
-      backgroundColor: "#00253c",
-      height: "70px"
+    backgroundColor: "#00253c",
+    height: "70px"
   },
-  
+
   menuButton: {
-      marginRight: theme.spacing(0),
+    marginRight: theme.spacing(0),
   },
 
   logo: {
     marginTop: "10px",
-    marginLeft:"20px",
-      [theme.breakpoints.down("xs")]: {
+    marginLeft: "20px",
+    [theme.breakpoints.down("xs")]: {
       flexGrow: 1,
-      marginTop:"15px"
+      marginTop: "15px"
     },
   },
-    
+
   headerOptions: {
-      display: "flex",
-      //flex: 1,
-      justifyContent: "space-evenly",
-      color: "#fffff"
+    display: "flex",
+
+    justifyContent: "space-evenly",
+    color: "#fffff"
   },
-  
+
   white: {
     color: "#fff  ",
     textTransform: "none",
     padding: "4px 16px",
     fontSize: "0.875rem",
-    //color: theme.palette.common.white,
+ 
     '&:hover': {
       color: "#0c7c73"
     }
   },
-  
+
   moreTravels: {
     color: "#fff  ",
     textTransform: "none",
@@ -88,27 +91,52 @@ const useStyles = makeStyles((theme) => ({
       color: "#0c7c73"
     }
   },
-  
+
+  paper: {
+    width: "28%",
+    margin: "50px 62.5%"
+  },
+  subModel: {
+    display: "flex",
+    padding: "10px",
+    justifyContent: "center",
+    color: "white"
+  },
+  Buttondiv: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "center",
+ 
+  },
+  Button1: {
+    width: "90%"
+  }
+
+
 }));
 
 const Navbar = () => {
   const classes = useStyles();
   const { isAuth } = useSelector((state) => state.auth)
-  let getdata = JSON.parse(localStorage.getItem("user")) || { username: "admin" }
+  let getdata = JSON.parse(localStorage.getItem("user")) || { username: "sign in" }
   console.log("name", getdata.username.toUpperCase())
   let name = getdata.username.toUpperCase()
   const dispatch = useDispatch()
+  const [open, setOpen] = useState(false);
   const handleLogout = () => {
     if (isAuth) {
 
       dispatch(logoutdonefunc())
       saveData("token", "")
       saveData("user", { username: "admin" })
+      
+      handleHome()
+   
     }
   }
 
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  // const open = Boolean(anchorEl);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
 
@@ -117,43 +145,58 @@ const Navbar = () => {
   };
   const history = useHistory();
   const handleHome = () => {
+    setOpen(false)
     history.push("/");
   }
+
+  const showModal = () => {
+    setOpen(false);
+    history.push("/signup")
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    history.push("/signin")
+  };
 
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.headerBg}>
-              <Toolbar className={classes.navSpacing}>
-                  <div style={{display:'flex'}}>
-                    <div className={classes.logo}>
-                      <img style={{ cursor: "pointer" }} onClick={handleHome} src={logo} alt="Orbitz"  />
-                    </div>
-                            {isMobile ?
-                            <div></div> : (<div className={classes.hoverEffect} >
-                        <Typography className={classes.moreTravels}>More travel</Typography> 
-                <ExpandMoreRoundedIcon className={classes.dropdown}/></div>)}
-                  </div>
-          
-{/* --------------------Mobile view------------------------- */}
+        <Toolbar className={classes.navSpacing}>
+          <div style={{ display: 'flex' }}>
+            <div className={classes.logo}>
+              <img style={{ cursor: "pointer" }} onClick={handleHome} src={logo} alt="Orbitz" />
+            </div>
+            {isMobile ?
+              <div></div> : (<div className={classes.hoverEffect} >
+                <Typography className={classes.moreTravels}>More travel</Typography>
+                <ExpandMoreRoundedIcon className={classes.dropdown} /></div>)}
+          </div>
+
+          {/* --------------------Mobile view------------------------- */}
           {isMobile ? (
             <>
-                <IconButton
+              <IconButton
                 edge="start"
                 className={classes.menuButton}
                 color="inherit"
                 aria-label="menu"
               >
                 <SearchIcon />
-                </IconButton>
-                <IconButton
+              </IconButton>
+              <IconButton
                 edge="start"
                 className={classes.menuButton}
                 color="inherit"
                 aria-label="menu"
               >
                 <WorkIcon />
-                </IconButton>
-                          
+              </IconButton>
+
               <IconButton
                 edge="start"
                 className={classes.menuButton}
@@ -178,19 +221,19 @@ const Navbar = () => {
                 open={open}
                 onClose={() => setAnchorEl(null)}
               >
-                    <MenuItem>
-                      Sign in
-                    </MenuItem>
-                    <MenuItem>
-                      Sign up
-                    </MenuItem>
+                <MenuItem>
+                  Sign in
+                </MenuItem>
+                <MenuItem>
+                  Sign up
+                </MenuItem>
               </Menu>
-              
+
             </>
           ) : (
             <div className={classes.headerOptions}>
-              <Button style={{color:"red"}}>
-               <Typography className={classes.white} variant="h6"> Español</Typography>
+              <Button style={{ color: "red" }}>
+                <Typography className={classes.white} variant="h6"> Español</Typography>
               </Button>
               <Button color="inherit" className={classes.btn}>
                 <Typography className={classes.white} variant="h6"> List your property</Typography>
@@ -201,17 +244,73 @@ const Navbar = () => {
               <Button color="inherit" className={classes.btn}>
                 <Typography className={classes.white} variant="h6"> Trips</Typography>
               </Button>
-                <Link style={{textDecoration:"none"}} to="/signin">
-                <Button onClick={handleLogout} className={classes.btn}>
-                <Typography className={classes.white} variant="h6"> 
-                      {isAuth ? name : "SIGNIN"}
+              <Link style={{ textDecoration: "none" }}>
+                <Button onClick={handleOpen} className={classes.btn}>
+                  <Typography className={classes.white} variant="h6">
+                    {isAuth ? name : "Sign in"}
                   </Typography>
-                  </Button>
-                </Link>
+                </Button>
+              </Link>
             </div>
           )}
         </Toolbar>
       </AppBar>
+
+       <Modal
+        aria-labelledby="spring-modal-title"
+        aria-describedby="spring-modal-description"
+        className={classes.Modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Paper className={classes.paper}>
+            <div style={{padding:"15px"}}>
+              <h3 style={{ textAlign: "center" }}>Members can access discounts, points and special features</h3>
+
+
+            </div>
+            <div>
+              {isAuth?<div className={classes.Buttondiv}>
+                <Button onClick={handleLogout} className={classes.Button1} variant="contained" color="secondary">
+                  <Typography style={{ color: "white" }}>Log out</Typography>
+                </Button>
+              </div>
+                :
+              <div className={classes.Buttondiv}>
+                <Button onClick={handleClose} className={classes.Button1} variant="contained" color="secondary">
+                  <Typography style={{ color: "white" }}>sign in</Typography>
+                </Button>
+              </div>}
+              <div onClick={showModal}>
+            
+                <h3 style={{ color: "#00A4BB", textAlign: "center",cursor:"pointer" }} >Create a free accout</h3>
+              
+              </div>
+              <div>
+                <ul style={{listStyle:"none"}}>
+                  <li >List of favouties</li>
+                  <li style={{ marginTop: "10px" }}>Loyalty Program</li>
+                </ul>
+                <ul style={{ borderTop: "1px solid black", listStyle: "none" }}>
+                  <li style={{padding:"20px 0" }}>feedback</li>
+                </ul>
+              </div>
+            </div>
+            <div className={classes.subModal1}>
+
+
+            </div>
+        
+
+          </Paper>
+        </Fade>
+      </Modal>
     </div>
   );
 };

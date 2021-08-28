@@ -94,13 +94,16 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = () => {
   const classes = useStyles();
   const { isAuth } = useSelector((state) => state.auth)
-  
+  let getdata = JSON.parse(localStorage.getItem("user")) || { username: "admin" }
+  console.log("name", getdata.username.toUpperCase())
+  let name = getdata.username.toUpperCase()
   const dispatch = useDispatch()
   const handleLogout = () => {
     if (isAuth) {
 
       dispatch(logoutdonefunc())
       saveData("token", "")
+      saveData("user", { username: "admin" })
     }
   }
 
@@ -201,7 +204,7 @@ const Navbar = () => {
                 <Link style={{textDecoration:"none"}} to="/signin">
                 <Button onClick={handleLogout} className={classes.btn}>
                 <Typography className={classes.white} variant="h6"> 
-                        {isAuth ? "SIGNOUT" : "SIGNIN"}
+                      {isAuth ? name : "SIGNIN"}
                   </Typography>
                   </Button>
                 </Link>

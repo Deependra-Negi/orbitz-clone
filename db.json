@@ -1,7 +1,5 @@
 {
-  "payment": [
-   
-  ],
+  "payment": [],
   "users": [
     {
       "id": 1,
@@ -17,6 +15,27 @@
       "password": "123456789",
       "showPassword": false,
       "id": 2
+    },
+    {
+      "firstname": "Monu",
+      "email": "pawanpatidar21@gmail.com",
+      "password": "123456789",
+      "showPassword": true,
+      "id": 3
+    },
+    {
+      "firstname": "Rahul",
+      "email": "rahulpatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": true,
+      "id": 4
+    },
+    {
+      "firstname": "Rahul",
+      "email": "rahulpatidar21@gmail.com",
+      "password": "123456789",
+      "showPassword": true,
+      "id": 5
     }
   ],
   "login": [
@@ -68,6 +87,27 @@
       "password": "123456789",
       "showPassword": false,
       "id": "1a710906-e29f-4f35-ad1f-f0b1fc6cc28c",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "6348af6b-fa28-4454-8eba-33e1d0d2a732",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpatidar21@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "2b2bdcec-fa05-4438-8a62-1bf2f7d47648",
+      "checkedA": true
+    },
+    {
+      "email": "rahulpatidar21@gmail.com",
+      "password": "123456789",
+      "showPassword": true,
+      "id": "effa8823-a8d7-4052-9f7c-16fb37c43b79",
       "checkedA": true
     }
   ],

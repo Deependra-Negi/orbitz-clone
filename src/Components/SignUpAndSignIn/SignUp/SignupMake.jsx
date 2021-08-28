@@ -48,7 +48,7 @@ marginTop:10,
         border: "1px solid black",
         marginTop: 10,
         alignItems: "center",
-        maxHeight: 55,
+        maxHeight: 48,
         justifyContent: "space-between"
 
     },
@@ -57,11 +57,13 @@ marginTop:10,
         alignItems: "center",
         alignContent: "flex start",
         columnGap: 10,
+ 
         paddingLeft: 10,
  
 
 
     },
+  
     Box3: {
         paddingRight: 10
     },
@@ -89,6 +91,29 @@ marginTop:10,
     ArrowForward: {
         
     },
+    paper: {
+       padding:"10px" 
+    },
+
+    Modal: {
+        width: "30%",
+        // background: "#F4F1F1",
+        height: "20%",
+        textAlign: "center",
+        margin: "0 auto",
+        color: "white",
+        marginTop:"20px"
+        
+    },
+    subModal: {
+        background: "red",
+        
+    },
+    subModal1: {
+        background: "white",
+        color: "red",
+        padding:"10px"
+    }
   
 
 

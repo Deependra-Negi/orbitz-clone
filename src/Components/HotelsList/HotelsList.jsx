@@ -143,6 +143,7 @@ const Cont = styled.div`
   max-width: 83%;
   margin: auto;
   justify-content: space-between;
+  background-color: #f5f5f5;
 `
 const FilterCont = styled.div`
 `

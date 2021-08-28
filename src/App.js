@@ -12,7 +12,7 @@ function App() {
     <Navbar/>
     <Routes/>
     <HelpBoat/>
-    <StripeContainer/>
+    
   </>
   );
 }

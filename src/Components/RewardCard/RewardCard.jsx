@@ -7,6 +7,7 @@ import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 
 import { Box, Button, TextField } from '@material-ui/core';
+import styled from 'styled-components';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
     Card: {
         display: "grid",
         gridTemplateColumns: "35% 52% 13%",
-        width: "80%",
+        width: "100%",
         height: 350,
-        margin: "auto"
+        margin: "auto",
     },
     Image: {
         width: "100%",
@@ -68,7 +69,6 @@ const useStyles = makeStyles((theme) => ({
      
     }
 
-
 }));
 const countries = [
     {
@@ -94,7 +94,7 @@ export default function RewardCard() {
  
 
     return (
-        <div style={{marginTop:"50px"}}>
+        <CardCont style={{marginTop:"50px"}}>
             <Card className={classes.Card}>
                 <Box>       <img className={classes.Image} src="https://thumbnails.trvl-media.com/CSYM6eB9q4W5M2gqyZNY_NfDEFQ=/a.travel-assets.com/mad-service/footer/marquee/ORB_App_Footer_v1.jpg" alt="RewardImage" />
                 </Box>
@@ -142,12 +142,11 @@ export default function RewardCard() {
                     <Typography className={classes.TexQR}>Scan the QR code</Typography>
                 </Box>
             </Card>
-
-
-
-
-
-
-        </div>
+        </CardCont>
     );
 }
+
+const CardCont = styled.div` 
+        padding: 1.5rem;
+        margin-top:50px;
+    `

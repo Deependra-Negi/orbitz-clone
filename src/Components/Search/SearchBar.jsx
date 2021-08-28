@@ -11,6 +11,8 @@ import styles from "./Home.module.css";
 import { PaymentModal } from "../PaymentModal/PaymentModal";
 import HomepageStatic from "../HomepageStatic/HomepageStatic";
 import styled from "styled-components";
+import RewardCard from '../RewardCard/RewardCard'
+import Footer from '../Footer/Footer'
 
 export const SearchBar = () => {
     const [valueTab, setValueTab] = useState(0);
@@ -86,8 +88,11 @@ export const SearchBar = () => {
                 </Box>
                 </Box>
                 <StaticDivs>
-                    <HomepageStatic />
+                <HomepageStatic />
+                <RewardCard />
+                <Footer />
                 </StaticDivs>
+                
             </MainCont>
     )
 }

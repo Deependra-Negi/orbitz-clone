@@ -1,0 +1,39 @@
+.outer {
+  background-color: rgb(245, 245, 245);
+  height: 1500px;
+}
+.containerPayment {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 70px;
+  background-color: white !important;
+  padding: 19px;
+}
+.containerPayment input {
+  height: 39px;
+  margin: 19px;
+  width: 380px;
+}
+.infoDiv {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 39px;
+  margin: 10px;
+}
+.selectDiv {
+  display: flex;
+  justify-content: flex-start;
+}
+.proceedDiv {
+  width: 60%;
+  background-color: white;
+  padding: 19px;
+  margin: 59px;
+}
+.selBox {
+  width: 19%;
+  margin: 19px;
+}

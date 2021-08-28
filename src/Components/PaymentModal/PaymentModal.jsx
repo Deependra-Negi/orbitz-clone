@@ -1,9 +1,11 @@
 import { Box, Button, Divider, makeStyles, Modal, Typography } from "@material-ui/core";
 import { useState } from "react";
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import { useHistory } from "react-router-dom";
 
 export function PaymentModal() {
     const [pay, setPay] = useState(false)
+    const history = useHistory();
     const handleClose = () => {
         setPay(false);
     }
@@ -85,7 +87,7 @@ export function PaymentModal() {
                                 <p className={classes.alignRight}>per night</p>
                                 <p style={{ fontWeight: "700" }} className={classes.alignRight}>₹ 7310 total</p>
                                 <p className={classes.alignRight}>includes taxes and fees</p>
-                                <button style={{ color: "white" }} variant="contained" color="secondary" className={classes.btn}>Pay now</button>
+                                <button onClick={() => history.push("/payment")} style={{ color: "white" }} variant="contained" color="secondary" className={classes.btn}>Pay now</button>
                             </div>
                         </div>
                         <div className={classes.paymentOptionsDiv}>

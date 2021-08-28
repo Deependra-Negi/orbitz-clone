@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router-dom"
 import { HotelPage } from "../Components/HotelPage/HotelPage"
+import { PaymentPage } from "../Components/Payment/PaymentPage"
 import { SearchBar } from "../Components/Search/SearchBar"
 import { SearchResults } from "../Components/Search/SearchResults"
 
@@ -28,6 +29,9 @@ export const Routes = () => {
                 </Route>
                 <Route exact path="/hotels/:id">
                     <HotelPage/>
+                </Route>
+                <Route exact path="/payment">
+                    <PaymentPage/>
                 </Route>
             </Switch>
         </div>

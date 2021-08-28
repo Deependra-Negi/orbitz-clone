@@ -5,9 +5,9 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
+
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useStyles } from './SignupMake';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -17,7 +17,7 @@ import axios from 'axios'
 import { useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginSuccess, responseGoogle, setuserName } from '../../../Redux/Auth/action';
+import { loginSuccess, setuserName } from '../../../Redux/Auth/action';
 const SignUpForm = () => {
     const init = {
         firstname: "",
@@ -40,22 +40,7 @@ const SignUpForm = () => {
     }, [])
 
     const handleonChangeinput = (e) => {
-        // let email = e.target.value;
-        // if (e.target.name === 'password') {
-        //     let password = e.target.value;
-        //     if (password.length >= 8) {
-        //         setdisable(false);
-        //     } else {
-        //         setdisable(true);
-        //     }
-        // }
-        // if (e.target.name === 'email') {
-        //     if (email.includes('@') && email.includes('.')) {
-        //         setstatus(true);
-        //     } else {
-        //         setstatus(false);
-        //     }
-        // }
+    
         const { name, value } = e.target
         setformdata({ ...formdata, [name]: value })
     }
@@ -105,35 +90,10 @@ const SignUpForm = () => {
         let username = data.name
         dispatch(loginSuccess({ token }))
         dispatch(setuserName({ username }))
-        alert("google login succesful")
+ 
         history.push('/');
       
-        // axios.get('http://localhost:3010/users').then(function (response) {
-        //     let allusers = response.data;
-        //     let status = false;
-        //     console.log(allusers);
-        //     allusers.forEach((el) => {
-        //         if (el.email === res.profileObj.email) {
-        //             status = true;
-        //         }
-        //     });
-        //     if (!status) {
-        //         axios
-        //             .post('http://localhost:3010/users',data)
-        //             .then(function (response) { });
-        //     }
-        // });
-
-        // axios.get('http://localhost:3010/login').then(function (resp) {
-        //     if (resp.data.length === 0) {
-        //         axios
-        //             .post('http://localhost:3010/login', res.profileObj)
-        //             .then(function (resp) { });
-        //         history.push('/');
-        //     } else {
-        //         history.push('/');
-        //     }
-        // });
+      
     };
 
     const handleauth = () => {
@@ -195,11 +155,12 @@ const SignUpForm = () => {
                                        
                                        
                                             onSuccess={responseGoogle}
-                                            onFailure={responseGoogle}
+                                           
                                           
                                             cookiePolicy={"single_host_origin"}
                                         />
-                                        <h4 className={classes.IconColor}>Google</h4>
+                                      
+                                        
 
 
                                     </Box>

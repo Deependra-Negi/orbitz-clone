@@ -15,8 +15,8 @@ function App() {
       
       
     
-{/* 
-      <Sort />
+
+      {/* <Sort />
       <HotelListFilters />  */}
     
     

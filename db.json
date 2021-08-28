@@ -52,6 +52,20 @@
       "showPassword": false,
       "id": "5326954c-4717-4b39-9470-bda7bd4ecb42",
       "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "9b9fa0fa-58cc-4fb8-8c96-18dfc77e948e",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "1a710906-e29f-4f35-ad1f-f0b1fc6cc28c",
+      "checkedA": true
     }
   ],
   "hotels": [

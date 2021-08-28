@@ -3,10 +3,8 @@ import { HotelPage } from "../Components/HotelPage/HotelPage"
 import { PaymentPage } from "../Components/Payment/PaymentPage"
 import { SearchBar } from "../Components/Search/SearchBar"
 import { SearchResults } from "../Components/Search/SearchResults"
-
 import SignInForm from '../Components/SignUpAndSignIn/SignIn/SignInForm'
 import SignUpForm from '../Components/SignUpAndSignIn/SignUp/SignUpForm'
-
 
 export const Routes = () => {
     return (
@@ -18,9 +16,6 @@ export const Routes = () => {
                 <Route exact path="/results">
                     <SearchResults/>
                 </Route>
-                {/* <Route exact path="/">
-               <Home/>
-                </Route> */}
                 <Route exact path="/signin">
                   <SignInForm/>
                 </Route>

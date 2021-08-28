@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "payment": [
     {
       "token": {
@@ -701,6 +702,9 @@
       "id": 20
     }
   ],
+=======
+  "payment": [],
+>>>>>>> 462fadc6fe8dd3da8490e067d6e0633e9137575f
   "users": [
     {
       "id": 1,
@@ -716,6 +720,34 @@
       "password": "123456789",
       "showPassword": false,
       "id": 2
+    },
+    {
+      "firstname": "Monu",
+      "email": "pawanpatidar21@gmail.com",
+      "password": "123456789",
+      "showPassword": true,
+      "id": 3
+    },
+    {
+      "firstname": "Rahul",
+      "email": "rahulpatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": true,
+      "id": 4
+    },
+    {
+      "firstname": "Rahul",
+      "email": "rahulpatidar21@gmail.com",
+      "password": "123456789",
+      "showPassword": true,
+      "id": 5
+    },
+    {
+      "firstname": "Kushal",
+      "email": "patidarkushal70@gmail.com",
+      "password": "12345678",
+      "showPassword": true,
+      "id": 6
     }
   ],
   "login": [
@@ -753,6 +785,111 @@
       "password": "123456789",
       "showPassword": false,
       "id": "5326954c-4717-4b39-9470-bda7bd4ecb42",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "9b9fa0fa-58cc-4fb8-8c96-18dfc77e948e",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "1a710906-e29f-4f35-ad1f-f0b1fc6cc28c",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "6348af6b-fa28-4454-8eba-33e1d0d2a732",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpatidar21@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "2b2bdcec-fa05-4438-8a62-1bf2f7d47648",
+      "checkedA": true
+    },
+    {
+      "email": "rahulpatidar21@gmail.com",
+      "password": "123456789",
+      "showPassword": true,
+      "id": "effa8823-a8d7-4052-9f7c-16fb37c43b79",
+      "checkedA": true
+    },
+    {
+      "email": "patidarkushal70@gmail.com",
+      "password": "12345678",
+      "showPassword": true,
+      "id": "10fc0dee-35f6-4134-b60b-e7bbba638bbf",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "cef36c57-8722-46a3-acbe-592e1020461a",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "31bab008-f502-4148-8550-733a59ee6354",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "490d23fe-c4ab-4a6b-a1b1-8a7f1cd38d0d",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "6ef1e893-9620-457c-9405-0d4fb4037af3",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "cf317dad-539b-4a72-be11-e655f6be8382",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "6c2b9197-387c-47c6-b36a-b69659259372",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "51432d84-1d4f-4619-a205-d9d21a1e4d25",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "3fa9f60d-e427-4fb4-90d7-e3be4d814c50",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "f38be213-2a60-401b-bf79-f175c57f5871",
       "checkedA": true
     }
   ],

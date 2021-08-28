@@ -12,7 +12,7 @@ export const HotelListFilters = (props) => {
    
     
     return (
-      <div style={{ border: "1px solid black", width: "20vw" }}>
+      <div style={{width: "20vw" }}>
         <Name />
         <h1>Filter by</h1>
         <h3>Popular filters</h3>

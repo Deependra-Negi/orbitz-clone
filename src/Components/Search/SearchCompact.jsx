@@ -48,7 +48,7 @@ export function SearchCompact() {
         checkboxes: {
             display: "flex",
             alignItems: "center",
-            margin: "17px 3px"
+            margin: "17px 3px",
         },
         btn1: {
             marginTop:"10px",
@@ -60,13 +60,15 @@ export function SearchCompact() {
             fontSize: "18px"
         },
         btn2: {
-            width: "210px",
+            width: "180px",
             height: "49px",
             backgroundColor: "rgb(200,50,89)",
-            borderRadius: "1px",
+            borderRadius: "3px",
             textTransform: "none",
             fontSize: "18px",
-            margin: "5px 40%",
+            position: "absolute",
+            bottom: 20,
+            left: 510,
         },
         inpBox: {
             display: "flex",
@@ -84,7 +86,8 @@ export function SearchCompact() {
         },
         date: {
             marginTop: "10px",
-            marginRight:"10px"
+            marginRight: "10px",
+            fill:"#616161"
         },
     })
     const handleChange = (e) => {

@@ -1,7 +1,10 @@
 .home {
   background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/08/19/ORB_LMLaborDay_imgB_1920x1440_20210813.jpg");
-  background-size: 100% 100%;
+  background-size:cover;
+  background-position: bottom; 
   background-repeat: no-repeat;
-  height: 580px;
-  padding: 50px;
+  height: 530px;
+  position: relative;
+
+  /* padding: 30px; */
 }

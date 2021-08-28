@@ -46,9 +46,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+<<<<<<< HEAD
 export default function RoomCard({ img, name }) {
     const hotel = useSelector(state => state.Query.currentHotel);
     const temp = Number(hotel.price) * (3 / 100);
+=======
+export default function RoomCard({img, name, price, deals, id}) {
+>>>>>>> 462fadc6fe8dd3da8490e067d6e0633e9137575f
 
     const [choice, setChoice] = useState("No")
 
@@ -62,7 +66,7 @@ export default function RoomCard({ img, name }) {
             <TextCont>
                 <Name><h3>{name}</h3></Name>
                 <Details>
-                    <li><Span><Icon><RoundedCornerSharpIcon className={classes.icon} /></Icon>377 sq ft</Span></li>
+                    <li><Span><Icon><RoundedCornerSharpIcon className={classes.icon} /></Icon>{(id===1)?"300 sq ft":(id===2)?"353 sq ft":(id===3)?"377 sq ft":(id===4)?"462 sq ft":(id===5)?"484 sq ft":"403 sq ft"}</Span></li>
                     <li><Span><Icon><PeopleIcon className={classes.icon} /></Icon>Sleeps 2</Span></li>
                     <li><Span><Icon><HotelIcon className={classes.icon} /></Icon>1 Double Bed</Span></li>
                     <li><Span><Icon><WifiIcon className={classes.icon} /></Icon>Free WiFi</Span></li>
@@ -70,23 +74,31 @@ export default function RoomCard({ img, name }) {
                     <li><Span><Icon><CheckIcon className={classes.icon} /></Icon>Reserve now, pay later</Span></li>
                     <Highlited>
                         <Span className={classes.green}>Fully Furnished<Icon><ErrorOutlineOutlinedIcon className={classes.icon} /></Icon></Span>
-                        <Span2>Before Wed, Sep 8</Span2>
+                        <Span2>Before Sun, Sep 12</Span2>
                         <Span className={classes.blue}>More details<Icon><ChevronRightOutlinedIcon className={classes.icon} /></Icon></Span>
                     </Highlited>
                 </Details>
                 <Hr />
                 <Name><h4>Extras</h4></Name>
                 <RadioGroup value = {choice} onChange={(e)=> setChoice(e.target.value)}>
-                    <Rd><Choice><FormControlLabel className={classes.radio} value="No" control={<Radio/>}/><Span3>No extras</Span3></Choice><Extra>+0 ₹</Extra></Rd>
-                    <Rd><Choice><FormControlLabel className={classes.radio} value="Yes" control={<Radio/>} /><Span3>Breakfast Buffet + Return airport transfer</Span3></Choice><Extra>+355 ₹</Extra></Rd>
+                    <Rd><Choice><FormControlLabel className={classes.radio} value="No" control={<Radio/>}/><Span3><p>No extras</p></Span3></Choice><Extra>+0 ₹</Extra></Rd>
+                    <Rd><Choice><FormControlLabel className={classes.radio} value="Yes" control={<Radio/>} /><Span3><p>Breakfast Buffet + Return airport transfer</p></Span3></Choice><Extra>+355 ₹</Extra></Rd>
                 </RadioGroup>
                 <TotalReserve>
                     <Right>
+<<<<<<< HEAD
                         <Orbucks><Icon3><MonetizationOnIcon /></Icon3><Orbucks2>Earn 300 ₹ Orbucks</Orbucks2></Orbucks>
                         <Deals>30% off</Deals>
                         <Price>{hotel.price}₹</Price>
                         <PerNight>per night</PerNight>
                         <Total>{Number(hotel.price) + temp}₹ total</Total>
+=======
+                        <Orbucks><Icon3><MonetizationOnIcon /></Icon3><Orbucks2>Earn ₹ {price*0.03} Orbucks</Orbucks2></Orbucks>
+                        <Deals>{deals}% off</Deals>
+                        <Price>{price}</Price>
+                        <PerNight>per night</PerNight>
+                        <Total>total {price+price*0.1}</Total>
+>>>>>>> 462fadc6fe8dd3da8490e067d6e0633e9137575f
                         <Taxes> includes taxes & fees</Taxes>
                         <Span className={classes.blue}>More details<Icon2><ExpandMoreIcon className={classes.icon} /></Icon2></Span>
                     </Right>
@@ -107,8 +119,9 @@ const CardCont = styled.div`
     }
     display: flex;
     flex-direction: column;
-    width: 350px;
-    margin: 15px;
+    width: 300px;
+    min-width: 24rem;
+    margin: 15px 0px;
     border: 1px solid lightgrey;
     background-color:white;
 `
@@ -127,6 +140,9 @@ const Name = styled.div`
     font-size: 1rem;
     font-weight: 700;
     padding-bottom: 0.5rem;
+    h4{
+        color: #1f1f1f;
+    }
 `
 const Details = styled.ul`
     font-size: 0.875rem;
@@ -134,6 +150,8 @@ const Details = styled.ul`
     line-height: 1.28571;
     color: #616161;
     list-style: none;
+    padding:0%;
+    margin:0%;
 `
 const Span = styled.span`
     margin-top: 0.55rem;
@@ -144,16 +162,25 @@ const Span2 = styled.span`
     padding: "0%";
 `
 const Icon = styled.div`
-    padding-left: 10px;
+    padding-right: 10px;
     margin-top: -3px;
+    svg{
+       fill:#616161; 
+    }
 `
 const Icon2 = styled.div`
     padding-right: 10px;
     margin-top: 3px;
+    svg{
+       fill:#616161; 
+    }
 `
 const Icon3 = styled.div`
     padding-right: 10px;
     margin-top: -3px;
+    svg{
+       fill:#8c1397; 
+    }
 `
 const Highlited = styled.div`
 `
@@ -173,8 +200,11 @@ const Rd = styled.div`
     color: #616161;
 `
 const Span3 = styled.div`
+p{
     padding-top: "20px";
-    margin-left: "20px";
+    padding-left: "20px";
+    color: #616161;
+}
 `
 const Choice = styled.div`
     display: flex;
@@ -193,6 +223,7 @@ const Orbucks = styled.div`
 `
 const Orbucks2 = styled.div`
     margin-top: -0.25rem;
+    color: #8c1397;
 `
 const Right = styled.div`
   text-align: left;

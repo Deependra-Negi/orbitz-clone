@@ -54,7 +54,7 @@ export const SearchBar = () => {
         setValueTab(newValue);
     };
     return (
-        <Box className={styles.home}>
+        <div className={styles.home}>
         <Box className={classes.containerSearchBox}>
             <Box className={classes.tabs}>
                     <Tabs
@@ -75,6 +75,6 @@ export const SearchBar = () => {
             <Divider className={classes.div}/>
             <SearchCompact />
             </Box>
-            </Box>
+            </div>
     )
 }

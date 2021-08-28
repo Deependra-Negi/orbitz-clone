@@ -6,8 +6,11 @@
   display: flex;
   flex-direction: column;
   width: 60%;
-  margin-left: 70px;
-  background-color: white !important;
+  margin-left: 30px;
+  padding: 19px;
+}
+.subsPayment {
+  background-color: white;
   padding: 19px;
 }
 .containerPayment input {
@@ -22,6 +25,9 @@
   align-items: center;
   height: 39px;
   margin: 10px;
+  /* background-color: white;
+  width: 60%;
+  margin-left: 70px; */
 }
 .selectDiv {
   display: flex;
@@ -31,9 +37,159 @@
   width: 60%;
   background-color: white;
   padding: 19px;
-  margin: 59px;
+  margin: 50px;
+  color: grey;
+  font-size: 15px;
 }
 .selBox {
   width: 19%;
   margin: 19px;
+}
+.payCard {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+.hotelPic {
+  width: 580px;
+  height: 250px;
+}
+.hotelPic img {
+  width: 100%;
+  height: 100%;
+}
+.times {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0px;
+}
+.infoDiv {
+  color: green !important;
+  display: flex;
+  justify-content: flex-start;
+}
+.infoDiv > div > div {
+  font-size: 14px;
+}
+.times p {
+  margin: 0px;
+  margin-left: 10px;
+}
+.outer > h1 {
+  margin-left: 80px;
+}
+.extraInfo p {
+  font-size: 13px;
+  margin: 3px;
+  color: grey;
+}
+.price {
+  color: rgb(82, 79, 79);
+  background-color: white;
+  padding: 19px;
+  margin-top: 19px;
+}
+.price > div > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  align-items: center;
+  height: 59px;
+}
+.detsDiv {
+  margin: 29px 0px;
+  margin-bottom: 0px;
+  color: grey;
+}
+.detsDiv p {
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 450;
+}
+.times h4 {
+  margin: 3px;
+}
+.hr {
+  color: rgb(212, 207, 207);
+}
+.confirmDets {
+  display: flex;
+  justify-content: space-around;
+  height: 90px;
+  background-color: white;
+  margin: 39px;
+}
+.confirmDets h4 {
+  color: grey;
+  font-weight: 450;
+  font-size: 13px;
+}
+.containerBCP {
+  width: 80%;
+  height: 190px;
+  margin: auto;
+  background-color: rgb(254, 255, 254);
+  padding: 19px;
+}
+.containerBCP > h3 {
+  font-size: 23px;
+  font-weight: 500;
+}
+.containerBCP > h4 {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(189, 185, 185);
+}
+.containerBCP h3,
+.containerBCP > h4 {
+  margin: 1px;
+  margin-bottom: 10px;
+  color: rgb(48, 46, 46);
+}
+.heading {
+  width: 80%;
+  margin: 19px auto;
+  padding: 19px;
+  background-color: white;
+}
+.heading > div > p {
+  display: flex;
+  align-items: center;
+}
+.heading p {
+  margin: 0px;
+  color: grey;
+  margin-left: 5px;
+}
+.mainContainer {
+  background-color: rgb(239, 245, 239);
+  margin-top: 0px;
+  height: 500px;
+}
+.heading span {
+  color: rgb(85, 138, 5);
+  font-weight: 600;
+  cursor: pointer;
+}
+.price > div {
+  width: 60%;
+  margin-top: 19px;
+}
+.total {
+  font-weight: 600;
+  font-size: 29px;
+  margin: 0px;
+  padding: 0px;
+}
+.price > div > div > p {
+  height: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+.paySub {
+  font-weight: 600;
+}
+.confirmDets > div {
+  text-align: center;
 }

@@ -20,6 +20,7 @@ import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button'
 import { PaymentModal } from '../PaymentModal/PaymentModal';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
     icon:{
@@ -45,7 +46,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function RoomCard({img, name}) {
+export default function RoomCard({ img, name }) {
+    const hotel = useSelector(state => state.Query.currentHotel);
+    const temp = Number(hotel.price) * (3 / 100);
 
     const [choice, setChoice] = useState("No")
 
@@ -81,9 +84,9 @@ export default function RoomCard({img, name}) {
                     <Right>
                         <Orbucks><Icon3><MonetizationOnIcon /></Icon3><Orbucks2>Earn 300 ₹ Orbucks</Orbucks2></Orbucks>
                         <Deals>30% off</Deals>
-                        <Price>5000 ₹</Price>
+                        <Price>{hotel.price}₹</Price>
                         <PerNight>per night</PerNight>
-                        <Total>total 5500 ₹</Total>
+                        <Total>{Number(hotel.price) + temp}₹ total</Total>
                         <Taxes> includes taxes & fees</Taxes>
                         <Span className={classes.blue}>More details<Icon2><ExpandMoreIcon className={classes.icon} /></Icon2></Span>
                     </Right>

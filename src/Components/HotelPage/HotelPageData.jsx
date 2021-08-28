@@ -56,15 +56,15 @@ export function HotelPageData() {
     const handleScroll = () => {
         const val = window.pageYOffset;
         if ((val < 1089) && (ref.current !== 0)) {
-            console.log("sp1",value);
+            //console.log("sp1",value);
             ref.current = 0;
             setValue(0);
         } else if ((val >= 1070) && (val < 3208) && (ref.current !== 1)) {
-            console.log("sp2",value);
+            //console.log("sp2",value);
             ref.current = 1;
             setValue(1);
         } else if ((val >= 3208) && (val < 5000) && (ref.current !== 2)) {
-            console.log("sp3",value);
+            //console.log("sp3",value);
             ref.current = 2;
             setValue(2);
         }
@@ -101,9 +101,9 @@ export function HotelPageData() {
                         </div>
                         <div className={styles.detailsDiv}>
                             <div>
-                                <div><h2>{hotel.name}</h2>
+                                <div className={styles.nameDiv}><h2>{hotel.name}</h2>
                                 <div className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon style={{ color: "#807d7d" }} /> })}</div></div>
-                                <Typography variant="h7">{hotel.rating}/5</Typography>
+                                <div style={{color:"grey", fontSize:"14px", marginLeft:"28px"}}>{hotel.rating}/5</div>
                                 <div className={styles.detailsSub}>
                                 <h3>Popular Amenities</h3>
                                 <div className={styles.amenities}>
@@ -143,10 +143,10 @@ export function HotelPageData() {
                         <div className={styles.roomDiv}>
                         <h1>Choose your Room</h1>
                         <div className={styles.rooms}>
-                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Superior Room, 2 Twin Beds, City View"}/>
-                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Deluxe Room, 2 Twin Beds, City View"}/>
-                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Executive Suite, 1 King Bed, City View (Inclusive of Bombay Chai)"}/>
-                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"SeleQtions Suite, 1 King Bed, City View (Inclusive of Bombay Chai)"}/>
+                        <RoomCard img={"https://images.trvl-media.com/hotels/13000000/12250000/12246300/12246261/1b10e3cb.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Superior Room, 2 Twin Beds, City View"}/>
+                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Deluxe Premium Room, 2 Twin Beds, City View"}/>
+                        <RoomCard img={"https://images.trvl-media.com/hotels/13000000/12250000/12246300/12246261/6f0750db.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Executive Suite, 1 King Bed, City View (Inclusive of Bombay Chai)"}/>
+                        <RoomCard img={"https://images.trvl-media.com/hotels/7000000/6100000/6097600/6097535/006547d0.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"SeleQtions Suite, 1 King Bed, City View (Inclusive of Bombay Chai)"}/>
                         </div>
                         </div>
                     <div className={styles.areaDiv}>

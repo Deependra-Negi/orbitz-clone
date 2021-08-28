@@ -140,3 +140,6 @@
   display: flex;
   flex-wrap: wrap;
 }
+.nameDiv {
+  margin-left: 23px;
+}

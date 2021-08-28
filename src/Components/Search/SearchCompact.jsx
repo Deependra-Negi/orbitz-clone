@@ -113,7 +113,7 @@ export function SearchCompact() {
                         label="Check-in"
                         type="date"
                         className={classes.date}
-                        variant="outlined"
+                    variant="outlined"
                         defaultValue="2017-05-24"
                         InputLabelProps={{
                             shrink: true,
@@ -125,7 +125,7 @@ export function SearchCompact() {
                         onChange={handleChange}
                         label="Check-out"
                         type="date"
-                        className={classes.date}
+                    className={classes.date}
                         variant="outlined"
                         defaultValue="2017-05-24"
                         InputLabelProps={{

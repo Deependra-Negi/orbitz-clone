@@ -2,7 +2,9 @@ import { Box, Container, Grid } from '@material-ui/core'
 import React from 'react'
 import { useStyles } from './Footermake';
 import styles from './Footer.module.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+//import { makeStyles } from '@material-ui/core/styles';
+
 const FootBox1 = [
     {
         to:"/about",Contact:"About"
@@ -109,7 +111,7 @@ const Footer = () => {
           <box >
             <Box className={styles.containerGrid} px={{xs:3,sm:10}} py={{xs:5,sm:10}}
               >
-                <Container>
+                <Container className={classess.logo}>
                     <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg" alt="" />
                 </Container>
             
@@ -163,9 +165,7 @@ const Footer = () => {
             <Box  textAlign="center"  borderTop={1}>
                 <Box className={classess.Box2}>© 2021 Orbitz, LLC, an Expedia Group Company. All rights reserved.</Box>
                 <Box className={classess.Box3}> Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST# 2083930-50.</Box>
-
-
-                    </Box>
+            </Box>
                 </Container>
             </box>
         </footer>

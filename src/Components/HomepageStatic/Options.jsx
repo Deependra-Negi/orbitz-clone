@@ -3,8 +3,19 @@ import styled from 'styled-components'
 import CreateIcon from '@material-ui/icons/Create';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import QuestionAnswerOutlinedIcon from '@material-ui/icons/QuestionAnswerOutlined';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    icon: {
+        width: "20px",
+        fill: "#465280",
+    }
+}));
 
 export default function Options() {
+
+    const classes = useStyles();
+
     return (
         <MainCont>
             <Cont>
@@ -20,7 +31,7 @@ export default function Options() {
                                 <Para><p>Make updates to your itinerary or cancle a booking</p></Para>
                             </Left>
                             <Right>
-                                <CreateIcon/>
+                                <CreateIcon className={classes.icon}/>
                             </Right>
                         </Card>
                         <Card>
@@ -29,7 +40,7 @@ export default function Options() {
                                 <Para><p>Apply a coupon code or credit to a new trip</p></Para>
                             </Left>
                             <Right>
-                                <MonetizationOnIcon/>
+                                <MonetizationOnIcon className={classes.icon}/>
                             </Right>
                         </Card>
                         <Card>
@@ -38,7 +49,7 @@ export default function Options() {
                                 <Para><p>Check the status of a refund currently in progress</p></Para>
                             </Left>
                             <Right>
-                                <QuestionAnswerOutlinedIcon/>
+                                <QuestionAnswerOutlinedIcon className={classes.icon}/>
                             </Right>
                         </Card> 
                     </CardCont>
@@ -63,8 +74,12 @@ const Heading = styled.div`
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     h3{
+        color: #1f1f1f;
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 2rem;
         margin:0;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.75rem;
     }
 `
 const ImgCont = styled.div`
@@ -104,15 +119,18 @@ const Title = styled.div`
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.25rem;
-    padding: 1rem 0.75rem 0rem;
+    padding: 0.5rem 0.75rem 0rem;
     h2{
-        color: #000000;
+        color: #1F1F1F;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.375rem;
         margin : 0;
     }
 `
 const Para = styled.div`
-padding-left: 0.75rem;
-margin-top: -0.3rem;
+padding-left: 0.6rem;
+margin-top: -0.5rem;
 p{
     color: #616161;
     font-size: 0.875rem;

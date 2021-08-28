@@ -56,7 +56,7 @@ export const SearchBar = () => {
             justifyContent:"space-evenly !important"
         },
         lite:{
-            color: "#616161",
+            fill: "#616161",
         }
     })
     const classes = useStyles();

@@ -56,15 +56,15 @@ const Cont = styled.div`
     padding: 0.75rem 0.75rem 1.5rem 0.75rem;
 `
 const Heading = styled.div`
-    color: #1f1f1f;
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 2rem;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     h3{
+        color: #1f1f1f;
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 2rem;
         margin:0;
-        padding-bottom: 0.5rem;
+        //padding-bottom: 0.5rem;
     }
 `
 const ImgCont = styled.div`
@@ -92,6 +92,9 @@ const Title = styled.div`
     line-height: 1.25rem;
     h2{
         color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25rem;
     }
 `
 

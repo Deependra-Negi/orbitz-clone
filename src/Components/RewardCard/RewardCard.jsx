@@ -23,14 +23,23 @@ const useStyles = makeStyles((theme) => ({
     },
     Image: {
         width: "100%",
-        height: "100%"
+        height: "100%",
+        objectFit: "cover"
+        
     },
     Text: {
-        fontSize: "28px",
-        fontWeight:"bolder"
+        color: "#1F1F1F",
+        fontSize: "1.75rem",
+        fontWeight: "700",
+        lineHeight: "2rem",
+        marginTop: "1rem"
     },
     Text1: {
         marginTop: 4,
+        color: "#616161",
+        fontSize: "0.85rem",
+        lineHeight:"1.5rem",
+        
     },
     Text2: {
         marginTop: 15,
@@ -43,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
     Box3: {
   
         textAlign: "center",
-        alignItems: "center"
+        alignItems: "center",
+        marginTop: "1.5rem",
     },
     TexQR: {
         fontWeight:"bolder"
@@ -66,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     },
     text3: {
         fontSize: "12px",
-     
+        color:"#616161"
     }
 
 }));

@@ -48,7 +48,7 @@ export function SearchCompact() {
         checkboxes: {
             display: "flex",
             alignItems: "center",
-            margin: "17px 3px"
+            margin: "17px 3px",
         },
         btn1: {
             marginTop:"10px",
@@ -86,7 +86,8 @@ export function SearchCompact() {
         },
         date: {
             marginTop: "10px",
-            marginRight:"10px"
+            marginRight: "10px",
+            fill:"#616161"
         },
     })
     const handleChange = (e) => {

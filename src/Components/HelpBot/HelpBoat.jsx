@@ -18,7 +18,6 @@ const useStyles = makeStyles(() => ({
     bottom: "0",
     borderRadius:'39px',
     height: "600px",
- 
   },
 
   bot: {
@@ -70,9 +69,8 @@ const HelpBot = () => {
   useEffect(() => {
     setTimeout(() => {
       setHelp(true);
-    }, 1000);
+    }, 1700);
   }, []);
-  const time = new Date().toLocaleTimeString();
 
   return (
     <>

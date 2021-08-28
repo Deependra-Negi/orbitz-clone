@@ -106,6 +106,5 @@ const MainCont = styled.div`
     background-color: #f5f5f5;
 `
 const StaticDivs = styled.div`
-    max-width:80rem;
     margin: auto;
 `

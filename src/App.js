@@ -8,7 +8,6 @@ function App() {
     <>
       <Navbar />
       <Routes />
-      {/* <HelpBot /> */}
       </>
   );
 }

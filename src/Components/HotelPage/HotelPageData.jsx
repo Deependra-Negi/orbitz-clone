@@ -102,7 +102,7 @@ export function HotelPageData() {
                             <div>
                                 <div className={styles.nameDiv}><h2>{hotel.name}</h2>
                                 <div className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon style={{ color: "#807d7d" }} /> })}</div></div>
-                                <div style={{color:"grey", fontSize:"14px", marginLeft:"28px"}}>{hotel.rating}/5</div>
+                                <div style={{color:"grey", fontSize:"14px", marginLeft:"5px"}}>{hotel.rating}/5</div>
                                 <div className={styles.detailsSub}>
                                 <h3>Popular Amenities</h3>
                                 <div className={styles.amenities}>

@@ -105,8 +105,8 @@ const CardCont = styled.div`
     }
     display: flex;
     flex-direction: column;
-    width: 300px;
-    min-width: 24rem;
+    width: 210px;
+    min-width: 23rem;
     margin: 15px 0px;
     border: 1px solid lightgrey;
     background-color:white;

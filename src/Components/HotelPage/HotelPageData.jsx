@@ -69,7 +69,7 @@ export function HotelPageData() {
         }
     }
     return (
-        <div style={{backgroundColor:"#f5f5f5"}}>
+        <div className={styles.outer} style={{backgroundColor:"#f5f5f5"}}>
             <div className={styles.container}>
                     <div className={styles.innerContainer}>
                         <Box className={styles.imageContainer}>

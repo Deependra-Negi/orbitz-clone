@@ -1,11 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
-
 import Card from '@material-ui/core/Card';
-
 import Typography from '@material-ui/core/Typography';
-
 import { Box, Button, TextField } from '@material-ui/core';
 import styled from 'styled-components';
 
@@ -24,8 +20,7 @@ const useStyles = makeStyles((theme) => ({
     Image: {
         width: "100%",
         height: "100%",
-        objectFit: "cover"
-        
+        objectFit: "cover",
     },
     Text: {
         color: "#1F1F1F",
@@ -39,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
         color: "#616161",
         fontSize: "0.85rem",
         lineHeight:"1.5rem",
-        
     },
     Text2: {
         marginTop: 15,
@@ -47,10 +41,8 @@ const useStyles = makeStyles((theme) => ({
     },
     Box2: {
         padding: "2% 4%",
-
     },
     Box3: {
-  
         textAlign: "center",
         alignItems: "center",
         marginTop: "1.5rem",
@@ -59,9 +51,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"bolder"
     },
     Boxadjust: {
-
         margin: "20px 0"
-
     },
     TextFeild: {
         width: "30%",
@@ -78,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "12px",
         color:"#616161"
     }
-
 }));
 const countries = [
     {
@@ -102,7 +91,6 @@ const countries = [
 export default function RewardCard() {
     const classes = useStyles();
  
-
     return (
         <CardCont style={{marginTop:"50px"}}>
             <Card className={classes.Card}>
@@ -113,25 +101,27 @@ export default function RewardCard() {
                     <Typography className={classes.Text} component="h2">
                         Rewards are waiting for you in the Orbitz app
                     </Typography>
+
                     <ui>
                         <li className={classes.Text1}>Earn 4% back when you book your hotel in app, vs. 3% on site</li>
                         <li className={classes.Text1}>Get flight status and gate number notifications</li>
                         <li className={classes.Text1}>Have questions about your stay? Message your hotel right in the app</li>
                     </ui>
-                    <Typography className={classes.Text2} >Text yourself a download link</Typography>
+
+                    <Typography className={classes.Text2} >
+                        Text yourself a download link
+                    </Typography>
+
                     <Box className={classes.Boxadjust}>
                         <TextField className={classes.TextFeild}
                             id="outlined-select-currency-native"
                             select
                             label="country code"
-                            // value={currency}
-                            // onChange={handleChange}
                             SelectProps={{
                                 native: true,
                             }}
-                      
-                            variant="outlined"
-                        >
+                            variant="outlined">
+                            
                             {countries.map((option) => (
                                 <option key={option.value} value={option.value}>
                                     {option.label}
@@ -143,8 +133,7 @@ export default function RewardCard() {
                             Get the App
                         </Button>
                     </Box>
-                    <p className={classes.text3}>By providing your number, you agree to receive a one-time automated text message with a link to get the app. Standard text message rates may apply.</p>
-                    
+                    <p className={classes.text3}>By providing your number, you agree to receive a one-time automated text message with a link to get the app. Standard text message rates may apply.</p> 
                   
                 </Box>
                 <Box className={classes.Box3}>

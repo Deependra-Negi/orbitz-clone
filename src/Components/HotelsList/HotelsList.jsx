@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import HotelCard from "../HotelCard/HotelCard";
 import { HotelListFilters } from "../Filters/HotelListFilters";
 import Sort from "../Sort/Sort";
+import styled from "styled-components";
 
 const HotelsList = () => {
   const results = useSelector((state) => state.Query.result);
@@ -75,11 +76,10 @@ const HotelsList = () => {
     setFilter({ ...filter, [name]: checked });
   };
   return (
-    <>
-      <div style={{ display: "flex" }}>
-        <div>
+      <Cont>
+        <FilterCont>
           <HotelListFilters handleFilter={handleFilter} filter={filter} />
-        </div>
+        </FilterCont>
         <div>
           <Sort handleSort={handleSort} />
           {results
@@ -128,9 +128,21 @@ const HotelsList = () => {
               return <HotelCard key={hotel.id} hotel={hotel} />;
             })}
         </div>
-      </div>
-    </>
+      </Cont>
   );
 };
 
 export default HotelsList;
+
+
+//-----------------------------styled components----------------------------------------
+
+const Cont = styled.div`
+  margin-top: 20px;
+  display: flex;
+  max-width: 83%;
+  margin: auto;
+  justify-content: space-between;
+`
+const FilterCont = styled.div`
+`

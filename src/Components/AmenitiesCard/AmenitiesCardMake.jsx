@@ -1,10 +1,10 @@
 import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles((theme) => ({
     Card: {
-        maxWidth: 1100,
-      
-        margin: "40px 100px",
-        padding:"20px"
+        width: "100%",
+        marginTop: "30px",
+        border: "none",
+        boxShadow:"none"
   },
     Bolder: {
         fontWeight: "bolder",

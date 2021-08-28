@@ -21,7 +21,8 @@ const AmenitiesCrad = () => {
     return (
         <div>
             <Card className={classess.Card}>
-                <Box>
+                <div style={{height:"30px", width:"100%", background:"#f5f5f5"}}></div>
+                <Box style={{paddingTop:"20px",paddingBottom:"30px"}}>
                     <Container >
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={4}>
@@ -213,8 +214,9 @@ const AmenitiesCrad = () => {
 
 
 
+                <div style={{height:"30px", width:"100%", background:"#f5f5f5"}}></div>
 
-                <Box style={{ borderTop: "1px solid black" }}>
+                <Box style={{paddingTop:"20px",paddingBottom:"30px"}}>
                     <Container >
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={4}>

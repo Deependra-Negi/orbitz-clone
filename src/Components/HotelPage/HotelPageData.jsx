@@ -14,6 +14,7 @@ import AcUnitIcon from '@material-ui/icons/AcUnit';
 import LocalParkingIcon from '@material-ui/icons/LocalParking';
 import DeckIcon from '@material-ui/icons/Deck';
 import RoomCard from "../RoomCard/RoomCard";
+import AmenitiesCrad from '../AmenitiesCard/AmenitiesCrad'
 
 export function HotelPageData() {
     useEffect(() => {
@@ -192,9 +193,12 @@ export function HotelPageData() {
                             </div>
                         </div>
                             
-                        </div>
                     </div>
+                    <AmenitiesCrad styles={{width:"100%", margin:"auto"}}/>
                 </div>
+                
+            </div>
+            
         </div>
     )
 }

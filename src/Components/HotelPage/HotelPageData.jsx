@@ -15,8 +15,6 @@ import LocalParkingIcon from '@material-ui/icons/LocalParking';
 import DeckIcon from '@material-ui/icons/Deck';
 import RoomCard from "../RoomCard/RoomCard";
 
-
-
 export function HotelPageData() {
     useEffect(() => {
         window.scrollTo(0, 0);

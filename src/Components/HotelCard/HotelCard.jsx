@@ -22,20 +22,20 @@ export default function HotelCard({hotel}) {
             <TextCont>
                 <UpperSec>
                        <Name><h3>{hotel.name}</h3></Name>
-                    <Location>{hotel.area}</Location>
+              <Location>{hotel.area}, {hotel.city}</Location>
                 </UpperSec>
                 <LowerSec>
                     <Left>
                         <Refund>Fully refundable</Refund>
-                        <Refund>Reserve now, pay later</Refund>
-                        <Ratings>{hotel.rating}/5 Excelent</Ratings>
+                        <Refund>{(hotel.price>3000)?"Reserve now, pay later":""}</Refund>
+                        <Ratings>{hotel.rating}/5 {(hotel.rating>3)?"Excelent":"Good"}</Ratings>
                         <Reviews>{hotel.reviews} reviews</Reviews>
                     </Left>
                     <Right>
                         <Deals>{hotel.delas}% off</Deals>
-                        <Price>Rs. {hotel.price}</Price>
+                        <Price>₹ {hotel.price}</Price>
                         <PerNight>per night</PerNight>
-                        <Total>total {hotel.price}+20</Total>
+                        <Total>total ₹ {hotel.price+(hotel.price*0.13)}</Total>
                         <Taxes> includes taxes & fees</Taxes>
                     </Right>
                 </LowerSec>
@@ -55,13 +55,14 @@ flex-wrap: wrap;
 color: #616161;
 background-color: #ffffff;
 cursor: pointer;
+min-width: 60rem;
 `
 
 const ImgCont = styled.div`
   display: flex;
   flex-grow: 1;
   width: 200px;
-  min-width: 300px;
+  min-width: 25rem;
   & > img {
     width: 100%;
     height: 100%;

@@ -13,6 +13,7 @@ import HomepageStatic from "../HomepageStatic/HomepageStatic";
 import styled from "styled-components";
 import RewardCard from '../RewardCard/RewardCard'
 import Footer from '../Footer/Footer'
+import HelpBot from "../HelpBot/HelpBoat";
 
 export const SearchBar = () => {
     const [valueTab, setValueTab] = useState(0);
@@ -82,11 +83,13 @@ export const SearchBar = () => {
                             <Tab icon={<ListAltIcon className={classes.lite}/>} className={classes.eachTab} label="Things to do" />
                             <Tab icon={<DirectionsBoatIcon className={classes.lite}/>} className={classes.eachTab} label="Cruises" />
                         </Tabs>
-                </Box>
-                <Divider className={classes.div}/>
+                    </Box>
+                    <Divider className={classes.div} />
                 <SearchCompact />
                 </Box>
-                </Box>
+            </Box>
+                    <div className={styles.bot}><HelpBot/></div>
+            
                 <StaticDivs>
                 <HomepageStatic />
                 <RewardCard />

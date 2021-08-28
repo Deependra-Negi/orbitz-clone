@@ -13,44 +13,57 @@ const useStyles = makeStyles(() => ({
   paper: {
     position: "absolute",
     width: "400px",
+    maxHeight:"650px",
     right: "2rem",
     bottom: "0",
-    borderRadius:'5%',
+    borderRadius:'39px',
     height: "600px",
  
   },
 
   bot: {
     position: "absolute",
-    
+    boxShadow: "3px 3px 3px",
+    cursor:"pointer",
+    height: "10px",
+    width: "70px",
     padding: "1rem",
-    bottom: "5px",
+    bottom: "30px",
       right: "2rem",
-      display: 'flex',
+    display: 'flex',
+      alignItems:"center",
       background: '#fff',
-      borderRadius:"20%"
+      borderRadius:"30px"
     
     },
     option: {
         display: 'inline-block',
-        border: '1px solid grey',
         borderRadius: '10px',
         padding: '0.5rem',
-        margin:'0.2rem'
+      margin: '5px 15px',
+      width: "150px",
+      height: "19px",
+      border: "1px solid rgb(1,127,143)",
+      cursor: "pointer"
     },
     header: {
-        backgroundColor: 'blue',
-        display:"flex",
+        backgroundColor: 'rgb(0,177,255)',
+      display: "flex",
+        height: "23px",
         justifyContent: "space-between",
-                  padding:'1rem'
+      padding: '1rem',
+                  borderRadius:"3px"
     },
     question: {
-        backgroundColor: 'lightgreen',
-        margin:'1rem'
+        backgroundColor: 'rgb(230,230,230)',
+      margin: '1rem',
+      padding: "8px",
+      width: "70%",
+      borderRadius:"5px"
     }
 }));
 
-const HelpBoat = () => {
+const HelpBot = () => {
   const [isModal, setIsModal] = useState(false);
   const [help, setHelp] = useState(false);
   const classes = useStyles();
@@ -67,65 +80,53 @@ const HelpBoat = () => {
         <Box>
           <Box className={classes.bot} onClick={() => setIsModal(!isModal)}>
             <QuestionAnswerIcon />
-            <Typography>Help</Typography>
+            <div style={{color:"teal", marginLeft:"8px"}}>Help</div>
           </Box>
 
           <Modal open={isModal} onClose={() => setIsModal(!isModal)}>
             <Paper className={classes.paper}>
               <Box>
                 <Box className={classes.header}>
-                  <Typography paddingRight="2rem" variant="h6">
-                    Chat with virtual Agent
-                  </Typography>
+                  <div style={{width:"100%"}}>
+                    <p style={{textAlign:"center", margin:"0px", padding:"0px"}}>Chat with Virtual Agent</p>
+                  </div>
                   <CloseIcon onClick={() => setIsModal(!isModal)} />
                 </Box>
                 <Box>
-                  <Typography align="center" variant="body1">
-                    The very begining
-                  </Typography>
-                  <Typography align="center" variant="body1">
-                    Today
-                  </Typography>
-                  <Typography align="center">{time}</Typography>
-                </Box>
-                <Typography variant="h6">
-                  Virtual Agent joined conversation
-                </Typography>
-                <Box>
                   <Box>
-                    <Paper className={classes.question}>
+                    <p className={classes.question}>
                       Hi, I'm your Virtual Travel Agent. 👋 I'm a bot who can
                       help you change your booking, redeem airline credit, and
                       more.
-                    </Paper>
-                    <Paper className={classes.question}>
+                    </p>
+                    <p className={classes.question}>
                       What would you like to do?
-                    </Paper>
+                    </p>
                   </Box>
                 </Box>
-                <Box></Box>
+                <p style={{marginTop:"110px"}}></p>
                 <Box>
                   <Box className={classes.option}>
-                    <Typography>Cancel Booking</Typography>
+                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Cancel Booking</p>
                   </Box>
                   <Box className={classes.option}>
-                    <Typography>Change booking</Typography>
+                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Change booking</p>
                   </Box>
                   <Box className={classes.option}>
-                    <Typography>Check refund status</Typography>
+                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Check refund status</p>
                   </Box>
                   <Box className={classes.option}>
-                    <Typography>Use Airline Creding</Typography>
+                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Use Airline Creding</p>
                   </Box>
                   <Box className={classes.option}>
-                    <Typography>Do something else</Typography>
+                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Do something else</p>
                   </Box>
                 </Box>
                 <Box
                   display="flex"
                   justifyContent="space-around"
                   alignItems="center"
-                  marginTop="4rem"
+                  marginTop="35px"
                 >
                   <Box>
                     <AttachFileIcon />
@@ -148,4 +149,4 @@ const HelpBoat = () => {
   );
 };
 
-export default HelpBoat;
+export default HelpBot;

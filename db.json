@@ -36,6 +36,13 @@
       "password": "123456789",
       "showPassword": true,
       "id": 5
+    },
+    {
+      "firstname": "Kushal",
+      "email": "patidarkushal70@gmail.com",
+      "password": "12345678",
+      "showPassword": true,
+      "id": 6
     }
   ],
   "login": [
@@ -108,6 +115,13 @@
       "password": "123456789",
       "showPassword": true,
       "id": "effa8823-a8d7-4052-9f7c-16fb37c43b79",
+      "checkedA": true
+    },
+    {
+      "email": "patidarkushal70@gmail.com",
+      "password": "12345678",
+      "showPassword": true,
+      "id": "10fc0dee-35f6-4134-b60b-e7bbba638bbf",
       "checkedA": true
     }
   ],

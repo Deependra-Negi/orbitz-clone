@@ -64,8 +64,8 @@ const ForgotPassword = () => {
 
 
         } else {
-            
-          
+
+
             history.push("/signup")
         }
 
@@ -73,23 +73,7 @@ const ForgotPassword = () => {
 
     }
 
-    // function CheckPassword(data, email) {
 
-    //     return data
-    //     // let flag = false
-    //     // for (let i = 0; i < data.length; i++){
-    //     //     if (data[i].email === email) {
-
-    //     //         flag = true
-    //     //     }
-    //     //     if (flag) {
-    //     //         console.log(data[i].password)
-    //     //     }
-
-    //     // }
-
-
-    // }
     return (
         <>
             <div>
@@ -133,7 +117,7 @@ const ForgotPassword = () => {
 
                 </Grid>
             </form>
-            <button onClick={handleOpen}>open</button>
+           
             <Modal
                 aria-labelledby="spring-modal-title"
                 aria-describedby="spring-modal-description"
@@ -150,21 +134,21 @@ const ForgotPassword = () => {
                     <Paper className={classes.paper}>
                         <div className={classes.subModal} style={{ display: "flex", justifyContent: "space-around", alignItems: "center" }}>
                             <h2 style={{ color: "black" }} >Your Password Retrive</h2>
-                           
-                     <button onClick={handleClose} style={{ height: "25px",width:"25px",borderRadius:"10%", background:"#C51162",color:"white",border:"none" }}>X</button>
+
+                            <button onClick={handleClose} style={{ height: "25px", width: "25px", borderRadius: "10%", background: "#C51162", color: "white", border: "none" }}>X</button>
                         </div>
                         <div className={classes.subModal1}>
 
-                            <h3 style={{textAlign:"center"}}  >{`Password:-${password}`}</h3>
+                            <h3 style={{ textAlign: "center" }}  >{`Password: - ${password}`}</h3>
                         </div>
                         <div className={classes.subModel}>
                             <Button variant="contained"
                                 color="primary" onClick={showModal}>
-                                
-                            <Typography style={{color:"white"}}>OK</Typography>
+
+                                <Typography style={{ color: "white" }}>OK</Typography>
                             </Button>
                         </div>
-                       
+
                     </Paper>
                 </Fade>
             </Modal>

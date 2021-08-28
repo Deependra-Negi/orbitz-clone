@@ -1,21 +1,27 @@
-import React from 'react'
+import React from "react";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 const FilterCard = (props) => {
-    const { label,onChange } = props;
-    return (
+  const { label, handleFilter, name } = props;
+ 
+  const handleChange = (e) => {
+    handleFilter(e);
+  };
+  return (<>
       <FormControlLabel
         control={
-          <Checkbox
-           /*  checked={false} */
-            onChange={onChange}
-            name="checkedB"
+        <Checkbox
+            onChange={handleChange}
+            name={name}
             color="primary"
           />
         }
         label={label}
       />
+      </>
     );
-}
+  
+  };
+  
 
-export default FilterCard
+export default FilterCard;

@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import axios from 'axios'
-import { useDispatch, useSelector } from 'react-redux'
+
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { getHotel } from '../../Redux/Queries/actions'
 
 
-export default function HotelCard() {
+export default function HotelCard({hotel}) {
     const history = useHistory();
     const dispatch = useDispatch();
-    const results = useSelector(state => state.result)
+
     const handleClick = (id) => {
         dispatch(getHotel(id));
         history.push(`/hotels/${id}`);
@@ -17,7 +17,6 @@ export default function HotelCard() {
     
     return (
     <>
-       {results.map((hotel)=>(
         <CardCont onClick={() => handleClick(hotel.id)}>
             <ImgCont><img src={hotel.images[0].url} alt="hotel" /></ImgCont>
             <TextCont>
@@ -42,7 +41,6 @@ export default function HotelCard() {
                 </LowerSec>
             </TextCont>
            </CardCont>
-           ))}
         </>
     )
 }

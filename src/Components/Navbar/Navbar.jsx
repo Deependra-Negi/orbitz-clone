@@ -14,11 +14,15 @@ import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutdonefunc } from "../../Redux/Auth/action";
+import { saveData } from "../../Utils/LocalStore/LocalData";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    width: "100vw",
+    //width: "100vw",
     margin: 0,
     padding: 0
   },
@@ -56,21 +60,26 @@ const useStyles = makeStyles((theme) => ({
       color: "#fffff"
   },
   
-  btn: {
-    color: "#fffff",
+  white: {
+    color: "#fff  ",
     textTransform: "none",
     padding: "4px 16px",
+    fontSize: "0.875rem",
+    //color: theme.palette.common.white,
     '&:hover': {
       color: "#0c7c73"
     }
   },
   
   moreTravels: {
+    color: "#fff  ",
+    textTransform: "none",
     marginTop: "13px",
     marginLeft: "25px",
   },
   dropdown: {
     marginTop: "12px",
+    color: "#fff  ",
   },
   hoverEffect: {
     display: "flex",
@@ -78,11 +87,23 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: "#0c7c73"
     }
-  }
+  },
+  
 }));
 
 const Navbar = () => {
   const classes = useStyles();
+  const { isAuth } = useSelector((state) => state.auth)
+  
+  const dispatch = useDispatch()
+  const handleLogout = () => {
+    if (isAuth) {
+
+      dispatch(logoutdonefunc())
+      saveData("token", "")
+    }
+  }
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const theme = useTheme();
@@ -102,13 +123,14 @@ const Navbar = () => {
               <Toolbar className={classes.navSpacing}>
                   <div style={{display:'flex'}}>
                     <div className={classes.logo}>
-              <img style={{ cursor: "pointer" }} onClick={handleHome} src={logo} alt="Orbitz"  />
+                      <img style={{ cursor: "pointer" }} onClick={handleHome} src={logo} alt="Orbitz"  />
                     </div>
-                    {isMobile ?
-                    <div></div> : (<div className={classes.hoverEffect} >
-                <Typography className={classes.moreTravels}>More travel </Typography> 
+                            {isMobile ?
+                            <div></div> : (<div className={classes.hoverEffect} >
+                        <Typography className={classes.moreTravels}>More travel</Typography> 
                 <ExpandMoreRoundedIcon className={classes.dropdown}/></div>)}
                   </div>
+          
 {/* --------------------Mobile view------------------------- */}
           {isMobile ? (
             <>
@@ -164,21 +186,25 @@ const Navbar = () => {
             </>
           ) : (
             <div className={classes.headerOptions}>
-              <Button color="inherit" className={classes.btn}>
-                Español
+              <Button style={{color:"red"}}>
+               <Typography className={classes.white} variant="h6"> Español</Typography>
               </Button>
               <Button color="inherit" className={classes.btn}>
-                List your property
+                <Typography className={classes.white} variant="h6"> List your property</Typography>
               </Button>
               <Button color="inherit" className={classes.btn}>
-                Support
+                <Typography className={classes.white} variant="h6"> Support</Typography>
               </Button>
               <Button color="inherit" className={classes.btn}>
-                Trips
+                <Typography className={classes.white} variant="h6"> Trips</Typography>
               </Button>
-              <Button color="inherit" className={classes.btn}>
-                Sign in
-              </Button>
+                <Link style={{textDecoration:"none"}} to="/signin">
+                <Button onClick={handleLogout} className={classes.btn}>
+                <Typography className={classes.white} variant="h6"> 
+                        {isAuth ? "SIGNOUT" : "SIGNIN"}
+                  </Typography>
+                  </Button>
+                </Link>
             </div>
           )}
         </Toolbar>

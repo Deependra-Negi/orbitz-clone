@@ -9,6 +9,7 @@ import Options from './Components/HomepageStatic/Options'
 import Section1 from './Components/HomepageStatic/Section1'
 
 
+
 function App() {
   return (
     <>

@@ -27,7 +27,7 @@ export function HotelPageData() {
             clearInterval(timer);
         }
     }, [])
-    const hotel = useSelector(state => state.currentHotel);
+    const hotel = useSelector(state => state.Query.currentHotel);
     const starArr = new Array(Math.round(hotel.rating)).fill(1);
     const [value, setValue] = useState(0);
     const ref = useRef();
@@ -59,18 +59,18 @@ export function HotelPageData() {
             console.log("sp1",value);
             ref.current = 0;
             setValue(0);
-        } else if ((val >= 1070) && (val < 1850) && (ref.current !== 1)) {
+        } else if ((val >= 1070) && (val < 3208) && (ref.current !== 1)) {
             console.log("sp2",value);
             ref.current = 1;
             setValue(1);
-        } else if ((val >= 1850) && (val < 5000) && (ref.current !== 2)) {
+        } else if ((val >= 3208) && (val < 5000) && (ref.current !== 2)) {
             console.log("sp3",value);
             ref.current = 2;
             setValue(2);
         }
     }
     return (
-        <div>
+        <div style={{backgroundColor:"rgb(255, 255, 255)"}}>
             <div className={styles.container}>
                     <div className={styles.innerContainer}>
                         <Box className={styles.imageContainer}>
@@ -89,10 +89,11 @@ export function HotelPageData() {
                             className={classes.prime}
                             indicatorColor="primary"
                             textColor="primary"
+                            style={{backgroundColor:"white"}}
                         >
                             <Tab onClick={() => handleClick()} style={{minWidth:"6%"}} className={classes.subTabs} label="Overview" />
                             <Tab onClick={() => handleClick(1183)} style={{minWidth:"6%"}} className={classes.subTabs} label="Rooms" />
-                            <Tab onClick={() => handleClick(1900)} style={{minWidth:"6%"}} className={classes.subTabs} label="Location" />
+                            <Tab onClick={() => handleClick(3210)} style={{minWidth:"6%"}} className={classes.subTabs} label="Location" />
                             <Tab style={{minWidth:"6%"}} className={classes.subTabs} label="Amenities" />
                             <Tab style={{minWidth:"6%"}} className={classes.subTabs} label="Policies" />
                             <Tab style={{minWidth:"6%"}} className={classes.subTabs} label="Reviews" />
@@ -141,8 +142,12 @@ export function HotelPageData() {
                         </div>
                         <div className={styles.roomDiv}>
                         <h1>Choose your Room</h1>
-                            <RoomCard/>
-
+                        <div className={styles.rooms}>
+                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Superior Room, 2 Twin Beds, City View"}/>
+                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Deluxe Room, 2 Twin Beds, City View"}/>
+                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Executive Suite, 1 King Bed, City View (Inclusive of Bombay Chai)"}/>
+                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"SeleQtions Suite, 1 King Bed, City View (Inclusive of Bombay Chai)"}/>
+                        </div>
                         </div>
                     <div className={styles.areaDiv}>
                         <div className={styles.subArea}>

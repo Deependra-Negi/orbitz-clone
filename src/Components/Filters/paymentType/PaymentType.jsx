@@ -6,7 +6,7 @@ const PaymentType = (props) => {
   const { handleFilter } = props;
   const paymentTypes = [
   {
-    label: "Fully refundable",
+    label: "Fully Refundable",
     name: "FullyRefundable",     
   },{
     label: "Reserve now, Pay later",

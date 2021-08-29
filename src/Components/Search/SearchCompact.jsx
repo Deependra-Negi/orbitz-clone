@@ -172,7 +172,7 @@ export function SearchCompact() {
                             shrink: true,
                         }}
                     />
-            <TextField name="travelers" onChange={handleChange} className={classes.inps} variant="outlined" label="travelers" />
+            <TextField name="travelers" onChange={handleChange} className={classes.inps} variant="outlined" label="Travelers" />
             {!homePage ? <Box>
                 <button onClick={handleSearch} style={btn1}>Search</button>
             </Box> : null}

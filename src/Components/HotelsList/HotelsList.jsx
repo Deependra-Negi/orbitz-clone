@@ -180,9 +180,9 @@ const Cont = styled.div`
 
   top: 2rem;
   display: flex;
-  max-width: 83%;
+  max-width: 95%;
   margin: auto;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: #f5f5f5;
 `;
 const FilterCont = styled.div``;

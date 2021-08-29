@@ -36,7 +36,7 @@ export function PaymentPage() {
         console.log(res.data.token.id);
         if (res.data.token.id === temp && temp !== "") {
             toast("Success!", { type: 'success' });
-            history.push("/BookingConfirmed");
+            history.push("/bookingconfirmed");
         } else {
             toast("Something went wrong", {type:'error'});
         }

@@ -1,5 +1,111 @@
 {
-  "payment": [],
+  "payment": [
+    {
+      "token": {
+        "id": "tok_1JTkkGSJE6bJwq3gzVaFT4x3",
+        "object": "token",
+        "card": {
+          "id": "card_1JTkkFSJE6bJwq3grgfWLik7",
+          "object": "card",
+          "address_city": "Bengaluru",
+          "address_country": "India",
+          "address_line1": "Jayanagar",
+          "address_line1_check": "unchecked",
+          "address_line2": null,
+          "address_state": "19",
+          "address_zip": "560001",
+          "address_zip_check": "unchecked",
+          "brand": "Visa",
+          "country": "US",
+          "cvc_check": "unchecked",
+          "dynamic_last4": null,
+          "exp_month": 11,
+          "exp_year": 2055,
+          "funding": "credit",
+          "last4": "4242",
+          "name": "fweq",
+          "tokenization_method": null
+        },
+        "client_ip": "157.45.196.166",
+        "created": 1630230968,
+        "email": "doodoo@gmail.com",
+        "livemode": false,
+        "type": "card",
+        "used": false
+      },
+      "id": 1
+    },
+    {
+      "token": {
+        "id": "tok_1JTl5hSJE6bJwq3gse8NLXgi",
+        "object": "token",
+        "card": {
+          "id": "card_1JTl5hSJE6bJwq3gbjMs6s7C",
+          "object": "card",
+          "address_city": "Bengaluru",
+          "address_country": "India",
+          "address_line1": "Jayanagar",
+          "address_line1_check": "unchecked",
+          "address_line2": null,
+          "address_state": "19",
+          "address_zip": "560001",
+          "address_zip_check": "unchecked",
+          "brand": "Visa",
+          "country": "US",
+          "cvc_check": "unchecked",
+          "dynamic_last4": null,
+          "exp_month": 11,
+          "exp_year": 2055,
+          "funding": "credit",
+          "last4": "4242",
+          "name": "cgj",
+          "tokenization_method": null
+        },
+        "client_ip": "157.45.196.166",
+        "created": 1630232297,
+        "email": "doodoo@gmail.com",
+        "livemode": false,
+        "type": "card",
+        "used": false
+      },
+      "id": 2
+    },
+    {
+      "token": {
+        "id": "tok_1JTlCrSJE6bJwq3gfV04DGPp",
+        "object": "token",
+        "card": {
+          "id": "card_1JTlCqSJE6bJwq3gUIbxFI6I",
+          "object": "card",
+          "address_city": "Bengaluru",
+          "address_country": "India",
+          "address_line1": "Jayanagar",
+          "address_line1_check": "unchecked",
+          "address_line2": null,
+          "address_state": "19",
+          "address_zip": "560001",
+          "address_zip_check": "unchecked",
+          "brand": "Visa",
+          "country": "US",
+          "cvc_check": "unchecked",
+          "dynamic_last4": null,
+          "exp_month": 11,
+          "exp_year": 2055,
+          "funding": "credit",
+          "last4": "4242",
+          "name": " j ",
+          "tokenization_method": null
+        },
+        "client_ip": "157.45.196.166",
+        "created": 1630232741,
+        "email": "doodoo@gmail.com",
+        "livemode": false,
+        "type": "card",
+        "used": false
+      },
+      "id": 3
+    }
+  ],
   "users": [
     {
       "id": 1,
@@ -471,10 +577,9 @@
       "price": 4500,
       "delas": 0,
       "city": "Delhi",
-      "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
+      "address": "",
       "paymentType": "Reserve now Pay, Later",
       "propertyType": "Bed",
-      "address": "",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/14000000/13090000/13083600/13083538/380e3879.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -622,10 +727,9 @@
       "price": 3500,
       "delas": 0,
       "city": "Delhi",
-      "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
+      "address": "",
       "paymentType": "Fully Refundable",
       "propertyType": "Villa",
-      "address": "",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/1000000/540000/536600/536519/84169a9e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"

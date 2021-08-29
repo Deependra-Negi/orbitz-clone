@@ -50,6 +50,7 @@ margin: 0%;
 padding: 0%;
 box-sizing: border-box;
 margin-top: 0.75rem;
+margin-left: 29px;
 display: flex;
 /* flex-wrap: wrap; */
 color: #616161;
@@ -62,8 +63,8 @@ width: 750px;
 const ImgCont = styled.div`
   display: flex;
   flex-grow: 1;
-  width: 220px;
-  min-width: 20rem;
+  width: 180px;
+  min-width: 19rem;
   & > img {
     width: 100%;
   }

@@ -9,7 +9,7 @@ export const SearchResults = () => {
         {isLoading ? (
           <LoadingComp />
         ) : (
-          <div style={{ backgroundColor: "#f5f5f5" }}>
+          <div style={{ border:"1px solid grey",backgroundColor: "#f5f5f5" }}>
             <SearchCompact />
             <div >
                 <HotelsList />

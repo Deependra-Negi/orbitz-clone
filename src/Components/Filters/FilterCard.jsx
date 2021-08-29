@@ -8,7 +8,7 @@ const FilterCard = (props) => {
     handleFilter(e);
   };
   return (<>
-      <FormControlLabel
+    <FormControlLabel
         control={
         <Checkbox
             onChange={handleChange}
@@ -16,7 +16,8 @@ const FilterCard = (props) => {
             color="primary"
           />
         }
-        label={label}
+      label={<span style={{ fontSize: '14px' }}>{label}</span>}
+        // label={label}
       />
       </>
     );

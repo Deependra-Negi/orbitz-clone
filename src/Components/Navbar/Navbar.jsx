@@ -25,6 +25,7 @@ import { useState } from "react";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    overflowX: "hidden",
 
     margin: 0,
     padding: 0

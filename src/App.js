@@ -6,11 +6,11 @@ import Map from './Components/Map/Map';
 
 function App() {
   return (
-    <>
+    <div className="class1">
       <Navbar />
       <Routes />
       {/* <Map/> */}
-      </>
+      </div>
   );
 }
 

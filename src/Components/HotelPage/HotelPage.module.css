@@ -44,8 +44,8 @@
   display: flex;
 }
 .tabContainer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: -webkit-sticky !important;
+  position: sticky !important;
   top: 0;
   border-bottom: 1px solid rgb(185, 190, 185);
   padding: 0px;

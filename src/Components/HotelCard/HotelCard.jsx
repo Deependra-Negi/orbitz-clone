@@ -26,8 +26,8 @@ export default function HotelCard({hotel}) {
                 </UpperSec>
                 <LowerSec>
                     <Left>
-                        <Refund>Fully refundable</Refund>
-                        <Refund>{(hotel.price>3000)?"Reserve now, pay later":""}</Refund>
+                        <Refund>{hotel.paymentType}</Refund>
+                        {/* <Refund>{(hotel.price>3000)?"Reserve now, pay later":""}</Refund> */}
                         <Ratings>{hotel.rating}/5 {(hotel.rating>3.6)?"Excelent":"Good"}</Ratings>
                         <Reviews>{hotel.reviews} reviews</Reviews>
                     </Left>

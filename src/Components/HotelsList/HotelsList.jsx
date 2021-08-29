@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const HotelsList = () => {
   const results = useSelector((state) => state.Query.result);
-// console.log("allhotelssort",results)
+
   const [dealsorting, setDealSorting] = useState(false);
   const [guestRatesorting, setGuestRateSorting] = useState(false);
   const [pricePicksorting, setPricePickSorting] = useState(false);
@@ -32,7 +32,6 @@ const HotelsList = () => {
   };
   const [filter, setFilter] = useState(initFilter);
   const handleSort = (value) => {
-    console.log(value)
     if (value === "price") {
       setPriceSorting(true);
       setPricePickSorting(false);
@@ -76,74 +75,85 @@ const HotelsList = () => {
     setFilter({ ...filter, [name]: checked });
   };
   return (
-      <Cont>
-        <FilterCont>
-          <HotelListFilters handleFilter={handleFilter} filter={filter} />
-        </FilterCont>
-        <div>
-          <Sort handleSort={handleSort} />
-          {results
-            .filter((a) => {
-              if (filter.priceAbove400) {
-                return a.price > 4000;
-              }
-              if (filter.price2000to4000) {
-                return a.price > 2000 && a.price <= 4000;
-              }
-              if (filter.price1000to2000) {
-                return a.price > 1000 && a.price <= 2000;
-              }
-              if (filter.priceBelow1000) {
-                return a.price <= 1000;
-              } else {
-                return a;
-              }
-            })
-            .filter((a) => {
-              return filter.Any ? a.rating > 0 : a;
-            })
-            .filter((a) => {
-              return filter.Good35 ? a.rating > 3.5 : a;
-            })
-            .filter((a) => {
-              return filter.VeryGood4 ? a.rating > 4 : a;
-            })
-            .filter((a) => {
-              return filter.Wonderful45 ? a.rating > 4.5 : a;
-            })
-            .sort((a, b) => {
-              return priceSorting
-                ? a.price - b.price
-                : starSorting
-                ? b.rating - a.rating
-                : pricePicksorting
-                ? b.price - a.price
-                : guestRatesorting
-                ? b.reviews - a.reviews
-                : dealsorting
-                ? b.delas - a.delas
-                : b;
-            })
-            .map((hotel) => {
-              return <HotelCard key={hotel.id} hotel={hotel} />;
-            })}
-        </div>
-      </Cont>
+    <Cont>
+      <FilterCont>
+        <HotelListFilters handleFilter={handleFilter} filter={filter} />
+      </FilterCont>
+      <div>
+        <Sort handleSort={handleSort} />
+        {results
+          .filter((a) => {
+            if (filter.priceAbove400) {
+              return a.price > 4000;
+            }
+            if (filter.price2000to4000) {
+              return a.price > 2000 && a.price <= 4000;
+            }
+            if (filter.price1000to2000) {
+              return a.price > 1000 && a.price <= 2000;
+            }
+            if (filter.priceBelow1000) {
+              return a.price <= 1000;
+            } else {
+              return a;
+            }
+          })
+          .filter((a) => {
+            return filter.Any ? a.rating > 0 : a;
+          })
+          .filter((a) => {
+            return filter.Good35 ? a.rating > 3.5 : a;
+          })
+          .filter((a) => {
+            return filter.VeryGood4 ? a.rating > 4 : a;
+          })
+          .filter((a) => {
+            return filter.Wonderful45 ? a.rating > 4.5 : a;
+          })
+          .filter((a) => {
+            return filter.PayLater
+              ? a.paymentType === "Reserve now Pay, Later"
+              : a;
+          })
+          .filter((a) => {
+            return filter.FullyRefundable
+              ? a.paymentType ===  "Fully Refundable"
+              : a;
+          })
+          .sort((a, b) => {
+            return priceSorting
+              ? a.price - b.price
+              : starSorting
+              ? b.rating - a.rating
+              : pricePicksorting
+              ? b.price - a.price
+              : guestRatesorting
+              ? b.reviews - a.reviews
+              : dealsorting
+              ? b.delas - a.delas
+              : b;
+          })
+          .map((hotel) => {
+            return <HotelCard key={hotel.id} hotel={hotel} />;
+          })}
+      </div>
+    </Cont>
   );
 };
 
 export default HotelsList;
 
-
 //-----------------------------styled components----------------------------------------
 
 const Cont = styled.div`
   margin-top: 20px;
+  position: relative;
+
+  top: 2rem;
   display: flex;
   max-width: 83%;
   margin: auto;
   justify-content: space-between;
   background-color: #f5f5f5;
-`
-const FilterCont = styled.div`
-`
+`;
+const FilterCont = styled.div``;

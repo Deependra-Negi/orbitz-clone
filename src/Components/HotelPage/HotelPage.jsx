@@ -17,5 +17,5 @@ export function HotelPage() {
 const Cont = styled.div`
     margin: auto;
     background-color: #f5f5f5;
-    border:1px solid green
+    border:1px solid white;
 `

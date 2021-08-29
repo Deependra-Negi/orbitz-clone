@@ -2,6 +2,7 @@ Clone Of orbitz.com
 
 Orbitz.com is a travel fare aggregator website and travel metasearch engine.
 This is project is implemented using React JS.
+
 The core features of the project:
 
 1) Sign-in using google details.

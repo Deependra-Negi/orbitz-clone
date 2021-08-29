@@ -11,7 +11,6 @@ export default function HomepageStatic() {
             <Options />
             <TravelTips />
             <Vacation />
-            
         </div>
     )
 }

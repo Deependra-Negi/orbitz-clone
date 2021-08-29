@@ -14,6 +14,7 @@ import AcUnitIcon from '@material-ui/icons/AcUnit';
 import LocalParkingIcon from '@material-ui/icons/LocalParking';
 import DeckIcon from '@material-ui/icons/Deck';
 import RoomCard from "../RoomCard/RoomCard";
+import AmenitiesCrad from '../AmenitiesCard/AmenitiesCrad'
 
 export function HotelPageData() {
     useEffect(() => {
@@ -54,21 +55,21 @@ export function HotelPageData() {
     const handleScroll = () => {
         const val = window.pageYOffset;
         if ((val < 1089) && (ref.current !== 0)) {
-            console.log("sp1",value);
+            //console.log("sp1",value);
             ref.current = 0;
             setValue(0);
         } else if ((val >= 1070) && (val < 3208) && (ref.current !== 1)) {
-            console.log("sp2",value);
+            //console.log("sp2",value);
             ref.current = 1;
             setValue(1);
         } else if ((val >= 3208) && (val < 5000) && (ref.current !== 2)) {
-            console.log("sp3",value);
+            //console.log("sp3",value);
             ref.current = 2;
             setValue(2);
         }
     }
     return (
-        <div style={{backgroundColor:"rgb(255, 255, 255)"}}>
+        <div className={styles.outer} style={{backgroundColor:"#f5f5f5"}}>
             <div className={styles.container}>
                     <div className={styles.innerContainer}>
                         <Box className={styles.imageContainer}>
@@ -99,9 +100,9 @@ export function HotelPageData() {
                         </div>
                         <div className={styles.detailsDiv}>
                             <div>
-                                <div><h2>{hotel.name}</h2>
+                                <div className={styles.nameDiv}><h2>{hotel.name}</h2>
                                 <div className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon style={{ color: "#807d7d" }} /> })}</div></div>
-                                <Typography variant="h7">{hotel.rating}/5</Typography>
+                                <div style={{color:"grey", fontSize:"14px", marginLeft:"5px"}}>{hotel.rating}/5</div>
                                 <div className={styles.detailsSub}>
                                 <h3>Popular Amenities</h3>
                                 <div className={styles.amenities}>
@@ -141,10 +142,12 @@ export function HotelPageData() {
                         <div className={styles.roomDiv}>
                         <h1>Choose your Room</h1>
                         <div className={styles.rooms}>
-                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Superior Room, 2 Twin Beds, City View"}/>
-                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Deluxe Room, 2 Twin Beds, City View"}/>
-                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Executive Suite, 1 King Bed, City View (Inclusive of Bombay Chai)"}/>
-                        <RoomCard img={"https://images.trvl-media.com/hotels/1000000/470000/465100/465005/5b2c7bd3.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"SeleQtions Suite, 1 King Bed, City View (Inclusive of Bombay Chai)"}/>
+                            <RoomCard img={"https://images.trvl-media.com/hotels/2000000/1310000/1304400/1304393/f45dec6a.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Delux Room"} price={hotel.price} deals={hotel.delas} id={1}/>
+                            <RoomCard img={"https://images.trvl-media.com/hotels/11000000/10220000/10210200/10210101/7841963d.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Premier Room"} price={hotel.price+(hotel.price*0.3)} deals={hotel.delas} id={2}/>
+                            <RoomCard img={"https://images.trvl-media.com/hotels/11000000/10220000/10210200/10210101/81732015.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Superior Suite"} price={hotel.price+(hotel.price*0.5)} deals={hotel.delas} id={3}/>
+                            <RoomCard img={"https://images.trvl-media.com/hotels/2000000/1310000/1304400/1304393/7fcbfc55.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Super Delux Suite"}  price={hotel.price+(hotel.price*0.7)} deals={hotel.delas} id={4}/>
+                            <RoomCard img={"https://images.trvl-media.com/hotels/21000000/20170000/20160800/20160759/26859605.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Executive Suite"} price={hotel.price+hotel.price} deals={hotel.delas} id={5}/>
+                            <RoomCard img={"https://images.trvl-media.com/hotels/11000000/10220000/10210200/10210101/3fd60858.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"} name={"Corporate Suite"} price={hotel.price+(hotel.price*1.1)} deals={hotel.delas} id={6}/>
                         </div>
                         </div>
                     <div className={styles.areaDiv}>
@@ -190,9 +193,12 @@ export function HotelPageData() {
                             </div>
                         </div>
                             
-                        </div>
                     </div>
+                    <AmenitiesCrad styles={{width:"100%", margin:"auto"}}/>
                 </div>
+                
+            </div>
+            
         </div>
     )
 }

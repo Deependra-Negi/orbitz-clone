@@ -21,21 +21,21 @@ export default function HotelCard({hotel}) {
             <ImgCont><img src={hotel.images[0].url} alt="hotel" /></ImgCont>
             <TextCont>
                 <UpperSec>
-                       <Name><h3>{hotel.name}</h3></Name>
-                    <Location>{hotel.area}</Location>
+                       <Name><h3 style={{fontSize:"21px", color:"rgb(54, 53, 53);"}}>{hotel.name}</h3></Name>
+              <Location>{hotel.area}, {hotel.city}</Location>
                 </UpperSec>
                 <LowerSec>
                     <Left>
                         <Refund>Fully refundable</Refund>
-                        <Refund>Reserve now, pay later</Refund>
-                        <Ratings>{hotel.rating}/5 Excelent</Ratings>
+                        <Refund>{(hotel.price>3000)?"Reserve now, pay later":""}</Refund>
+                        <Ratings>{hotel.rating}/5 {(hotel.rating>3.6)?"Excelent":"Good"}</Ratings>
                         <Reviews>{hotel.reviews} reviews</Reviews>
                     </Left>
                     <Right>
                         <Deals>{hotel.delas}% off</Deals>
-                        <Price>Rs. {hotel.price}</Price>
+                        <Price>₹ {hotel.price}</Price>
                         <PerNight>per night</PerNight>
-                        <Total>total {hotel.price}+20</Total>
+                        <Total>total ₹ {hotel.price+(hotel.price*0.13)}</Total>
                         <Taxes> includes taxes & fees</Taxes>
                     </Right>
                 </LowerSec>
@@ -51,20 +51,21 @@ padding: 0%;
 box-sizing: border-box;
 margin-top: 0.75rem;
 display: flex;
-flex-wrap: wrap;
+/* flex-wrap: wrap; */
 color: #616161;
 background-color: #ffffff;
 cursor: pointer;
+width: 750px;
+//min-width: 60rem;
 `
 
 const ImgCont = styled.div`
   display: flex;
   flex-grow: 1;
-  width: 200px;
-  min-width: 300px;
+  width: 220px;
+  min-width: 20rem;
   & > img {
     width: 100%;
-    height: 100%;
   }
 `;
 const TextCont = styled.div`
@@ -73,6 +74,7 @@ const TextCont = styled.div`
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 2;
+  /* min-width: 36rem; */
 `;
 const UpperSec = styled.div`
   flex-direction: column;

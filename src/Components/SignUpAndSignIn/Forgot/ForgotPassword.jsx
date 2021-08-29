@@ -103,12 +103,14 @@ const ForgotPassword = () => {
 
                         <Box className={classes.buttonMargin}>
                             <Button
-                                className={classes.button} type="submit" variant="contained" color="secondary" >Send Reset link</Button>
+                                className={classes.button} type="submit" variant="contained" color="secondary" >
+                                <Typography style={{ color: "white", fontSize: "14px" }}>Send Reset link</Typography>
+                            </Button>
 
                         </Box>
                         <Box className={classes.Box}>
                             <Typography className={classes.textmargin} variant="subtitle1" component="h2">
-                                Not a member?<Link to="/signup" style={{ color: "#0090BA" }} className={classes.LinkDeco1}>Create an account</Link>
+                                Not a member?<Link  to="/signup" style={{ color: "#0090BA",textDecoration:"none" }} className={classes.LinkDeco1}>Create an account</Link>
 
                             </Typography>
                         </Box>

@@ -20,6 +20,7 @@ import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button'
 import { PaymentModal } from '../PaymentModal/PaymentModal';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
     icon:{
@@ -104,8 +105,8 @@ const CardCont = styled.div`
     }
     display: flex;
     flex-direction: column;
-    width: 300px;
-    min-width: 24rem;
+    width: 210px;
+    min-width: 23rem;
     margin: 15px 0px;
     border: 1px solid lightgrey;
     background-color:white;

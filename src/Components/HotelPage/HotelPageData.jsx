@@ -55,21 +55,21 @@ export function HotelPageData() {
     const handleScroll = () => {
         const val = window.pageYOffset;
         if ((val < 1089) && (ref.current !== 0)) {
-            console.log("sp1",value);
+            //console.log("sp1",value);
             ref.current = 0;
             setValue(0);
         } else if ((val >= 1070) && (val < 3208) && (ref.current !== 1)) {
-            console.log("sp2",value);
+            //console.log("sp2",value);
             ref.current = 1;
             setValue(1);
         } else if ((val >= 3208) && (val < 5000) && (ref.current !== 2)) {
-            console.log("sp3",value);
+            //console.log("sp3",value);
             ref.current = 2;
             setValue(2);
         }
     }
     return (
-        <div style={{backgroundColor:"#f5f5f5"}}>
+        <div className={styles.outer} style={{backgroundColor:"#f5f5f5"}}>
             <div className={styles.container}>
                     <div className={styles.innerContainer}>
                         <Box className={styles.imageContainer}>
@@ -100,9 +100,9 @@ export function HotelPageData() {
                         </div>
                         <div className={styles.detailsDiv}>
                             <div>
-                                <div><h2>{hotel.name}</h2>
+                                <div className={styles.nameDiv}><h2>{hotel.name}</h2>
                                 <div className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon style={{ color: "#807d7d" }} /> })}</div></div>
-                                <Typography variant="h7">{hotel.rating}/5</Typography>
+                                <div style={{color:"grey", fontSize:"14px", marginLeft:"5px"}}>{hotel.rating}/5</div>
                                 <div className={styles.detailsSub}>
                                 <h3>Popular Amenities</h3>
                                 <div className={styles.amenities}>

@@ -119,8 +119,8 @@ const Navbar = () => {
   const classes = useStyles();
   const { isAuth } = useSelector((state) => state.auth)
   let getdata = JSON.parse(localStorage.getItem("user")) || { username: "sign in" }
-  console.log("name", getdata.username.toUpperCase())
-  let name = getdata.username.toUpperCase()
+  //console.log("name", getdata.username.toUpperCase())
+  let name = getdata.username?.toUpperCase()
   const dispatch = useDispatch()
   const [open, setOpen] = useState(false);
   const handleLogout = () => {

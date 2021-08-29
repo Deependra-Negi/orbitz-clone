@@ -57,7 +57,8 @@ export function SearchCompact() {
             backgroundColor: "rgb(200,50,89)",
             borderRadius: "1px",
             textTransform: "none",
-            fontSize: "18px"
+            fontSize: "18px",
+            color:"white"
         },
         btn2: {
             width: "180px",
@@ -69,6 +70,7 @@ export function SearchCompact() {
             position: "absolute",
             bottom: 20,
             left: 510,
+            color:"white"
         },
         inpBox: {
             display: "flex",
@@ -90,6 +92,32 @@ export function SearchCompact() {
             fill:"#616161"
         },
     })
+    const btn1 = {
+        marginTop: "10px",
+        width: "170px",
+        height: "49px",
+        backgroundColor: "rgb(200,50,89)",
+        borderRadius: "1px",
+        textTransform: "none",
+        fontSize: "18px",
+        color: "white",
+        cursor:"pointer",
+        border:"0px",
+    };
+    const btn2 = {
+        width: "180px",
+        height: "49px",
+        backgroundColor: "rgb(200,50,89)",
+        borderRadius: "3px",
+        textTransform: "none",
+        fontSize: "18px",
+        position: "absolute",
+        bottom: 20,
+        left: 510,
+        color: "white",
+        cursor:"pointer",
+        border:"0px",
+    };
     const handleChange = (e) => {
         const { name, value } = e.target;
         setQueryDetails({ ...queryDetails, [name]: value } );
@@ -116,7 +144,7 @@ export function SearchCompact() {
                         label="Check-in"
                         type="date"
                         className={classes.date}
-                        variant="outlined"
+                    variant="outlined"
                         defaultValue="2017-05-24"
                         InputLabelProps={{
                             shrink: true,
@@ -128,7 +156,7 @@ export function SearchCompact() {
                         onChange={handleChange}
                         label="Check-out"
                         type="date"
-                        className={classes.date}
+                    className={classes.date}
                         variant="outlined"
                         defaultValue="2017-05-24"
                         InputLabelProps={{
@@ -137,7 +165,7 @@ export function SearchCompact() {
                     />
             <TextField name="travelers" onChange={handleChange} className={classes.inps} variant="outlined" label="travelers" />
             {!homePage ? <Box>
-                <Button onClick={handleSearch} className={classes.btn1} variant="contained" color="primary">Search</Button>
+                <button onClick={handleSearch} style={btn1}>Search</button>
             </Box> : null}
             </Box>
             {homePage ? <Box><Box className={classes.checkboxes}>
@@ -148,7 +176,7 @@ export function SearchCompact() {
                       color: "#2e4138",
                     }} onChange={(e) => setAddCar(e.target.checked) }/><Typography>Add a Car </Typography>
             </Box><Box>
-                <Button onClick={handleSearch} className={classes.btn2} variant="contained" color="primary">Search</Button>
+                <button onClick={handleSearch} style={btn2}>Search</button>
             </Box></Box> : null}
             </>
     )

@@ -1,8 +1,9 @@
 .container {
   background-color: #f5f5f5;
+  width: 100%;
 }
 .innerContainer {
-  width: 95%;
+  width: 100%;
   margin: auto;
   background-color: white;
 }
@@ -39,7 +40,7 @@
   height: 690px;
   width: 99%;
   margin: 5px auto;
-  padding: 0px 30px;
+  padding: 0px 25px;
   display: flex;
 }
 .tabContainer {
@@ -59,6 +60,7 @@
 }
 .ratingDiv {
   display: flex;
+  padding: 0px;
 }
 .detailsDiv > div:nth-child(1) {
   display: flex;
@@ -140,4 +142,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.nameDiv {
+  margin-left: 1px;
+}
+.outer {
+  width: 93%;
+  margin: auto;
 }

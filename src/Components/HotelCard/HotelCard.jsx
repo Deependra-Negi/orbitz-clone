@@ -21,7 +21,7 @@ export default function HotelCard({hotel}) {
             <ImgCont><img src={hotel.images[0].url} alt="hotel" /></ImgCont>
             <TextCont>
                 <UpperSec>
-                       <Name><h3>{hotel.name}</h3></Name>
+                       <Name><h3 style={{fontSize:"21px", color:"rgb(54, 53, 53);"}}>{hotel.name}</h3></Name>
               <Location>{hotel.area}, {hotel.city}</Location>
                 </UpperSec>
                 <LowerSec>
@@ -51,10 +51,11 @@ padding: 0%;
 box-sizing: border-box;
 margin-top: 0.75rem;
 display: flex;
-flex-wrap: wrap;
+/* flex-wrap: wrap; */
 color: #616161;
 background-color: #ffffff;
 cursor: pointer;
+width: 750px;
 //min-width: 60rem;
 `
 
@@ -73,7 +74,7 @@ const TextCont = styled.div`
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 2;
-  min-width: 36rem;
+  /* min-width: 36rem; */
 `;
 const UpperSec = styled.div`
   flex-direction: column;

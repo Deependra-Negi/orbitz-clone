@@ -1,3 +1,4 @@
+import { loadData, saveData } from "../../Utils/LocalStore/LocalData";
 import { GET_HOTEL_FAILURE, GET_HOTEL_REQUEST, GET_HOTEL_SUCCESS, SEARCH_FAILURE, SEARCH_REQUEST, SEARCH_SUCCESS } from "./actionTypes";
 
 export const queriesReducer = (state = initState, { type, payload }) => {
@@ -11,14 +12,17 @@ export const queriesReducer = (state = initState, { type, payload }) => {
             },
            queries: payload
         }
-        case SEARCH_SUCCESS: return {
-            ...state,
-            status: {
-                isLoading: false,
-                isError: false
-            },
-            result: payload
-        }
+        case SEARCH_SUCCESS:
+            const stateObj1 = {
+                ...state,
+                status: {
+                    isLoading: false,
+                    isError: false
+                },
+                result: payload
+            }
+            saveData("savedState", stateObj1);
+            return stateObj1;
         case SEARCH_FAILURE: return {
             ...state,
             status: {
@@ -33,14 +37,17 @@ export const queriesReducer = (state = initState, { type, payload }) => {
                 isError: false
             }
         }
-        case GET_HOTEL_SUCCESS: return {
-            ...state,
-            currentHotel: payload,
-            status: {
-                isLoading: false,
-                isError: false
+        case GET_HOTEL_SUCCESS:
+            const stateObj2 = {
+                ...state,
+                currentHotel: payload,
+                status: {
+                    isLoading: false,
+                    isError: false
+                }
             }
-        }
+            saveData("savedState", stateObj2);
+            return stateObj2;
         case GET_HOTEL_FAILURE: return {
             ...state,
             status: {
@@ -51,7 +58,7 @@ export const queriesReducer = (state = initState, { type, payload }) => {
     }
 }
 
-const initState = {
+const temp = {
     result: [],
     queries : {
         city: "",
@@ -65,3 +72,4 @@ const initState = {
     },
     currentHotel: {}
 }
+const initState = loadData("savedState") || temp;

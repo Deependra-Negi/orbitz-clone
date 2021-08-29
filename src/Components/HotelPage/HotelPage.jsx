@@ -15,7 +15,7 @@ export function HotelPage() {
 }
 
 const Cont = styled.div`
-    max-width: 85%;
     margin: auto;
     background-color: #f5f5f5;
+    border:1px solid green
 `

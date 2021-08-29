@@ -1,9 +1,14 @@
 import { Box, Button, Divider, makeStyles, Modal, Typography } from "@material-ui/core";
 import { useState } from "react";
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export function PaymentModal() {
+    const hotel = useSelector(state => state.Query.currentHotel);
+    const temp = Number(hotel.price) * (3 / 100);
     const [pay, setPay] = useState(false)
+    const history = useHistory();
     const handleClose = () => {
         setPay(false);
     }
@@ -81,11 +86,11 @@ export function PaymentModal() {
                                 <h5 className={classes.h5}>We will process your payment in your local currency</h5>
                             </div>
                             <div >
-                                <h3 style={{ fontSize: "25px" }} className={classes.alignRight}>₹ 5000</h3>
+                                <h3 style={{ fontSize: "25px" }} className={classes.alignRight}>₹ {hotel.price}</h3>
                                 <p className={classes.alignRight}>per night</p>
-                                <p style={{ fontWeight: "700" }} className={classes.alignRight}>₹ 7310 total</p>
+                                <p style={{ fontWeight: "700" }} className={classes.alignRight}>₹ {Number(hotel.price) + temp} total</p>
                                 <p className={classes.alignRight}>includes taxes and fees</p>
-                                <button style={{ color: "white" }} variant="contained" color="secondary" className={classes.btn}>Pay now</button>
+                                <button onClick={() => history.push("/payment")} style={{ color: "white" }} variant="contained" color="secondary" className={classes.btn}>Pay now</button>
                             </div>
                         </div>
                         <div className={classes.paymentOptionsDiv}>
@@ -95,9 +100,9 @@ export function PaymentModal() {
                                 <h5 className={classes.h5}>Pay the property directly in their local currency</h5>
                             </div>
                             <div >
-                                <h3 style={{ fontSize: "25px" }} className={classes.alignRight}>₹ 5000</h3>
+                                <h3 style={{ fontSize: "25px" }} className={classes.alignRight}>₹ {hotel.price}</h3>
                                 <p className={classes.alignRight}>per night</p>
-                                <p style={{ fontWeight: "700" }} className={classes.alignRight}>₹ 7310 total</p>
+                                <p style={{ fontWeight: "700" }} className={classes.alignRight}>₹ {Number(hotel.price) + temp} total</p>
                                 <p className={classes.alignRight}>includes taxes and fees</p>
                                 <button className={classes.btn}>Pay at property</button>
                             </div>

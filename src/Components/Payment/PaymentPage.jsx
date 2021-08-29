@@ -44,7 +44,7 @@ export function PaymentPage() {
     return (
         <div className={styles.outer}>
             <Typography variant="h4" style={{ margin: "15px 59px" }}>Secure booking — only takes 2 minutes!</Typography>
-            <div className={styles.orbucksContainer}><LockIcon/><p className={styles.orbucksInfo}>Sign in to earn $3.03 in Orbucks</p></div>
+            <div className={styles.orbucksContainer}><LockIcon/><p className={styles.orbucksInfo}>Sign in to earn ₹299 in Orbucks</p></div>
             <div className={styles.containerPayment}>
                 <div>
                     <div className={styles.subsPayment}>

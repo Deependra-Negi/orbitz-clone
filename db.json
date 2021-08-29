@@ -1,111 +1,5 @@
 {
-  "payment": [
-    {
-      "token": {
-        "id": "tok_1JTWPySJE6bJwq3gqG8IiMU1",
-        "object": "token",
-        "card": {
-          "id": "card_1JTWPySJE6bJwq3gzoQ7SjGk",
-          "object": "card",
-          "address_city": "Bengaluru",
-          "address_country": "India",
-          "address_line1": "Jayanagar",
-          "address_line1_check": "unchecked",
-          "address_line2": null,
-          "address_state": "19",
-          "address_zip": "560001",
-          "address_zip_check": "unchecked",
-          "brand": "Visa",
-          "country": "US",
-          "cvc_check": "unchecked",
-          "dynamic_last4": null,
-          "exp_month": 11,
-          "exp_year": 2037,
-          "funding": "credit",
-          "last4": "4242",
-          "name": "few",
-          "tokenization_method": null
-        },
-        "client_ip": "157.45.218.246",
-        "created": 1630175894,
-        "email": "doodoo@gmail.com",
-        "livemode": false,
-        "type": "card",
-        "used": false
-      },
-      "id": 1
-    },
-    {
-      "token": {
-        "id": "tok_1JTWd6SJE6bJwq3gJ8ph27i9",
-        "object": "token",
-        "card": {
-          "id": "card_1JTWd5SJE6bJwq3g0UgOIqHN",
-          "object": "card",
-          "address_city": "Bengaluru",
-          "address_country": "India",
-          "address_line1": "Jayanagar",
-          "address_line1_check": "unchecked",
-          "address_line2": null,
-          "address_state": "19",
-          "address_zip": "560001",
-          "address_zip_check": "unchecked",
-          "brand": "Visa",
-          "country": "US",
-          "cvc_check": "unchecked",
-          "dynamic_last4": null,
-          "exp_month": 11,
-          "exp_year": 2055,
-          "funding": "credit",
-          "last4": "4242",
-          "name": "kj",
-          "tokenization_method": null
-        },
-        "client_ip": "157.45.218.246",
-        "created": 1630176708,
-        "email": "doodoo@gmail.com",
-        "livemode": false,
-        "type": "card",
-        "used": false
-      },
-      "id": 2
-    },
-    {
-      "token": {
-        "id": "tok_1JTgimSJE6bJwq3gz09UZpGk",
-        "object": "token",
-        "card": {
-          "id": "card_1JTgimSJE6bJwq3gNsLtSMOT",
-          "object": "card",
-          "address_city": "Bengaluru",
-          "address_country": "India",
-          "address_line1": "Jayanagar",
-          "address_line1_check": "unchecked",
-          "address_line2": null,
-          "address_state": "19",
-          "address_zip": "560001",
-          "address_zip_check": "unchecked",
-          "brand": "Visa",
-          "country": "US",
-          "cvc_check": "unchecked",
-          "dynamic_last4": null,
-          "exp_month": 11,
-          "exp_year": 2055,
-          "funding": "credit",
-          "last4": "4242",
-          "name": "fewfvvfe",
-          "tokenization_method": null
-        },
-        "client_ip": "157.45.197.230",
-        "created": 1630215500,
-        "email": "doodoo@gmail.com",
-        "livemode": false,
-        "type": "card",
-        "used": false
-      },
-      "id": 3
-    }
-  ],
+  "payment": [],
   "users": [
     {
       "id": 1,
@@ -292,6 +186,69 @@
       "showPassword": false,
       "id": "f38be213-2a60-401b-bf79-f175c57f5871",
       "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "e5ba0b3e-b604-4829-b404-f7e76ed6f41d",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "d306b0da-5356-4db2-bcf2-1691eb9ac45b",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "e841d085-f823-451d-8fdb-fd6bf47812bc",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "f14a045b-97c3-4d5f-b495-3971048ab277",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "03d6acf4-3e0e-48b5-99cb-fa9db30be87d",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "638c0386-7fa3-4804-9217-274a9bbf0aa0",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "c74c216f-edde-4051-a8b0-bbc527d1b597",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "7f50b65e-32a2-4054-81b5-c2208b291eba",
+      "checkedA": true
+    },
+    {
+      "email": "pawanpfgfgatidar41@gmail.com",
+      "password": "123456789",
+      "showPassword": false,
+      "id": "23f0039e-89d5-42b5-9804-89d89a5ca86a",
+      "checkedA": true
     }
   ],
   "hotels": [
@@ -304,6 +261,8 @@
       "price": 2200,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
+      "propertyType": "Hotel",
       "address": "2 Sardar Patel Marg, New Delhi, Delhi N.C.R, 110 021",
       "images": [
         {
@@ -332,6 +291,8 @@
       "price": 2000,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
+      "propertyType": "Hotel Resort",
       "address": "Plot No. 10, GMR Hospitality District, Indira Gandhi International Airport, New Delhi, Delhi N.C.R, 110037",
       "images": [
         {
@@ -360,6 +321,8 @@
       "price": 2200,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
+      "propertyType": "Villa",
       "address": "Diplomatic Enclave Chanakyapuri, New Delhi, Delhi N.C.R, 110023",
       "images": [
         {
@@ -388,6 +351,8 @@
       "price": 3500,
       "delas": 10,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
+      "propertyType": "Hotel",
       "address": "Diplomatic Enclave Chanakyapuri, New Delhi, Delhi N.C.R, 110023",
       "images": [
         {
@@ -416,6 +381,8 @@
       "price": 3000,
       "delas": 10,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
+      "propertyType": "Hotel Resort",
       "address": "15 Parliament Street, Near Connaught Place, New Delhi, Delhi N.C.R, 110001",
       "images": [
         {
@@ -444,6 +411,8 @@
       "price": 1500,
       "delas": 30,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
+      "propertyType": "Palace",
       "address": "8718 D.B. Gupta Road Paharganj, New Delhi, Delhi N.C.R, 110055",
       "images": [
         {
@@ -472,6 +441,8 @@
       "price": 1200,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
+      "propertyType": "Hotel",
       "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
         {
@@ -501,6 +472,9 @@
       "delas": 0,
       "city": "Delhi",
       "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
+      "paymentType": "Reserve now Pay, Later",
+      "propertyType": "Bed",
+      "address": "",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/14000000/13090000/13083600/13083538/380e3879.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -528,6 +502,8 @@
       "price": 4000,
       "delas": 20,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
+      "propertyType": "Hotel Palace",
       "address": "Nehru Place, New Delhi, 110019",
       "images": [
         {
@@ -556,6 +532,8 @@
       "price": 2200,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
+      "propertyType": "Villa",
       "address": "Janpath Road, New Delhi, Delhi N.C.R, 110001",
       "images": [
         {
@@ -584,6 +562,8 @@
       "price": 2500,
       "delas": 15,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
+      "propertyType": "Bed",
       "address": "8718 D.B. Gupta Road Paharganj, New Delhi, Delhi N.C.R, 110055",
       "images": [
         {
@@ -612,6 +592,8 @@
       "price": 1700,
       "delas": 20,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
+      "propertyType": "Hotel Resort",
       "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
         {
@@ -641,6 +623,9 @@
       "delas": 0,
       "city": "Delhi",
       "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
+      "paymentType": "Fully Refundable",
+      "propertyType": "Villa",
+      "address": "",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/1000000/540000/536600/536519/84169a9e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -668,6 +653,7 @@
       "price": 5000,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
       "address": "Nehru Place, New Delhi, 110019",
       "images": [
         {
@@ -696,6 +682,7 @@
       "price": 1300,
       "delas": 40,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
       "address": "Janpath Road, New Delhi, Delhi N.C.R, 110001",
       "images": [
         {
@@ -724,6 +711,7 @@
       "price": 1200,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
       "address": "2 Sardar Patel Marg, New Delhi, Delhi N.C.R, 110 021",
       "images": [
         {
@@ -752,6 +740,7 @@
       "price": 2200,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
       "address": "Plot No. 10, GMR Hospitality District, Indira Gandhi International Airport, New Delhi, Delhi N.C.R, 110037",
       "images": [
         {
@@ -780,6 +769,7 @@
       "price": 900,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
       "address": "Diplomatic Enclave Chanakyapuri, New Delhi, Delhi N.C.R, 110023",
       "images": [
         {
@@ -808,6 +798,7 @@
       "price": 600,
       "delas": 10,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
       "address": "Diplomatic Enclave Chanakyapuri, New Delhi, Delhi N.C.R, 110023",
       "images": [
         {
@@ -836,6 +827,7 @@
       "price": 800,
       "delas": 10,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
       "address": "15 Parliament Street, Near Connaught Place, New Delhi, Delhi N.C.R, 110001",
       "images": [
         {
@@ -864,6 +856,7 @@
       "price": 2300,
       "delas": 30,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
       "address": "8718 D.B. Gupta Road Paharganj, New Delhi, Delhi N.C.R, 110055",
       "images": [
         {
@@ -893,6 +886,7 @@
       "delas": 0,
       "city": "Delhi",
       "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
+      "paymentType": "Reserve now Pay, Later",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/2000000/1530000/1528800/1528788/dffafa2c.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -921,6 +915,7 @@
       "delas": 25,
       "city": "Delhi",
       "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
+      "paymentType": "Fully Refundable",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/2000000/1530000/1528800/1528788/c7178182.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -949,6 +944,7 @@
       "delas": 0,
       "city": "Delhi",
       "address": "Nehru Place, New Delhi, 110019",
+      "paymentType": "Reserve now Pay, Later",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/2000000/1530000/1528800/1528788/e1cfe61e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -976,6 +972,7 @@
       "price": 1300,
       "delas": 30,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
       "address": "Janpath Road, New Delhi, Delhi N.C.R, 110001",
       "images": [
         {
@@ -1004,6 +1001,7 @@
       "price": 2500,
       "delas": 15,
       "city": "Delhi",
+      "paymentType": "Reserve now Pay, Later",
       "address": "8718 D.B. Gupta Road Paharganj, New Delhi, Delhi N.C.R, 110055",
       "images": [
         {
@@ -1031,6 +1029,7 @@
       "reviews": 565,
       "price": 3100,
       "delas": 20,
+      "paymentType": "Fully Refundable",
       "city": "Delhi",
       "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
@@ -1061,6 +1060,7 @@
       "delas": 10,
       "city": "Delhi",
       "address": "Gurgaon",
+      "paymentType": "Fully Refundable",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/5000000/4330000/4327800/4327701/8258bc4d.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -1089,6 +1089,7 @@
       "delas": 0,
       "city": "Delhi",
       "address": "Nehru Place, New Delhi, 110019",
+      "paymentType": "Reserve now Pay, Later",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/1000000/80000/75800/75755/d06e9d8d.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -1116,6 +1117,7 @@
       "price": 2300,
       "delas": 0,
       "city": "Delhi",
+      "paymentType": "Fully Refundable",
       "address": "Janpath Road, New Delhi, Delhi N.C.R, 110001",
       "images": [
         {
@@ -1172,6 +1174,7 @@
       "price": 2000,
       "delas": 0,
       "city": "Lucknow",
+      "paymentType": "Fully Refundable",
       "address": "Plot No. 10, GMR Hospitality District, Indira Gandhi International Airport, New Delhi, Delhi N.C.R, 110037",
       "images": [
         {
@@ -1228,6 +1231,7 @@
       "price": 3500,
       "delas": 10,
       "city": "Lucknow",
+      "paymentType": "Fully Refundable",
       "address": "Diplomatic Enclave Chanakyapuri, New Delhi, Delhi N.C.R, 110023",
       "images": [
         {
@@ -1284,6 +1288,7 @@
       "price": 1500,
       "delas": 30,
       "city": "Lucknow",
+      "paymentType": "Fully Refundable",
       "address": "8718 D.B. Gupta Road Paharganj, New Delhi, Delhi N.C.R, 110055",
       "images": [
         {
@@ -1341,6 +1346,7 @@
       "delas": 0,
       "city": "Lucknow",
       "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
+      "paymentType": "Fully Refundable",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/14000000/13090000/13083600/13083538/380e3879.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -1396,6 +1402,7 @@
       "price": 2200,
       "delas": 0,
       "city": "Lucknow",
+      "paymentType": "Fully Refundable",
       "address": "Janpath Road, New Delhi, Delhi N.C.R, 110001",
       "images": [
         {
@@ -1452,6 +1459,7 @@
       "price": 2000,
       "delas": 0,
       "city": "Bangalore",
+      "paymentType": "Fully Refundable",
       "address": "Plot No. 10, GMR Hospitality District, Indira Gandhi International Airport, New Delhi, Delhi N.C.R, 110037",
       "images": [
         {
@@ -1508,6 +1516,7 @@
       "price": 3500,
       "delas": 10,
       "city": "Bangalore",
+      "paymentType": "Fully Refundable",
       "address": "Diplomatic Enclave Chanakyapuri, New Delhi, Delhi N.C.R, 110023",
       "images": [
         {
@@ -1564,6 +1573,7 @@
       "price": 1500,
       "delas": 30,
       "city": "Bangalore",
+      "paymentType": "Fully Refundable",
       "address": "8718 D.B. Gupta Road Paharganj, New Delhi, Delhi N.C.R, 110055",
       "images": [
         {

@@ -3,22 +3,39 @@ import Box from "@material-ui/core/Box";
 import { v4 as uuid } from "uuid";
 import FilterCard from "../FilterCard";
 const PropertyType = (props) => {
-  const { filter, handleFilter } = props;
-  const propertyTypes = [
-    "Hotel",
-    "Hotel resort",
-    "Bed and Breakfast",
-    "villa",
-    "Palace",
+  const { handleFilter } = props;
+  const propertyTypes = [  
+   
+    {
+      label: "Hotel",
+      name: "Hotel" 
+    },
+    {
+      label: "Hotel Resort",
+      name: "HotelResort"      
+    },
+    {
+      label: "Bed and Breakfast",
+      name: "Bed"    
+    },
+    {
+      label: "Villa",
+      name: "Villa"
+    },
+    {
+      label:  "Palace",
+      name:  "Palace"      
+    }
   ];
   return (
     <Box display="flex" flexDirection="column">
       {propertyTypes.map((item) => {
         return (
           <FilterCard
+          id={uuid()}
             handleFilter={handleFilter}
-            name={item}
-            label={item}
+            name={item.name}
+            label={item.label}
           />
         );
       })}

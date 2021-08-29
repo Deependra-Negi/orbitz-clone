@@ -238,8 +238,9 @@ const SignInForm = () => {
                               
                             </Box>
                                 <Link style={{ color: "#0090BA",textDecoration:"none" }} to="/forgot">
-                                <Box >
-                                Forgot password?
+                                    <Box >
+                                        <Typography style={{ color: "#0090BA" }}>Forgot password?</Typography>
+                                
                                     </Box>
                                 </Link>
                             </Box>
@@ -253,7 +254,9 @@ const SignInForm = () => {
                             </Typography>
                         </Box>
                         <Box className={classes.Box}>
-                            <Button className={classes.Button} type="submit" variant="contained" color="secondary" >Create account</Button>
+                            <Button className={classes.Button} type="submit" variant="contained" color="secondary" >
+                                <Typography style={{ color: "white", fontSize: "14px" }}>Sign in</Typography>
+                            </Button>
 
                         </Box>
                         <Box>

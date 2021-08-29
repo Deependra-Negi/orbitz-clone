@@ -15,7 +15,6 @@ import { Redirect, useHistory } from "react-router-dom";
 
 
 
-
 toast.configure();
 
 export function PaymentPage() {
@@ -32,7 +31,7 @@ export function PaymentPage() {
         const temp = token.id;
         const res = await axios.post("http://localhost:3001/payment", { token })
         console.log(res.data.token.id);
-        if (res.data.token.id === temp && temp != "") {
+        if (res.data.token.id === temp && temp !== "") {
             toast("Success!", { type: 'success' });
             history.push("/BookingConfirmed");
         } else {

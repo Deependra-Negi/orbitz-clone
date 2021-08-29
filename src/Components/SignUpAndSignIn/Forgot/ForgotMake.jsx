@@ -29,7 +29,8 @@ export const useStyles = makeStyles((theme) => ({
     Navbar: {
         maxWidth: "100%",
         background: "#FFFFFF",
-        maxHeight: 57,
+        maxHeight: 70,
+        padding: "5px",
         display: "flex",
 
     

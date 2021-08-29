@@ -70,7 +70,8 @@ marginTop:10,
     Navbar: {
     maxWidth:"100%",
         background: "#FFFFFF",
-        maxHeight: 57,
+        maxHeight: 70,
+        padding:"5px",
         display: "flex",
         
     },

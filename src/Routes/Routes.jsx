@@ -1,3 +1,4 @@
+import Map  from "../Components/Map/Map"
 import { Route, Switch } from "react-router-dom"
 import { HotelPage } from "../Components/HotelPage/HotelPage"
 import { BookingConfirmed } from "../Components/Payment/BookingConfirmedPage"
@@ -39,6 +40,9 @@ export const Routes = () => {
                     <div style={{border:"1px solid grey", backgroundColor:"rgb(239,245,239)"}}>
                     <BookingConfirmed/>
                     </div>
+                </Route>
+                <Route exact path="/map">
+                     <Map/>
                 </Route>
             </Switch>
         </div>

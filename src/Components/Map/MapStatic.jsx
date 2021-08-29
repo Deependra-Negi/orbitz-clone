@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { useHistory } from 'react-router'
 
 
 export default function MapStatic() {
-
+    const history = useHistory()
     const handleMap = () => {
-        alert('show map')
+        history.push("/map")
     }
     return (
         <Cont>

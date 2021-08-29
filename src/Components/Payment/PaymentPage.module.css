@@ -53,10 +53,12 @@
 .hotelPic {
   width: 580px;
   height: 250px;
+  position: relative;
 }
 .hotelPic img {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  background-color: black !important;
 }
 .times {
   display: flex;
@@ -192,4 +194,11 @@
 }
 .confirmDets > div {
   text-align: center;
+}
+.hnDiv {
+  font-size: 30px;
+  position: absolute;
+  bottom: 1%;
+  right: 30;
+  border: 1px solid black;
 }

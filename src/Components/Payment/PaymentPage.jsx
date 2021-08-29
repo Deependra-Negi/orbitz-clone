@@ -22,7 +22,7 @@ export function PaymentPage() {
     const history = useHistory();
     const hotel = useSelector(state => state.Query.currentHotel);
     const query = useSelector(state => state.Query.queries);
-    const temp = Number(hotel.price) * (3 / 100);
+    const temp = Number(hotel.price) * (13 / 100);
     
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -46,8 +46,7 @@ export function PaymentPage() {
                 <div>
                     <div className={styles.subsPayment}>
                         <h2>{hotel.name}, {hotel.city}</h2>
-                        <div className={styles.hotelPic}><img src={hotel.images[1].url} alt="hotel"/></div>
-                        {/* <h3>{hotel.rating}/5</h3> */}
+                        <div className={styles.hotelPic}><img src={hotel.images[1].url} alt="hotel" /><p className={styles.hnDiv}>{hotel.name}</p></div>
                         <div className={styles.detsDiv}>
                             <p><span className={styles.paySub} style={{marginRight:"3px"}}>Number of Guests:</span> {query.travelers}</p>
                         <div className={styles.times}>

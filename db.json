@@ -69,6 +69,41 @@
         "used": false
       },
       "id": 2
+    },
+    {
+      "token": {
+        "id": "tok_1JTgimSJE6bJwq3gz09UZpGk",
+        "object": "token",
+        "card": {
+          "id": "card_1JTgimSJE6bJwq3gNsLtSMOT",
+          "object": "card",
+          "address_city": "Bengaluru",
+          "address_country": "India",
+          "address_line1": "Jayanagar",
+          "address_line1_check": "unchecked",
+          "address_line2": null,
+          "address_state": "19",
+          "address_zip": "560001",
+          "address_zip_check": "unchecked",
+          "brand": "Visa",
+          "country": "US",
+          "cvc_check": "unchecked",
+          "dynamic_last4": null,
+          "exp_month": 11,
+          "exp_year": 2055,
+          "funding": "credit",
+          "last4": "4242",
+          "name": "fewfvvfe",
+          "tokenization_method": null
+        },
+        "client_ip": "157.45.197.230",
+        "created": 1630215500,
+        "email": "doodoo@gmail.com",
+        "livemode": false,
+        "type": "card",
+        "used": false
+      },
+      "id": 3
     }
   ],
   "users": [
@@ -263,7 +298,7 @@
     {
       "id": 1,
       "name": "Taj Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -319,7 +354,7 @@
     {
       "id": 3,
       "name": "The Leela Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -375,7 +410,7 @@
     {
       "id": 5,
       "name": "The Park New Delhi",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 3.5,
       "reviews": 542,
       "price": 3000,
@@ -465,7 +500,7 @@
       "price": 4500,
       "delas": 0,
       "city": "Delhi",
-      "address": "",
+      "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/14000000/13090000/13083600/13083538/380e3879.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -605,7 +640,7 @@
       "price": 3500,
       "delas": 0,
       "city": "Delhi",
-      "address": "",
+      "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/1000000/540000/536600/536519/84169a9e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -683,7 +718,7 @@
     {
       "id": 16,
       "name": "Hover Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 1200,
@@ -739,7 +774,7 @@
     {
       "id": 18,
       "name": "The Orion Plaza",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 3.6,
       "reviews": 745,
       "price": 900,
@@ -795,7 +830,7 @@
     {
       "id": 20,
       "name": "The Perk New",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 3.5,
       "reviews": 112,
       "price": 800,
@@ -885,7 +920,7 @@
       "price": 2600,
       "delas": 25,
       "city": "Delhi",
-      "address": "",
+      "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/2000000/1530000/1528800/1528788/c7178182.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -1103,7 +1138,7 @@
     {
       "id": 31,
       "name": "Taj Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -1159,7 +1194,7 @@
     {
       "id": 33,
       "name": "The Leela Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -1215,7 +1250,7 @@
     {
       "id": 35,
       "name": "The Park New Delhi",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 3.5,
       "reviews": 542,
       "price": 3000,
@@ -1305,7 +1340,7 @@
       "price": 4500,
       "delas": 0,
       "city": "Lucknow",
-      "address": "",
+      "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/14000000/13090000/13083600/13083538/380e3879.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -1383,7 +1418,7 @@
     {
       "id": 41,
       "name": "Taj Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -1439,7 +1474,7 @@
     {
       "id": 43,
       "name": "The Leela Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -1495,7 +1530,7 @@
     {
       "id": 45,
       "name": "The Park New Delhi",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 3.5,
       "reviews": 542,
       "price": 3000,
@@ -1585,7 +1620,7 @@
       "price": 4500,
       "delas": 0,
       "city": "Bangalore",
-      "address": "",
+      "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/14000000/13090000/13083600/13083538/380e3879.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
@@ -1663,7 +1698,7 @@
     {
       "id": 51,
       "name": "Taj Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -1719,7 +1754,7 @@
     {
       "id": 53,
       "name": "The Leela Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -1775,7 +1810,7 @@
     {
       "id": 55,
       "name": "The Park New Delhi",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 3.5,
       "reviews": 542,
       "price": 3000,
@@ -1943,7 +1978,7 @@
     {
       "id": 61,
       "name": "Taj Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -1999,7 +2034,7 @@
     {
       "id": 63,
       "name": "The Leela Palace",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 4.6,
       "reviews": 745,
       "price": 2200,
@@ -2055,7 +2090,7 @@
     {
       "id": 65,
       "name": "The Park New Delhi",
-      "area": "New Delhi",
+      "area": "Rajpath Marg",
       "rating": 3.5,
       "reviews": 542,
       "price": 3000,
@@ -2145,7 +2180,7 @@
       "price": 4500,
       "delas": 0,
       "city": "Pune",
-      "address": "",
+      "address": "Bangla Sahib Road, Connaught Place, New Delhi, Delhi N.C.R, 110 001",
       "images": [
         {
           "url": "https://images.trvl-media.com/hotels/14000000/13090000/13083600/13083538/380e3879.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"

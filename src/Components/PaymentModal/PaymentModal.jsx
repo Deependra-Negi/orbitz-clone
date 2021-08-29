@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 export function PaymentModal() {
     const hotel = useSelector(state => state.Query.currentHotel);
-    const temp = Number(hotel.price) * (3 / 100);
+    const temp = Number(hotel.price) * (13 / 100);
     const [pay, setPay] = useState(false)
     const history = useHistory();
     const handleClose = () => {

@@ -108,6 +108,7 @@
 }
 .subArea {
   display: flex;
+  justify-content: space-between;
 }
 .subArea > div:nth-child(1) {
   width: 30% !important;

@@ -4,6 +4,7 @@ import HotelCard from "../HotelCard/HotelCard";
 import { HotelListFilters } from "../Filters/HotelListFilters";
 import Sort from "../Sort/Sort";
 import styled from "styled-components";
+import MapStatic from "../Map/MapStatic";
 
 const HotelsList = () => {
   const results = useSelector((state) => state.Query.result);
@@ -77,7 +78,8 @@ const HotelsList = () => {
   };
   return (
       <Cont>
-        <FilterCont>
+      <FilterCont>
+        <MapStatic/>
           <HotelListFilters handleFilter={handleFilter} filter={filter} />
         </FilterCont>
         <div>

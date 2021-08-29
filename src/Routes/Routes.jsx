@@ -37,7 +37,7 @@ export const Routes = () => {
                     </div>
                 </Route>
                 <Route exact path="/bookingconfirmed">
-                    <div style={{border:"1px solid grey", backgroundColor:"rgb(239,245,239)"}}>
+                    <div style={{border:"1px solid rgb(239,245,239)", backgroundColor:"rgb(239,245,239)"}}>
                     <BookingConfirmed/>
                     </div>
                 </Route>

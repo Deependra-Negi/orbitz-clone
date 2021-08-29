@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Clone Of orbitz.com
 
 Orbitz.com is a travel fare aggregator website and travel metasearch engine.
@@ -22,3 +23,6 @@ External Libraries used:
 10) thunk
 11) styled-components
 12) uuid
+=======
+
+>>>>>>> fdb1cb2065ed9993c96526be1c0be165d02198fe

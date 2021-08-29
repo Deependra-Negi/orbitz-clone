@@ -11,15 +11,17 @@ const useStyles = makeStyles((theme) => ({
   cont:{
     backgroundColor: "white",
     //padding:"5px 20px"
+    width: "100%",
   },
   sort:{
     backgroundColor: "white",
     border: "1px solid #adadad",
     padding: "5px 20px",
-    width: "200px",
+    width: "250px",
+    height: "50px"
   },
   select: {
-    backgroundColor: "white"
+    backgroundColor: "white",
   }
 }));
 const Sort = ({handleSort}) => {
@@ -45,12 +47,12 @@ const Sort = ({handleSort}) => {
                 name: "sorts",
                 id: "sort-category",
               }}>
-              <option value="recommended">Recommended</option>
-              <option value="price">Price</option>
-              <option value="pricePick">Price + our Picks</option>
-              <option value="deal">Deals</option>
-              <option value="guestRating">Guest Rating + our picks</option>
-              <option value="star">Star Rating</option>
+              <option styles={{height:"190px"}} value="recommended">Recommended</option>
+              <option styles={{height:"90px"}} value="price">Price</option>
+              <option styles={{height:"90px"}} value="pricePick">Price + our Picks</option>
+              <option styles={{height:"90px"}} value="deal">Deals</option>
+              <option styles={{height:"90px"}} value="guestRating">Guest Rating + our picks</option>
+              <option styles={{height:"90px"}} value="star">Star Rating</option>
             </NativeSelect>
           </FormControl>
         </Box>

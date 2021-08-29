@@ -16,7 +16,7 @@ export const Routes = () => {
                     <SearchBar/>
                 </Route>
                 <Route exact path="/results">
-                    <SearchResults/>
+                    <SearchResults  />
                 </Route>
                 <Route exact path="/forgot">
                 <ForgotPassword/>
@@ -31,10 +31,14 @@ export const Routes = () => {
                     <HotelPage/>
                 </Route>
                 <Route exact path="/payment">
+                    <div style={{border:"1px solid grey", backgroundColor:"#f5f5f5"}}>
                     <PaymentPage/>
+                    </div>
                 </Route>
-                <Route exact path="/BookingConfirmed">
+                <Route exact path="/bookingconfirmed">
+                    <div style={{border:"1px solid grey", backgroundColor:"rgb(239,245,239)"}}>
                     <BookingConfirmed/>
+                    </div>
                 </Route>
             </Switch>
         </div>

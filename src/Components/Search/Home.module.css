@@ -14,3 +14,11 @@
   bottom: 0;
   z-index: 7;
 }
+.checkboxes {
+  display: flex;
+  align-items: center;
+  margin: 5px 1px;
+  font-size: 14px;
+  height: 10px;
+  width: 350px;
+}

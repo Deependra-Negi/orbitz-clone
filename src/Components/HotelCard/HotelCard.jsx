@@ -26,8 +26,8 @@ export default function HotelCard({hotel}) {
                 </UpperSec>
                 <LowerSec>
                     <Left>
-                        <Refund>Fully refundable</Refund>
-                        <Refund>{(hotel.price>3000)?"Reserve now, pay later":""}</Refund>
+                        <Refund>{hotel.paymentType}</Refund>
+                        {/* <Refund>{(hotel.price>3000)?"Reserve now, pay later":""}</Refund> */}
                         <Ratings>{hotel.rating}/5 {(hotel.rating>3.6)?"Excelent":"Good"}</Ratings>
                         <Reviews>{hotel.reviews} reviews</Reviews>
                     </Left>
@@ -50,6 +50,7 @@ margin: 0%;
 padding: 0%;
 box-sizing: border-box;
 margin-top: 0.75rem;
+margin-left: 29px;
 display: flex;
 /* flex-wrap: wrap; */
 color: #616161;
@@ -62,8 +63,8 @@ width: 750px;
 const ImgCont = styled.div`
   display: flex;
   flex-grow: 1;
-  width: 220px;
-  min-width: 20rem;
+  width: 180px;
+  min-width: 19rem;
   & > img {
     width: 100%;
   }

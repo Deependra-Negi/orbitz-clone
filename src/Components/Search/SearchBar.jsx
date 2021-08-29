@@ -42,12 +42,12 @@ export const SearchBar = () => {
         containerSearchBox: {
             position: "absolute",
             top: 50,
-            left:160,
-            width: "77%",
+            left:80,
+            width: "87%",
+            margin: "auto",
             height: "290px",
-            border: "10px",
             borderRadius: "1px",
-            padding: "0px 15px",
+            padding: "0px 8px",
             backgroundColor: "white",
             boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
         },
@@ -66,7 +66,7 @@ export const SearchBar = () => {
     };
     return (
         <MainCont>
-            <Box className={styles.home}>
+            <div className={styles.home}>
             <Box className={classes.containerSearchBox}>
                 <Box className={classes.tabs}>
                         <Tabs
@@ -87,7 +87,7 @@ export const SearchBar = () => {
                     <Divider className={classes.div} />
                 <SearchCompact />
                 </Box>
-            </Box>
+            </div>
                     <div className={styles.bot}><HelpBot/></div>
             
                 <StaticDivs>

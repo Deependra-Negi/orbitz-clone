@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { green } from "@material-ui/core/colors";
 import LockIcon from '@material-ui/icons/Lock';
 import { Redirect, useHistory } from "react-router-dom";
+import StarRateIcon from '@material-ui/icons/StarRate';
 
 
 
@@ -22,7 +23,8 @@ export function PaymentPage() {
     const history = useHistory();
     const hotel = useSelector(state => state.Query.currentHotel);
     const query = useSelector(state => state.Query.queries);
-    const temp = Number(hotel.price) * (3 / 100);
+    const temp = Number(hotel.price) * (13 / 100);
+    const starArr = new Array(Math.round(hotel.rating)).fill(1);
     
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -32,35 +34,35 @@ export function PaymentPage() {
         const temp = token.id;
         const res = await axios.post("http://localhost:3001/payment", { token })
         console.log(res.data.token.id);
-        if (res.data.token.id === temp && temp != "") {
+        if (res.data.token.id === temp && temp !== "") {
             toast("Success!", { type: 'success' });
-            history.push("/BookingConfirmed");
+            history.push("/bookingconfirmed");
         } else {
             toast("Something went wrong", {type:'error'});
         }
     }
     return (
         <div className={styles.outer}>
-            <Typography variant="h4" style={{margin:"15px 29px"}}>Payment Method</Typography>
+            <Typography variant="h4" style={{ margin: "15px 59px" }}>Secure booking — only takes 2 minutes!</Typography>
+            <div className={styles.orbucksContainer}><LockIcon/><p className={styles.orbucksInfo}>Sign in to earn ₹299 in Orbucks</p></div>
             <div className={styles.containerPayment}>
                 <div>
                     <div className={styles.subsPayment}>
-                        <h2>{hotel.name}, {hotel.city}</h2>
-                        <div className={styles.hotelPic}><img src={hotel.images[1].url} alt="hotel"/></div>
-                        {/* <h3>{hotel.rating}/5</h3> */}
+                        {/* <h2>{hotel.name}, {hotel.city}</h2> */}
+                        <div className={styles.hotelPic}><img src={hotel.images[1].url} alt="hotel" /><div><p className={styles.hnDiv}>{hotel.name}, {hotel.city}</p><div style={{margin:"5px"}} className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon style={{ color: "#807d7d" }} /> })}</div></div></div>
                         <div className={styles.detsDiv}>
-                            <p><span className={styles.paySub} style={{marginRight:"3px"}}>Number of Guests:</span> {query.travelers}</p>
+                            <p><span className={styles.paySub} style={{marginRight:"3px", color:"grey"}}>Number of Guests:</span> {query.travelers}</p>
                         <div className={styles.times}>
-                            <div style={{display:"flex", alignItems:"center"}}><h4 className={styles.paySub}>Check in:</h4><p>{query.from?.split("-").reverse().join("-")}</p></div>
-                            <div style={{display:"flex", alignItems:"center"}}><h4 className={styles.paySub}>Check out:</h4><p>{query.to?.split("-").reverse().join("-")}</p></div>
+                            <div style={{display:"flex", alignItems:"center"}}><h4 style={{ color:"grey"}} className={styles.paySub}>Check in:</h4><p>{query.from?.split("-").reverse().join("-")}</p></div>
+                            <div style={{display:"flex", alignItems:"center"}}><h4 style={{ color:"grey"}} className={styles.paySub}>Check out:</h4><p>{query.to?.split("-").reverse().join("-")}</p></div>
                         </div>
                         </div>
                     </div>
                     <div className={styles.price}>
-                        <h2>Price Details</h2>
+                        <Typography variant="h4" style={{margin:"10px"}}>Price Details</Typography>
                         <Divider />
                         <div>
-                        <div><div>Stay fees </div><div>₹{hotel.price}</div></div>
+                        <div><div>Stay fee </div><div>₹{hotel.price}</div></div>
                             <div><div>Taxes and other fees</div> <div>₹{temp}</div></div>
                             <Divider/>
                             <div><div className={styles.total}>Total</div> <div className={styles.total}>₹{Number(hotel.price) + temp}</div></div>

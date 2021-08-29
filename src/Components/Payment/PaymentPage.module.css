@@ -11,7 +11,9 @@
 }
 .subsPayment {
   background-color: white;
-  padding: 19px;
+  padding: 5px;
+  height: 430px;
+  border-radius: 1px;
 }
 .containerPayment input {
   height: 39px;
@@ -51,18 +53,21 @@
   margin: 40px;
 }
 .hotelPic {
-  width: 580px;
-  height: 250px;
+  width: 100%;
+  height: 290px;
+  position: relative;
 }
 .hotelPic img {
-  width: 100%;
+  width: 99%;
   height: 100%;
+  filter: brightness(50%);
 }
 .times {
   display: flex;
   justify-content: space-between;
   width: 60%;
-  margin: 0px;
+  margin: 13px 2px;
+  /* border: 1px solid black; */
 }
 .infoDiv {
   color: green !important;
@@ -75,6 +80,8 @@
 .times p {
   margin: 0px;
   margin-left: 10px;
+  font-size: 19px;
+  font-weight: 600;
 }
 .outer > h1 {
   margin-left: 80px;
@@ -98,7 +105,7 @@
   height: 59px;
 }
 .detsDiv {
-  margin: 29px 0px;
+  margin: 41px 0px;
   margin-bottom: 0px;
   color: grey;
 }
@@ -189,7 +196,44 @@
 }
 .paySub {
   font-weight: 600;
+  /* border: 1px solid black; */
+  margin: 10px 0px;
+  font-size: 18px !important;
 }
 .confirmDets > div {
   text-align: center;
+}
+.hnDiv {
+  font-size: 35px;
+  color: white !important;
+  position: absolute;
+  bottom: 0;
+  right: 30;
+  padding-left: 10px;
+}
+.times > div {
+  height: 18px;
+}
+.times > div p {
+  font-weight: 600;
+  font-size: 19px;
+}
+.detsDiv > p {
+  font-size: 19px;
+  font-weight: 600;
+}
+.orbucksInfo {
+  color: rgb(24, 101, 184);
+  font-size: 21px;
+  font-weight: 650;
+  margin-left: 19px;
+}
+.orbucksContainer {
+  display: flex;
+  align-items: center;
+  width: 59%;
+  margin-left: 49px;
+  height: 40px;
+  background-color: white;
+  padding: 3px;
 }

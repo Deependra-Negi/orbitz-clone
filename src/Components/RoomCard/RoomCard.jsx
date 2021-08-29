@@ -80,11 +80,11 @@ export default function RoomCard({img, name, price, deals, id}) {
                 </RadioGroup>
                 <TotalReserve>
                     <Right>
-                        <Orbucks><Icon3><MonetizationOnIcon /></Icon3><Orbucks2>Earn ₹ {price*0.03} Orbucks</Orbucks2></Orbucks>
+                        <Orbucks><Icon3><MonetizationOnIcon /></Icon3><Orbucks2>Earn ₹ {(price*0.03).toFixed(0)} Orbucks</Orbucks2></Orbucks>
                         <Deals>{deals}% off</Deals>
-                        <Price>{price}</Price>
+                        <Price>₹{price}</Price>
                         <PerNight>per night</PerNight>
-                        <Total>total {price+price*0.1}</Total>
+                        <Total>total ₹{price+price*0.13}</Total>
                         <Taxes> includes taxes & fees</Taxes>
                         <Span className={classes.blue}>More details<Icon2><ExpandMoreIcon className={classes.icon} /></Icon2></Span>
                     </Right>

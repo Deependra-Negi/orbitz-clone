@@ -1,3 +1,4 @@
+import { Divider } from '@material-ui/core'
 import React from 'react'
 import GuestRating from './guestRating/GuestRating'
 import Name from './nameSearch/Name'
@@ -14,18 +15,19 @@ export const HotelListFilters = (props) => {
     return (
       <div style={{width: "20vw" }}>
         <Name />
-        <h1>Filter by</h1>
-        <h3>Popular filters</h3>
+        <Divider/>
+        <h2>Filter by</h2>
+        <h4>Popular filters</h4>
         <Popular filter={filter} handleFilter={handleFilter} />
         <h3> </h3>
         <StarRating />
-        <h3>Your budget </h3>
+        <h4>Your budget </h4>
         <YourBudget filter={filter} handleFilter={handleFilter} />
-        <h3>Guest Rating </h3>
+        <h4>Guest Rating </h4>
         <GuestRating filter={filter} handleFilter={handleFilter} />
-        <h3>Payment Type </h3>
+        <h4>Payment Type </h4>
         <PaymentType filter={filter} handleFilter={handleFilter} />
-        <h3>Property Type </h3>
+        <h4>Property Type </h4>
         <PropertyType filter={filter} handleFilter={handleFilter} />
       </div>
     );

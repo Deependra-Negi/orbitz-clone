@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Box from "@material-ui/core/Box";
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import Modal from "@material-ui/core/Modal";
-import Typography from "@material-ui/core/Typography";
+
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import CloseIcon from "@material-ui/icons/Close";

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import { search } from "../../Redux/Queries/actions";
+import styles from "./Home.module.css";
 
 export function SearchCompact() {
     const [addFlight, setAddFlight] = useState(false);
@@ -48,7 +49,12 @@ export function SearchCompact() {
         checkboxes: {
             display: "flex",
             alignItems: "center",
-            margin: "17px 3px",
+            justifyContent:"flex-start",
+            margin: "5px 1px",
+            fontSize: "14px",
+            height: "10px",
+            // border: "1px solid black",
+            width: "380px"
         },
         btn1: {
             marginTop:"10px",
@@ -91,6 +97,9 @@ export function SearchCompact() {
             marginRight: "10px",
             fill:"#616161"
         },
+        typ: {
+            fontSize:"8"
+        }
     })
     const btn1 = {
         marginTop: "10px",
@@ -145,7 +154,7 @@ export function SearchCompact() {
                         type="date"
                         className={classes.date}
                     variant="outlined"
-                        defaultValue="2017-05-24"
+                        defaultValue="2021-08-31"
                         InputLabelProps={{
                             shrink: true,
                         }}
@@ -158,24 +167,26 @@ export function SearchCompact() {
                         type="date"
                     className={classes.date}
                         variant="outlined"
-                        defaultValue="2017-05-24"
+                        defaultValue="2021-09-03"
                         InputLabelProps={{
                             shrink: true,
                         }}
                     />
-            <TextField name="travelers" onChange={handleChange} className={classes.inps} variant="outlined" label="travelers" />
+            <TextField name="travelers" onChange={handleChange} className={classes.inps} variant="outlined" label="Travelers" />
             {!homePage ? <Box>
                 <button onClick={handleSearch} style={btn1}>Search</button>
             </Box> : null}
             </Box>
-            {homePage ? <Box><Box className={classes.checkboxes}>
+            {homePage ? <Box><div className={styles.checkboxes}>
+                <Checkbox style={{
+                    color: "#b3c9be",
+                    transform:"scale(1)"
+                    }} onChange={(e) => setAddFlight(e.target.checked) }/><div style={{margin:"0px", padding:"0px"}}>Add a Flight </div>
                 <Checkbox style ={{
-                      color: "#2e4138",
-                    }} onChange={(e) => setAddFlight(e.target.checked) }/><Typography>Add a Flight </Typography>
-                <Checkbox style ={{
-                      color: "#2e4138",
-                    }} onChange={(e) => setAddCar(e.target.checked) }/><Typography>Add a Car </Typography>
-            </Box><Box>
+                    color: "#c5d4cd",
+                    transform:"scale(1)"
+                    }} onChange={(e) => setAddCar(e.target.checked) }/><p style={{margin:"0px", padding:"0px"}}>Add a Car </p>
+            </div><Box>
                 <button onClick={handleSearch} style={btn2}>Search</button>
             </Box></Box> : null}
             </>

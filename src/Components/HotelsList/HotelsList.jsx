@@ -20,15 +20,17 @@ const HotelsList = () => {
     priceAbove400: false,
     Hotel: false,
     HotelResort: false,
-    BedBreakfast: false,
+    Bed: false,
     villa: false,
     Palace: false,
+    Villa:false,
     Any: false,
     Wonderful45: false,
     VeryGood4: false,
     Good35: false,
     FullyRefundable: false,
-    PayLater: false,
+    PayLater: false, 
+   
   };
   const [filter, setFilter] = useState(initFilter);
   const handleSort = (value) => {
@@ -118,6 +120,33 @@ const HotelsList = () => {
           .filter((a) => {
             return filter.FullyRefundable
               ? a.paymentType ===  "Fully Refundable"
+              : a;
+          })
+          .filter((a) => {
+            console.log('a:', a)
+            return filter.Hotel
+            
+              ? a.propertyType ===  "Hotel"
+              : a;
+          })
+          .filter((a) => {
+            return filter.HotelResort
+              ? a.propertyType ===  "Hotel Resort"
+              : a;
+          })
+          .filter((a) => {
+            return filter.Bed
+              ? a.propertyType === "Bed"
+              : a;
+          })
+          .filter((a) => {
+            return filter.Villa
+              ? a.propertyType ===  "Villa"
+              : a;
+          })
+          .filter((a) => {
+            return filter.Palace
+              ? a.propertyType ===  "Palace"
               : a;
           })
           .sort((a, b) => {

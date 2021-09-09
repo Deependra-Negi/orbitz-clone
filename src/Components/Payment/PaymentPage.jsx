@@ -32,7 +32,7 @@ export function PaymentPage() {
 
     async function handleToken(token) {
         const temp = token.id;
-        const res = await axios.post("https://deependra-heroku-test-app.herokuapp.com/payment", { token })
+        const res = await axios.post("https://orbitz-heroku-data.herokuapp.com/payment", { token })
         console.log(res.data.token.id);
         if (res.data.token.id === temp && temp !== "") {
             toast("Success!", { type: 'success' });

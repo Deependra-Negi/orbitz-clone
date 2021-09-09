@@ -28,7 +28,7 @@ console.log(success)
             try {
                 const { id } = paymentMethod
                 console.log(id)
-                const response = await axios.post("https://deependra-heroku-test-app.herokuapp.com/payment", {
+                const response = await axios.post("https://orbitz-heroku-data.herokuapp.com/payment", {
                     amount: 1000,
                     id
                 })

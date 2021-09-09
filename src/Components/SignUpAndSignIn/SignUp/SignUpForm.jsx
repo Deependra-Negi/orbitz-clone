@@ -49,7 +49,7 @@ const SignUpForm = () => {
         console.log(formdata)
         let username = formdata.firstname
         dispatch(setuserName({ username }))
-        axios.get('https://deependra-heroku-test-app.herokuapp.com/users').then(function (response) {
+        axios.get('https://orbitz-heroku-data.herokuapp.com/users').then(function (response) {
             let allusers = response.data;
             let status = false;
         
@@ -61,7 +61,7 @@ const SignUpForm = () => {
             });
             if (!status) {
                 axios
-                    .post('https://deependra-heroku-test-app.herokuapp.com/users', { ...formdata })
+                    .post('https://orbitz-heroku-data.herokuapp.com/users', { ...formdata })
                     .then(function (response) {
                         console.log(response)
                       

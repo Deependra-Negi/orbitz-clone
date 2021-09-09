@@ -7,6 +7,7 @@ export default function MapStaticHotel2() {
 
     const history = useHistory()
     const handleMap = () => {
+        alert("map")
         history.push("/map")
     }
     return (

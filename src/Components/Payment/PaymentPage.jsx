@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { green } from "@material-ui/core/colors";
 import LockIcon from '@material-ui/icons/Lock';
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import StarRateIcon from '@material-ui/icons/StarRate';
 
 
@@ -32,7 +32,7 @@ export function PaymentPage() {
 
     async function handleToken(token) {
         const temp = token.id;
-        const res = await axios.post("http://localhost:3001/payment", { token })
+        const res = await axios.post("https://deependra-heroku-test-app.herokuapp.com/payment", { token })
         console.log(res.data.token.id);
         if (res.data.token.id === temp && temp !== "") {
             toast("Success!", { type: 'success' });

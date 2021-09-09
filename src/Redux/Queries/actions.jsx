@@ -39,7 +39,7 @@ export const getHotelFailure = () => {
 
 export const getHotel = (payload) => (dispatch) => {
     dispatch(getHotelRequest());
-    axios.get(`http://localhost:3001/hotels/${payload}`)
+    axios.get(`https://deependra-heroku-test-app.herokuapp.com/hotels/${payload}`)
         .then((res) => {
             dispatch(getHotelSuccess(res.data));
         })
@@ -50,7 +50,7 @@ export const getHotel = (payload) => (dispatch) => {
 
 export const search = (payload) => (dispatch) => {
     dispatch(searchRequest(payload));
-    axios.get(`http://localhost:3001/hotels?city=${payload.city}`)
+    axios.get(`https://deependra-heroku-test-app.herokuapp.com/hotels?city=${payload.city}`)
         .then((res) => {
             dispatch(searchSuccess(res.data));
         })

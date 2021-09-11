@@ -73,6 +73,9 @@ const ForgotPassword = () => {
 
     }
 
+    const submodel = { display: "flex", justifyContent: "space-around", alignItems: "center" }
+    const subhandleclose = { height: "25px", width: "25px", borderRadius: "10%", background: "#C51162", color: "white", border: "none" }
+    const LinkSub = { color: "#0090BA", textDecoration: "none" }
 
     return (
         <>
@@ -80,7 +83,7 @@ const ForgotPassword = () => {
                 <AppBar className={classes.Navbar} position="fixed">
                     <Toolbar>
                         <IconButton className={classes.IconColor}>
-                            <ArrowBackIcon style={{ color: "#0090BA" }} onClick={handleback} />
+                            <ArrowBackIcon className={classes.Arrowback} onClick={handleback} />
                         </IconButton>
 
                     </Toolbar>
@@ -104,13 +107,13 @@ const ForgotPassword = () => {
                         <Box className={classes.buttonMargin}>
                             <Button
                                 className={classes.button} type="submit" variant="contained" color="secondary" >
-                                <Typography style={{ color: "white", fontSize: "14px" }}>Send Reset link</Typography>
+                                <Typography className={classes.sendReset}>Send Reset link</Typography>
                             </Button>
 
                         </Box>
                         <Box className={classes.Box}>
                             <Typography className={classes.textmargin} variant="subtitle1" component="h2">
-                                Not a member?<Link  to="/signup" style={{ color: "#0090BA",textDecoration:"none" }} className={classes.LinkDeco1}>Create an account</Link>
+                                Not a member?<Link to="/signup" style={LinkSub} className={classes.LinkDeco1}>Create an account</Link>
 
                             </Typography>
                         </Box>
@@ -134,20 +137,20 @@ const ForgotPassword = () => {
             >
                 <Fade in={open}>
                     <Paper className={classes.paper}>
-                        <div className={classes.subModal} style={{ display: "flex", justifyContent: "space-around", alignItems: "center" }}>
-                            <h2 style={{ color: "black" }} >Your Password Retrive</h2>
+                        <div className={classes.subModal} style={submodel}>
+                            <h2 className={classes.texth2} >Your Password Retrive</h2>
 
-                            <button onClick={handleClose} style={{ height: "25px", width: "25px", borderRadius: "10%", background: "#C51162", color: "white", border: "none" }}>X</button>
+                            <button onClick={handleClose} style={subhandleclose}>X</button>
                         </div>
                         <div className={classes.subModal1}>
 
-                            <h3 style={{ textAlign: "center" }}  >{`Password: - ${password}`}</h3>
+                            <h3 className={classes.texth1}  >{`Password: - ${password}`}</h3>
                         </div>
                         <div className={classes.subModel}>
                             <Button variant="contained"
                                 color="primary" onClick={showModal}>
 
-                                <Typography style={{ color: "white" }}>OK</Typography>
+                                <Typography style={classes.Ok}>OK</Typography>
                             </Button>
                         </div>
 

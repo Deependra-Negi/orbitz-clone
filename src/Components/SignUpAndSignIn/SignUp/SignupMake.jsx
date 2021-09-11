@@ -115,7 +115,14 @@ marginTop:10,
         color: "red",
         padding:"10px"
     }
-  
+    ,
+    CreateAccount: { color: "white", fontSize: "14px" },
+    Boxsign: { display: "flex", justifyContent: "space-between", alignItems: "center" },
+   
+    X: { height: "30px" },
+    SinIn: { color: "white", fontSize: "14px" },
+    LinkForgot: { color: "#0090BA", textDecoration: "none" },
+    ForgotTopo: { color: "#0090BA" }
 
 
 

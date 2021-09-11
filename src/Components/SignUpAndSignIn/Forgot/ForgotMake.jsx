@@ -62,8 +62,15 @@ export const useStyles = makeStyles((theme) => ({
        padding:"10px",
         justifyContent: "center",
         color:"white"
-    }
-
+    },
+    texth1: { textAlign: "center" }
+    ,
+    texth2: { color: "black" }
+    ,
+    sendReset: { color: "white", fontSize: "14px" },
+    Ok: { color: "white" },
+    Arrowback: { color: "#0090BA" }
+    
 
 
 

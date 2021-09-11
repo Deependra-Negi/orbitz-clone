@@ -24,12 +24,18 @@ export const useStyles = makeStyles((theme) => ({
     SubHeadMargin: {
         margin:"5px 6px"
     },
-    // SubMargin: {
-    //     marginTop:"20px"
-    // }
-
-
-
+    BigBox: {
+        display: "flex",
+        alignItems:"center"
+   },
+   
+   OuterBox: {
+       height: "30px",
+       width: "100%",
+       background: "#f5f5f5"
+   }
+    ,
+    SmallBox: { paddingTop: "20px", paddingBottom: "30px" }
 
 
 

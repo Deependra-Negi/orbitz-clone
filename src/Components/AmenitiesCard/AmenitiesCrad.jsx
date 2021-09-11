@@ -1,7 +1,7 @@
 import { Box, Card, Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import { useStyles } from '../AmenitiesCard/AmenitiesCardMake';
-import { Link } from '@material-ui/core';
+
 import WifiIcon from '@material-ui/icons/Wifi';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import LocalParkingIcon from '@material-ui/icons/LocalParking';
@@ -13,16 +13,14 @@ import DeckIcon from '@material-ui/icons/Deck';
 import AccessibleIcon from '@material-ui/icons/Accessible';
 import BathtubIcon from '@material-ui/icons/Bathtub';
 import LocalHotelIcon from '@material-ui/icons/LocalHotel';
-// const PropBox1 = [
-//     {to:"/",content:""}
-// ]
+
 const AmenitiesCrad = () => {
     const classess = useStyles()
     return (
         <div>
             <Card className={classess.Card}>
-                <div style={{height:"30px", width:"100%", background:"#f5f5f5"}}></div>
-                <Box style={{paddingTop:"20px",paddingBottom:"30px"}}>
+                <div className={classess.OuterBox}></div>
+                <Box className={classess.SmallBox}>
                     <Container >
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={4}>
@@ -36,7 +34,7 @@ const AmenitiesCrad = () => {
                             <Grid item xs={12} sm={4}>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box >
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
                                             <WifiIcon />
                                             <Typography className={classess.HeadMargin} variant="h6">Internet</Typography>
                                         </Box>
@@ -50,7 +48,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <LocalParkingIcon />
@@ -66,7 +64,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
 
@@ -83,7 +81,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <PeopleOutlineIcon />
@@ -99,7 +97,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <LocalConvenienceStoreIcon />
@@ -116,7 +114,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <RoomServiceIcon />
@@ -145,7 +143,7 @@ const AmenitiesCrad = () => {
 
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <CheckIcon />
@@ -163,7 +161,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <DeckIcon />
@@ -180,7 +178,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <AccessibleIcon />
@@ -191,8 +189,7 @@ const AmenitiesCrad = () => {
                                     <Container className={classess.SubHeadMargin}>
                                         <Typography variant="subtitle">If you have requests for specific accessibility needs, please contact the property using the information on the reservation confirmation received after booking</Typography><br />
                                         <Typography variant="subtitle">Daily housekeeping</Typography><br />
-                                        {/* <Typography variant="subtitle">Dry cleaning service</Typography><br />
-                                        <Typography variant="subtitle">Laundry facilities</Typography> */}
+                                      
 
                                     </Container>
 
@@ -214,9 +211,9 @@ const AmenitiesCrad = () => {
 
 
 
-                <div style={{height:"30px", width:"100%", background:"#f5f5f5"}}></div>
+                <div className={classess.OuterBox}></div>
 
-                <Box style={{paddingTop:"20px",paddingBottom:"30px"}}>
+                <Box className={classess.SmallBox}>
                     <Container >
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={4}>
@@ -232,7 +229,7 @@ const AmenitiesCrad = () => {
 
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <LocalHotelIcon />
@@ -248,7 +245,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <BathtubIcon />
@@ -267,7 +264,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <CheckIcon />
@@ -297,7 +294,7 @@ const AmenitiesCrad = () => {
 
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <DeckIcon />
@@ -315,7 +312,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                             <CheckIcon />
@@ -371,7 +368,7 @@ const AmenitiesCrad = () => {
 
                                 <Container className={classess.HeadMarginTop}>
                                     <Box >
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                       
@@ -390,7 +387,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                            
@@ -411,7 +408,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                       
@@ -431,7 +428,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                       
@@ -451,7 +448,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                       
@@ -474,7 +471,7 @@ const AmenitiesCrad = () => {
                                 </Container>
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                    
@@ -486,15 +483,7 @@ const AmenitiesCrad = () => {
 
                                     <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_visa.svg" alt="" />
                                     </Container>
-                                    {/* <Container className={classess.SubHeadMargin}>
-                                        <Typography variant="subtitle">Children are welcome
-                                        </Typography><br />
-                                        <Typography variant="subtitle">Cribs (infant beds) are not available
-
-                                        </Typography>
-
-
-                                    </Container> */}
+                                 
 
                                 </Container>
 
@@ -510,7 +499,7 @@ const AmenitiesCrad = () => {
 
                                 <Container className={classess.HeadMarginTop}>
                                     <Box className={classess.HeadBox}>
-                                        <Box style={{ display: "flex", alignItems: "center" }}>
+                                        <Box className={classess.BigBox}>
 
 
                                           

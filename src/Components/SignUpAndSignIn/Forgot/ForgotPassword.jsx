@@ -38,7 +38,7 @@ const ForgotPassword = () => {
         setOpen(false);
     };
     const getData = async () => {
-        let { data } = await axios.get("http://localhost:3001/users")
+        let { data } = await axios.get("https://orbitz-heroku-data.herokuapp.com/users")
         setAllData(data)
 
     }

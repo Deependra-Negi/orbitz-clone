@@ -1,4 +1,4 @@
-import { Box, TextField, makeStyles, MenuItem, Button, Checkbox, Typography } from "@material-ui/core";
+import { Box, TextField, makeStyles, MenuItem, Checkbox} from "@material-ui/core";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -22,7 +22,7 @@ export function SearchCompact() {
         }
     }, []);
     
-    console.log(location);
+    // console.log(location);
     const places = [
         {
             label: "Bangalore",
@@ -178,14 +178,8 @@ export function SearchCompact() {
             </Box> : null}
             </Box>
             {homePage ? <Box><div className={styles.checkboxes}>
-                <Checkbox style={{
-                    color: "#b3c9be",
-                    transform:"scale(1)"
-                    }} onChange={(e) => setAddFlight(e.target.checked) }/><div style={{margin:"0px", padding:"0px"}}>Add a Flight </div>
-                <Checkbox style ={{
-                    color: "#c5d4cd",
-                    transform:"scale(1)"
-                    }} onChange={(e) => setAddCar(e.target.checked) }/><p style={{margin:"0px", padding:"0px"}}>Add a Car </p>
+                <Checkbox className={styles.checkboxStyle1} onChange={(e) => setAddFlight(e.target.checked) }/><div className={styles.flight_div}>Add a Flight </div>
+                <Checkbox className={styles.checkboxStyle2} onChange={(e) => setAddCar(e.target.checked) }/><p className={styles.car_div}>Add a Car </p>
             </div><Box>
                 <button onClick={handleSearch} style={btn2}>Search</button>
             </Box></Box> : null}

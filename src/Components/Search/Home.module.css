@@ -22,3 +22,23 @@
   height: 10px;
   width: 350px;
 }
+.flight_div {
+  margin: 0px;
+  padding: 0px;
+}
+.car_div {
+  margin: 0px;
+  padding: 0px;
+}
+.checkboxStyle1 {
+  color: #b3c9be;
+  transform: scale(1);
+}
+.checkboxStyle2 {
+  color: #c5d4cd;
+  transform: scale(1);
+}
+.BG_style {
+  border: 1px solid grey;
+  background-color: #f5f5f5;
+}

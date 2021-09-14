@@ -3,6 +3,7 @@ import { useState } from "react";
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
+import styles from "./PaymentModal.module.css";
 
 export function PaymentModal() {
     const hotel = useSelector(state => state.Query.currentHotel);
@@ -67,17 +68,17 @@ export function PaymentModal() {
             <Modal onClose={() => setPay(false)} open={pay}>
                 <Box className={useStyles().modal}>
                     <div className={classes.modalContainer}>
-                        <div style={{ padding: "18px" }}>
+                        <div className={styles.options_style} >
                             Your Payment options
                         </div>
                         <Divider />
                         <div className={classes.info}>
                             <div>
-                                <VerifiedUserIcon size="large" style={{ marginLeft: "10px" }} />
+                                <VerifiedUserIcon className={styles.verified_icon} size="large"  />
                             </div>
-                            <div style={{ margin: "10px 15px" }}>
-                                <h4 style={{ fontSize: "15px", margin: "1px" }}>Fully Refundable</h4>
-                                <h5 style={{ fontSize: "10px", margin: "1px", fontWeight: "400" }}>You can change or cancel this stay if plans change. Because flexibility matters.</h5>
+                            <div className={styles.div_1}>
+                                <h4 className={styles.h4_style} >Fully Refundable</h4>
+                                <h5 className={styles.h5_style} >You can change or cancel this stay if plans change. Because flexibility matters.</h5>
                             </div>
                         </div>
                         <div className={classes.paymentOptionsDiv}>

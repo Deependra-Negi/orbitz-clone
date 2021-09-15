@@ -4,6 +4,11 @@ This project is a clone of [orbitz.com](https://www.orbitz.com/), which is a  is
 This is collaborative project, completed within 6 days with a team of 4 members, as a part of 'Construct-week' project at Masai School. This website have end to end functionalities from SignUp/LogIn and searching the hotel rooms to booking and payment. 
 
 
+## Deployed link
+
+[orbitz.netlify.app](https://orbitz.netlify.app/)
+
+
 ## Authors
 
 - [@deependra-negi](https://github.com/deependra-negi)

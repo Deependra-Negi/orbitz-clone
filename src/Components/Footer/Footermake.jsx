@@ -33,13 +33,4 @@ export const useStyles = makeStyles((theme) => ({
         fontSize: 13
      
     }
-
-
-    
-
-
-
-
-
-
 }))

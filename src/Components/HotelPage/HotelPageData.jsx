@@ -1,4 +1,4 @@
-import { Box, makeStyles, Tab, Tabs, Typography } from "@material-ui/core";
+import { Box, makeStyles, Tab, Tabs} from "@material-ui/core";
 import { useSelector } from "react-redux";
 import StarRateIcon from '@material-ui/icons/StarRate';
 import styles from "./HotelPage.module.css";
@@ -49,7 +49,7 @@ export function HotelPageData() {
     const classes = useStyles();
     const handleClick = (val) => {
         window.scrollTo(0, val);
-        console.log(window.pageYOffset);
+        // console.log(window.pageYOffset);
     }
     const handleChange = (event, newValue) => {
         ref.current = newValue;
@@ -104,8 +104,8 @@ export function HotelPageData() {
                         <div className={styles.detailsDiv}>
                             <div>
                                 <div className={styles.nameDiv}><h2>{hotel.name}</h2>
-                                <div className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon style={{ color: "#807d7d" }} /> })}</div></div>
-                                <div style={{color:"grey", fontSize:"14px", marginLeft:"5px"}}>{hotel.rating}/5</div>
+                                <div className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon className={styles.starIcon} /> })}</div></div>
+                                <div className={styles.rate_div} >{hotel.rating}/5</div>
                                 <div className={styles.detailsSub}>
                                 <h3>Popular Amenities</h3>
                                 <div className={styles.amenities}>
@@ -133,7 +133,7 @@ export function HotelPageData() {
                                 <Address>{hotel.address}</Address>
                                 </div>
                                 <div>
-                                    <h3 style={{margin:0, marginTop:"60px"}}>Explore the area</h3>
+                                    <h3 className={styles.exploreSection}>Explore the area</h3>
                                     <div className={styles.explore}>
                                         <p className={styles.flexDisp}><RoomIcon/>Suburban Gateway</p>
                                         <p className={styles.flexDisp}><RoomIcon/>Shivaji Museum</p>
@@ -195,7 +195,7 @@ export function HotelPageData() {
                         </div>
                             
                     </div>
-                    <AmenitiesCrad styles={{width:"100%", margin:"auto"}}/>
+                    <AmenitiesCrad className={styles.amenities_crad}/>
                 </div>
                 
             </div>

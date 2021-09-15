@@ -8,6 +8,7 @@ export default function MapStaticHotel1() {
 
     const handleMap = () => {
         history.push("/map")
+   
     }
     return (
         <Cont>

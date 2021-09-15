@@ -129,7 +129,9 @@ const SignInForm = () => {
         };
         const classes = useStyles()
     
- 
+    const paperSub = { display: "flex", justifyContent: "space-around", alignItems: "center" }
+    const LinkDec = { color: "#0090BA", textDecoration: "none" }
+    const signLink = { color: "#0090BA" }
     // if (isAuth) {
     //     return <Redirect to="/"/>
     // } 
@@ -229,7 +231,7 @@ const SignInForm = () => {
 
                             />
                            
-                            <Box style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                            <Box className={classes.Boxsign}>
                             <Box>
                                 <FormControlLabel
                                         control={<Checkbox required onChange={handleonChangeinput}  color="primary" name="checkedA" />}
@@ -237,9 +239,9 @@ const SignInForm = () => {
                                 />
                               
                             </Box>
-                                <Link style={{ color: "#0090BA",textDecoration:"none" }} to="/forgot">
+                                <Link className={classes.LinkForgot} to="/forgot">
                                     <Box >
-                                        <Typography style={{ color: "#0090BA" }}>Forgot password?</Typography>
+                                        <Typography className={classes.ForgotTopo}>Forgot password?</Typography>
                                 
                                     </Box>
                                 </Link>
@@ -249,19 +251,19 @@ const SignInForm = () => {
 
                         <Box>
                             <Typography className={classes.textsize} variant="subtitle1" component="h2">
-                                By signing in, I agree to the <Link style={{ color: "#0090BA", textDecoration: "none" }} className={classes.LinkDeco1}>Orbitz Rewards Terms and Conditions.</Link>
+                                By signing in, I agree to the <Link style={LinkDec} className={classes.LinkDeco1}>Orbitz Rewards Terms and Conditions.</Link>
                               
                             </Typography>
                         </Box>
                         <Box className={classes.Box}>
                             <Button className={classes.Button} type="submit" variant="contained" color="secondary" >
-                                <Typography style={{ color: "white", fontSize: "14px" }}>Sign in</Typography>
+                                <Typography className={classes.SinIn}>Sign in</Typography>
                             </Button>
 
                         </Box>
                         <Box>
                             <Typography className={classes.textsize} variant="subtitle1" component="h2">
-                                Not a member?<Link to="/signup" style={{ color: "#0090BA" }} className={classes.LinkDeco1}>Create an account</Link>
+                                Not a member?<Link to="/signup" style={signLink} className={classes.LinkDeco1}>Create an account</Link>
                                
                             </Typography>
                         </Box>
@@ -285,9 +287,9 @@ const SignInForm = () => {
             >
                 <Fade in={open}>
                     <Paper className={classes.paper}>
-                        <div className={classes.subModal} style={{display:"flex",justifyContent:"space-around",alignItems:"center"}}>
+                        <div className={classes.subModal} style={paperSub}>
                             <h2 style={{color:"white"}} >!opps:warning</h2>
-                            <Button variant="contained" color="inherit" style={{ height: "30px" }} onClick={handleClose}>X</Button>
+                            <Button variant="contained" color="inherit" className={classes.X} onClick={handleClose}>X</Button>
                         </div>
                         <div className={classes.subModal1}>
 

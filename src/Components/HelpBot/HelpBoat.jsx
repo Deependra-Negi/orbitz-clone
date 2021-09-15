@@ -9,6 +9,9 @@ import CloseIcon from "@material-ui/icons/Close";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
 import SendIcon from "@material-ui/icons/Send";
 import TextField from "@material-ui/core/TextField";
+import styles from "./HelpBot.module.css";
+
+
 const useStyles = makeStyles(() => ({
   paper: {
     position: "absolute",
@@ -78,15 +81,15 @@ const HelpBot = () => {
         <Box>
           <Box className={classes.bot} onClick={() => setIsModal(!isModal)}>
             <QuestionAnswerIcon />
-            <div style={{color:"teal", marginLeft:"8px"}}>Help</div>
+            <div className={styles.help_div} >Help</div>
           </Box>
 
           <Modal open={isModal} onClose={() => setIsModal(!isModal)}>
             <Paper className={classes.paper}>
               <Box>
                 <Box className={classes.header}>
-                  <div style={{width:"100%"}}>
-                    <p style={{textAlign:"center", margin:"0px", padding:"0px"}}>Chat with Virtual Agent</p>
+                  <div className={styles.wid_style}>
+                    <p className={styles.chat_style} >Chat with Virtual Agent</p>
                   </div>
                   <CloseIcon onClick={() => setIsModal(!isModal)} />
                 </Box>
@@ -102,22 +105,22 @@ const HelpBot = () => {
                     </p>
                   </Box>
                 </Box>
-                <p style={{marginTop:"110px"}}></p>
+                <p className={styles.mar_style} ></p>
                 <Box>
                   <Box className={classes.option}>
-                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Cancel Booking</p>
+                    <p className={styles.p_option_style} >Cancel Booking</p>
                   </Box>
                   <Box className={classes.option}>
-                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Change booking</p>
+                    <p className={styles.p_option_style} >Change booking</p>
                   </Box>
                   <Box className={classes.option}>
-                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Check refund status</p>
+                    <p className={styles.p_option_style} >Check refund status</p>
                   </Box>
                   <Box className={classes.option}>
-                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Use Airline Creding</p>
+                    <p className={styles.p_option_style} >Use Airline Creding</p>
                   </Box>
                   <Box className={classes.option}>
-                    <p style={{fontSize:"13px", padding:"0px", margin:"0px", color:"rgb(1,127,143)"}}>Do something else</p>
+                    <p className={styles.p_option_style} >Do something else</p>
                   </Box>
                 </Box>
                 <Box

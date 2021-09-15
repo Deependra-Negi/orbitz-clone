@@ -237,3 +237,44 @@
   background-color: white;
   padding: 3px;
 }
+.secure_typ {
+  margin: 15px 59px;
+}
+.pay_style {
+  margin-right: 3px;
+  color: grey;
+}
+.pay_check {
+  display: flex;
+  align-items: center;
+}
+.checkHeading_style {
+  color: "grey";
+}
+.price_style {
+  margin: 10px;
+}
+.flex_style {
+  display: flex;
+}
+.check_circle_icon {
+  color: green;
+  margin-left: 15px;
+  margin-right: 1px;
+}
+.info_style {
+  color: darkgreen;
+  margin-right: 25px;
+}
+.p_secure_style {
+  margin-left: 8px;
+}
+.p_payment_style {
+  margin-left: 35px;
+}
+.star_icon_style {
+  color: #807d7d;
+}
+.ratingDiv {
+  margin: 5px;
+}

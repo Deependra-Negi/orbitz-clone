@@ -241,7 +241,7 @@ const SignUpForm = () => {
                         </Box>
                         <Box className={classes.Box}>
                             <Button className={classes.Button} type="submit" variant="contained" color="secondary" >
-                                <Typography style={{color:"white",fontSize:"14px"}}>Create account</Typography>
+                                <Typography className={classes.CreateAccount}>Create account</Typography>
                             </Button>
 
                         </Box>

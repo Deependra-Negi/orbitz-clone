@@ -6,6 +6,7 @@ import { useHistory } from 'react-router'
 export default function MapStatic() {
     const history = useHistory()
     const handleMap = () => {
+      
         history.push("/map")
     }
     return (

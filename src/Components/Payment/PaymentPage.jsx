@@ -1,15 +1,15 @@
 import styles from "./PaymentPage.module.css";
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
-import { Button, Divider, MenuItem, TextField, Typography } from "@material-ui/core";
+import { Divider, Typography } from "@material-ui/core";
 import { useEffect } from "react";
-import { Temp } from "./temp";
+// import { Temp } from "./temp";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { green } from "@material-ui/core/colors";
+// import { green } from "@material-ui/core/colors";
 import LockIcon from '@material-ui/icons/Lock';
 import { useHistory } from "react-router-dom";
 import StarRateIcon from '@material-ui/icons/StarRate';
@@ -33,7 +33,7 @@ export function PaymentPage() {
     async function handleToken(token) {
         const temp = token.id;
         const res = await axios.post("https://orbitz-heroku-data.herokuapp.com/payment", { token })
-        console.log(res.data.token.id);
+        // console.log(res.data.token.id);
         if (res.data.token.id === temp && temp !== "") {
             toast("Success!", { type: 'success' });
             history.push("/bookingconfirmed");
@@ -43,23 +43,23 @@ export function PaymentPage() {
     }
     return (
         <div className={styles.outer}>
-            <Typography variant="h4" style={{ margin: "15px 59px" }}>Secure booking — only takes 2 minutes!</Typography>
+            <Typography variant="h4" className={styles.secure_typ}>Secure booking — only takes 2 minutes!</Typography>
             <div className={styles.orbucksContainer}><LockIcon/><p className={styles.orbucksInfo}>Sign in to earn ₹299 in Orbucks</p></div>
             <div className={styles.containerPayment}>
                 <div>
                     <div className={styles.subsPayment}>
                         {/* <h2>{hotel.name}, {hotel.city}</h2> */}
-                        <div className={styles.hotelPic}><img src={hotel.images[1].url} alt="hotel" /><div><p className={styles.hnDiv}>{hotel.name}, {hotel.city}</p><div style={{margin:"5px"}} className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon style={{ color: "#807d7d" }} /> })}</div></div></div>
+                        <div className={styles.hotelPic}><img src={hotel.images[1].url} alt="hotel" /><div><p className={styles.hnDiv}>{hotel.name}, {hotel.city}</p><div className={styles.ratingDiv}>{starArr.map(() => { return <StarRateIcon className={styles.star_icon_style} /> })}</div></div></div>
                         <div className={styles.detsDiv}>
-                            <p><span className={styles.paySub} style={{marginRight:"3px", color:"grey"}}>Number of Guests:</span> {query.travelers}</p>
+                            <p><span className={`${styles.paySub} ${styles.pay_style}`}>Number of Guests:</span> {query.travelers}</p>
                         <div className={styles.times}>
-                            <div style={{display:"flex", alignItems:"center"}}><h4 style={{ color:"grey"}} className={styles.paySub}>Check in:</h4><p>{query.from?.split("-").reverse().join("-")}</p></div>
-                            <div style={{display:"flex", alignItems:"center"}}><h4 style={{ color:"grey"}} className={styles.paySub}>Check out:</h4><p>{query.to?.split("-").reverse().join("-")}</p></div>
+                            <div className={styles.pay_check} ><h4 className={`${styles.paySub} ${styles.checkHeading_style}`} >Check in:</h4><p>{query.from?.split("-").reverse().join("-")}</p></div>
+                            <div className={styles.pay_check} ><h4 className={`${styles.paySub} ${styles.checkHeading_style}`} >Check out:</h4><p>{query.to?.split("-").reverse().join("-")}</p></div>
                         </div>
                         </div>
                     </div>
                     <div className={styles.price}>
-                        <Typography variant="h4" style={{margin:"10px"}}>Price Details</Typography>
+                        <Typography variant="h4" className={styles.price_style} >Price Details</Typography>
                         <Divider />
                         <div>
                         <div><div>Stay fee </div><div>₹{hotel.price}</div></div>
@@ -91,8 +91,8 @@ export function PaymentPage() {
             <div className={styles.proceedDiv}>
                 <div className={styles.infoDiv}>
                     <CreditCardIcon/>
-                    <div style={{display:"flex"}}><CheckCircleIcon style={{ color: green[500], marginLeft:"15px", marginRight:"1px" }}/><div style={{color:"darkgreen", marginRight:"25px"}}>We use secure transmission</div></div>
-                    <div style={{display:"flex"}}><CheckCircleIcon style={{ color: green[500], marginLeft:"15px", marginRight:"1px" }}/><div style={{color:"darkgreen", marginRight:"25px"}}>We protect your personal information</div></div>
+                    <div className={styles.flex_style} ><CheckCircleIcon className={styles.check_circle_icon} /><div className={styles.info_style}>We use secure transmission</div></div>
+                    <div className={styles.flex_style} ><CheckCircleIcon className={styles.check_circle_icon} /><div className={styles.info_style}>We protect your personal information</div></div>
                 </div>
                 <Divider/>
                 <h4>Imoportant Information about your booking</h4>
@@ -116,8 +116,8 @@ export function PaymentPage() {
                     </StripeCheckout>
                 </div>
                 <div className={styles.extraInfo}>
-                    <div style={{display:"flex", alignItems:"center"}}><LockIcon/><p style={{marginLeft:"8px"}}>We use secure transmission and encrypted storage to protect your personal information.</p></div>
-                    <p style={{marginLeft:"35px"}}>This payment will be processed in India. This does not apply when the travel provider (airline/hotel/rail, etc.) processes your payment.</p>
+                    <div className={styles.pay_check} ><LockIcon/><p className={styles.p_secure_style}>We use secure transmission and encrypted storage to protect your personal information.</p></div>
+                    <p className={styles.p_payment_style}>This payment will be processed in India. This does not apply when the travel provider (airline/hotel/rail, etc.) processes your payment.</p>
                 </div>
             </div>
         </div>

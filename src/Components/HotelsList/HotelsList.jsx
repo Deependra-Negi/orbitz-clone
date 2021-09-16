@@ -80,7 +80,7 @@ const HotelsList = () => {
   return (
     <Cont>
       <FilterCont>
-    <MapStatic/>
+        <MapStatic/>
         <HotelListFilters handleFilter={handleFilter} filter={filter} />
       </FilterCont>
       <div>
@@ -179,12 +179,12 @@ export default HotelsList;
 const Cont = styled.div`
   margin-top: 20px;
   position: relative;
-
+  max-width: 1080px;
   top: 2rem;
   display: flex;
   max-width: 95%;
   margin: auto;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   background-color: #f5f5f5;
 `;
 const FilterCont = styled.div``;

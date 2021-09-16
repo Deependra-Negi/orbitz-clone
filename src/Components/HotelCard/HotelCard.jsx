@@ -27,7 +27,6 @@ export default function HotelCard({hotel}) {
                 <LowerSec>
                     <Left>
                         <Refund>{hotel.paymentType}</Refund>
-                        {/* <Refund>{(hotel.price>3000)?"Reserve now, pay later":""}</Refund> */}
                         <Ratings>{hotel.rating}/5 {(hotel.rating>3.6)?"Excelent":"Good"}</Ratings>
                         <Reviews>{hotel.reviews} reviews</Reviews>
                     </Left>
@@ -52,12 +51,13 @@ box-sizing: border-box;
 margin-top: 0.75rem;
 margin-left: 29px;
 display: flex;
-/* flex-wrap: wrap; */
 color: #616161;
 background-color: #ffffff;
 cursor: pointer;
-width: 750px;
-//min-width: 60rem;
+max-width: 60rem;
+@media (min-width: 1100px) {
+    min-width: 60rem;
+  }
 `
 
 const ImgCont = styled.div`
@@ -65,6 +65,9 @@ const ImgCont = styled.div`
   flex-grow: 1;
   width: 180px;
   min-width: 19rem;
+  @media (min-width: 1100px) {
+    min-width: 23rem;
+  }
   & > img {
     width: 100%;
   }
@@ -75,7 +78,6 @@ const TextCont = styled.div`
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 2;
-  /* min-width: 36rem; */
 `;
 const UpperSec = styled.div`
   flex-direction: column;

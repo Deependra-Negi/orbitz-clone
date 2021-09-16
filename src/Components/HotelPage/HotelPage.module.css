@@ -1,6 +1,7 @@
 .container {
   background-color: #f5f5f5;
   width: 100%;
+  
 }
 .innerContainer {
   width: 100%;
@@ -149,5 +150,21 @@
 }
 .outer {
   width: 93%;
+  margin: auto;
+}
+.rate_div {
+  color: grey;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.starIcon {
+  color: "#807d7d";
+}
+.exploreSection {
+  margin: 0;
+  margin-top: 60px;
+}
+.amenities_crad {
+  width: 100%;
   margin: auto;
 }

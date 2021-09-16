@@ -18,9 +18,7 @@ import { RadioGroup } from '@material-ui/core';
 import { FormControlLabel } from '@material-ui/core';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Button from '@material-ui/core/Button'
 import { PaymentModal } from '../PaymentModal/PaymentModal';
-import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
     icon:{
@@ -105,11 +103,13 @@ const CardCont = styled.div`
     }
     display: flex;
     flex-direction: column;
-    width: 210px;
-    min-width: 23rem;
+    width: 300px;
     margin: 15px 0px;
     border: 1px solid lightgrey;
     background-color:white;
+    @media (min-width: 1100px) {
+    width: 400px;
+  }
 `
 const ImgCont = styled.div`
     height: 220px;

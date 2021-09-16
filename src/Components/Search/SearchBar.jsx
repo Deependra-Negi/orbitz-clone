@@ -8,7 +8,7 @@ import WorkIcon from '@material-ui/icons/Work';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
 import styles from "./Home.module.css";
-import { PaymentModal } from "../PaymentModal/PaymentModal";
+// import { PaymentModal } from "../PaymentModal/PaymentModal";
 import HomepageStatic from "../HomepageStatic/HomepageStatic";
 import styled from "styled-components";
 import RewardCard from '../RewardCard/RewardCard'
@@ -42,14 +42,15 @@ export const SearchBar = () => {
         containerSearchBox: {
             position: "absolute",
             top: 50,
-            left:80,
-            width: "87%",
+            left:140,
+            width: "80%",
             margin: "auto",
-            height: "290px",
+            height: "330px",
             borderRadius: "1px",
             padding: "0px 8px",
             backgroundColor: "white",
-            boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
+            boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+            
         },
         tb: {
             width: "100%",
@@ -106,5 +107,7 @@ const MainCont = styled.div`
     background-color: #f5f5f5;
 `
 const StaticDivs = styled.div`
+    margin: auto;
+    max-width: 1180px;
     margin: auto;
 `

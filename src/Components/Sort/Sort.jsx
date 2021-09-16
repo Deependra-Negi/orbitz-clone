@@ -69,6 +69,7 @@ const MainCont = styled.div`
 const Notice = styled.div`
 display: flex;
 margin-top: 10px;
+padding-left: 30px;
 p{
   font-size: 0.9rem;
   font-weight: bold;

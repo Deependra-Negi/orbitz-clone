@@ -1,5 +1,3 @@
-import { Box, makeStyles, Tab, Tabs, Typography } from "@material-ui/core";
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import LoadingComp from "../Search/Loading";
 import { HotelPageData } from "./HotelPageData";

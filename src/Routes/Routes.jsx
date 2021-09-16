@@ -8,6 +8,7 @@ import { SearchResults } from "../Components/Search/SearchResults"
 import ForgotPassword from "../Components/SignUpAndSignIn/Forgot/ForgotPassword"
 import SignInForm from '../Components/SignUpAndSignIn/SignIn/SignInForm'
 import SignUpForm from '../Components/SignUpAndSignIn/SignUp/SignUpForm'
+import styles from "./bg.module.css"
 
 export const Routes = () => {
     return (
@@ -32,12 +33,12 @@ export const Routes = () => {
                     <HotelPage/>
                 </Route>
                 <Route exact path="/payment">
-                    <div style={{border:"1px solid grey", backgroundColor:"#f5f5f5"}}>
+                    <div className={styles.paymentBG}>
                     <PaymentPage/>
                     </div>
                 </Route>
                 <Route exact path="/bookingconfirmed">
-                    <div style={{border:"1px solid grey", backgroundColor:"rgb(239,245,239)"}}>
+                    <div className={styles.confirmedBG}>
                     <BookingConfirmed/>
                     </div>
                 </Route>

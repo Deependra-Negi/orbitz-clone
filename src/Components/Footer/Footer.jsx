@@ -103,12 +103,12 @@ const FootBox4 = [
 ] 
   
 const bootX = {
-    xs: 3,
-    sm:10
+ 
+    sm:7
 }
 const bootY = {
-    xs: 5,
-    sm:10
+    xs: 1,
+   
 }
 
 const Footer = () => {

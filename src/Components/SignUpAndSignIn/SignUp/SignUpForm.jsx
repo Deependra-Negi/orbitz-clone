@@ -91,7 +91,7 @@ const SignUpForm = () => {
         dispatch(loginSuccess({ token }))
         dispatch(setuserName({ username }))
  
-        history.push('/');
+        history.push('https://orbitz.netlify.app');
       
       
     };
